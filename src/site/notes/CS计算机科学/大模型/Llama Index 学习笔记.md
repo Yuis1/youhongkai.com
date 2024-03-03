@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/CS计算机科学/大模型/Llama Index 学习笔记/","tags":["gardenEntry"],"created":"2024-02-04T10:09:30.582+08:00","updated":"2024-03-04T00:26:44.719+08:00"}
+{"dg-publish":true,"permalink":"/CS计算机科学/大模型/Llama Index 学习笔记/","created":"2024-02-04T10:09:30.582+08:00","updated":"2024-03-04T02:09:22.457+08:00"}
 ---
 
 # Llama Index 学习笔记
