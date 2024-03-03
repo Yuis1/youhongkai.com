@@ -5,6 +5,6 @@
 评论模块：[giscus](https://giscus.app/)  
 
 ## 游鱼思工作室
-![游鱼思工作室](/logo.png "游鱼思工作室")  
-[游鱼思工作室](https://yuis.io/)
+[![](/logo.png "游鱼思工作室")](https://yuis.io/)  
+[游鱼思工作室](https://yuis.io/)  
 
