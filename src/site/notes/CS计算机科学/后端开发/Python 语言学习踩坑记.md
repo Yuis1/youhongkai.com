@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/CS计算机科学/后端开发/Python 语言学习踩坑记/","tags":["gardenEntry"],"created":"2024-01-04T22:30:34.083+08:00","updated":"2024-03-04T01:17:12.389+08:00"}
+{"dg-publish":true,"permalink":"/CS计算机科学/后端开发/Python 语言学习踩坑记/","created":"2024-01-04T22:30:34.083+08:00","updated":"2024-03-04T02:09:22.455+08:00"}
 ---
 
 ## Linux环境
