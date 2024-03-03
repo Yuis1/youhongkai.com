@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/CS计算机科学/运维部署/OS/在 Ubuntu 安装配置 Fcitx 5 中文输入法/","created":"2024-02-24T00:10:46.150+08:00","updated":"2024-03-04T01:34:49.838+08:00"}
+{"dg-publish":true,"permalink":"/CS计算机科学/运维部署/OS/在 Ubuntu 安装配置 Fcitx 5 中文输入法/","created":"2024-02-24T00:10:46.150+08:00","updated":"2024-03-04T02:09:06.791+08:00"}
 ---
 
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [muzing.top](https://muzing.top/posts/3fc249cf/)
