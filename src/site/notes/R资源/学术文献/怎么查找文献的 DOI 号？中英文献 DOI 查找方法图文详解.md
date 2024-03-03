@@ -1,0 +1,101 @@
+---
+{"dg-publish":true,"permalink":"/R资源/学术文献/怎么查找文献的 DOI 号？中英文献 DOI 查找方法图文详解/","created":"2024-02-07T22:59:43.094+08:00","updated":"2024-03-04T01:45:58.149+08:00"}
+---
+
+> 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [gfsoso.99lb.net](https://gfsoso.99lb.net/xiangguanwenti-208.html)
+
+> 一、DOI 是什么 DOI 全称数字对象唯一标识符 (DigitalObjectUniqueIdentifier-DOI)，是一个专门用来标识数字化对象的命名系统，为数字对象提供唯一、持久的标识符。
+
+**一、****DOI 是什么**
+
+DOI 全称数字对象唯一标识符 (Digital Object Unique Identifier-DOI)，是一个专门用来标识数字化对象的命名系统，为数字对象提供唯一、持久的标识符。DOI 被形象地称为数字资源的条形码或身份证。无论在任何地方，用户都可以固定的、永久的链接到 DOI 的相应内容。
+
+![](https://gfsoso.99lb.net/wordpress/wp-content/uploads/2023/03/1-4.png)
+
+**二、****如何获取外文文献的 DOI**
+
+已知文献的标题或作者等信息，如何查找 DOI？
+
+1、CrossRef
+
+首选 CrossRef：（http://www.crossref.org），这是全球最大的 DOI 注册机构。
+
+查找流程：
+
+进入网站首页，选择 Search metadata，输入标题、作者、DOI 等信息可进行搜索。（加载有时会比较慢）
+
+![](https://gfsoso.99lb.net/wordpress/wp-content/uploads/2023/03/2-4.png)
+
+或者进入网站页面：http://www.crossref.org/guestquery，在 Search on article title 这一栏中，通过第一作者的姓氏和文章题目来查。（一定要输入正确的姓，不能输入全名）
+
+![](https://gfsoso.99lb.net/wordpress/wp-content/uploads/2023/03/3-3.png)
+
+如下图，搜索后可以得到 DOI 的链接形式，后面的 “10.1007/BF02298091” 就是文献的 DOI。
+
+![](https://gfsoso.99lb.net/wordpress/wp-content/uploads/2023/03/4-3.png)
+
+2、在文献数据库查找文献，再获取 DOI
+
+国外的文献数据库有 Google Scholar、WOS、PubMed 等。
+
+以谷歌学术为例：（镜像网站：https://xs.scqylaw.com/）
+
+如果看到下图这样格式的文献信息，可以直接复制，再通过谷歌学术来检索文献并获取其 DOI 号。这部分信息代表着期刊名称、卷号、页码、年份。
+
+![](https://gfsoso.99lb.net/wordpress/wp-content/uploads/2023/03/9-1.png)
+
+此外，也可以在谷歌学术搜索文献标题，再找到对应的文献。有时候检索结果右侧会直接出现文献 PDF 全文的下载链接，这时候不要犹豫，直接点击即可查看和下载 PDF 全文。
+
+![](https://gfsoso.99lb.net/wordpress/wp-content/uploads/2023/03/6-4.png)
+
+对于没有全文下载链接的文献，直接点击文献链接，进入出版商发布页面。如果你看到下图左下角这样的绿色的打开着的小锁图案，并在旁边写着 Open Access，这说明这篇文献是开源获取的，那么直接点击该页面上的 Get PDF 链接即可直接下载到文献全文。
+
+![](https://gfsoso.99lb.net/wordpress/wp-content/uploads/2023/03/5-4-1024x564.png)
+
+如果不是开源的，那么在这个网页上一般可以找到其 DOI 号或者含有 DOI 号的链接，DOI 号全部都是从 10. 开始的，得到 DOI 号之后就可以使用 Sci-Hub 来下载文献。
+
+《Science》等期刊的文献的 DOI 一般会直接给出来，示例如下：
+
+![](https://gfsoso.99lb.net/wordpress/wp-content/uploads/2023/03/7-4-1024x533.png)
+
+**三、****如何获取中文文献的 DOI**
+
+中文可在 ChinaDOI 网站（http://www.chinadoi.cn）、或者知网、万方、维普、百度学
+
+术等文献数据库查询。在检索网站找到文献之后，进入详情页面一般都能看到 DOI。
+
+![](https://gfsoso.99lb.net/wordpress/wp-content/uploads/2023/03/8-2.png)
+
+**四、****DOI 的格式和链接作用**
+
+1、DOI 号由前缀和后缀两部分组成，中间用 “/” 分隔。
+
+DOI 前缀由 “10.” 开头，后面大多跟着 4 位数字；DOI 后缀不限制长度和字符形式，一般由字母、数字或符号组成。真正的 DOI 必须符合上述编码规范。
+
+例如: doi:10.1016/j.acra.2006.06.04（前缀 / 后缀）
+
+前缀：  10.：DOI 在解析系统中的应用代号, 是固定的
+
+1016（4 位数字）：由 IDF 的注册机构（RA）统一分配给 DOI 注册者的
+
+后缀：注册者 (如出版商) 赋予的数字对象的内部唯一编码
+
+2、DOI 号必须在 DOI 系统中注册后才能生效，有效的 DOI 号才能有链接作用。
+
+例如，使用 DOI 的 URL 形式
+
+http://dx.doi.org/10.3773/j.issn.1005-264x.2010.01.002
+
+一般情况下，一篇投稿论文被在线发表时，在线发表的文章页面就会附上 DOI，也有部分期刊是录用后期刊就为文章申请 DOI。如果期刊发表的文章有了 DOI，当一篇文章被引用时，可通过这个 DOI 直接链接到被引用的论文上。
+
+目前，大部分学术文献都有专属的 DOI，只要知道了一篇文献的 DOI，就能够查询到该文献的作者、标题、期刊、官方链接等信息。
+
+**五、****为何有些文献查不到 DOI**
+
+并不是每篇文献都有 DOI。有些文献查不到 DOI，可能有以下原因：
+
+1、未发表的研究或纸质期刊等并未数字化的期刊上发表的文章可能没有 DOI。例如，有些未在期刊上发表的硕博学位论文就没有 DOI。或者在只有纸质媒介的期刊上发表的文章也可能没有 DOI。
+
+2、有些发表时间比较久的文献，例如 2000 年前的文献可能没有 DOI。在 DOI 成为国际出版标准之前，学术论文的编号系统不止一种，许多文章可能使用了其它非 DOI 的编号系统。
+
+3、一本期刊在互联网发表文章，但该期刊发表的有些文章却没有 DOI。这可能是因为期刊并没有给这些文章申请 DOI。
