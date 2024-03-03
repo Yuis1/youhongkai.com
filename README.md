@@ -1,9 +1,10 @@
-# Digital Obsidian Garden
-This is the template to be used together with the [Digital Garden Obsidian Plugin](https://github.com/oleeskild/Obsidian-Digital-Garden). 
-See the README in the plugin repo for information on how to set it up.
+## 游宏凯的学习笔记
+这个仓库是本人的学习笔记，请访问 [Youhongkai.com](https://youhongkai.com) 查看。  
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/oleeskild/digitalgarden)
+基于 [Digital Garden Obsidian Plugin](https://github.com/oleeskild/Obsidian-Digital-Garden) 搭建。  
+评论模块：[giscus](https://giscus.app/)  
 
----
-## Docs
-Docs are available at [dg-docs.ole.dev](https://dg-docs.ole.dev/)
+## 游鱼思工作室
+![游鱼思工作室](/logo.png "游鱼思工作室")  
+[游鱼思工作室](https://yuis.io/)
+
