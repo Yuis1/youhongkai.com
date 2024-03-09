@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/CS计算机科学/前端开发/javascript - http 请求头 referer 详解/","created":"2022-09-20T16:32:08.173+08:00","updated":"2024-03-04T02:09:06.785+08:00"}
+{"dg-publish":true,"permalink":"/CS计算机科学/前端开发/javascript - http 请求头 referer 详解/","created":"2022-09-20T16:32:08.173+08:00","updated":"2024-03-09T18:08:56.164+08:00"}
 ---
 
 ## Referer(引荐者) 请求头
