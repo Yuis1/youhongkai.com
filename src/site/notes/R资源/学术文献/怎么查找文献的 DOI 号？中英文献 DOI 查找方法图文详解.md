@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/R资源/学术文献/怎么查找文献的 DOI 号？中英文献 DOI 查找方法图文详解/","created":"2024-02-07T22:59:43.094+08:00","updated":"2024-03-04T02:09:06.780+08:00"}
+{"dg-publish":true,"permalink":"/R资源/学术文献/怎么查找文献的 DOI 号？中英文献 DOI 查找方法图文详解/","created":"2024-02-07T22:59:43.094+08:00","updated":"2024-03-09T18:08:56.968+08:00"}
 ---
 
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [gfsoso.99lb.net](https://gfsoso.99lb.net/xiangguanwenti-208.html)
@@ -10,7 +10,7 @@
 
 DOI 全称数字对象唯一标识符 (Digital Object Unique Identifier-DOI)，是一个专门用来标识数字化对象的命名系统，为数字对象提供唯一、持久的标识符。DOI 被形象地称为数字资源的条形码或身份证。无论在任何地方，用户都可以固定的、永久的链接到 DOI 的相应内容。
 
-![](https://gfsoso.99lb.net/wordpress/wp-content/uploads/2023/03/1-4.png)
+![](/img/user/Z-attach/1-4.png)
 
 **二、****如何获取外文文献的 DOI**
 
@@ -24,15 +24,15 @@ DOI 全称数字对象唯一标识符 (Digital Object Unique Identifier-DOI)，�
 
 进入网站首页，选择 Search metadata，输入标题、作者、DOI 等信息可进行搜索。（加载有时会比较慢）
 
-![](https://gfsoso.99lb.net/wordpress/wp-content/uploads/2023/03/2-4.png)
+![](/img/user/Z-attach/2-4.png)
 
 或者进入网站页面：http://www.crossref.org/guestquery，在 Search on article title 这一栏中，通过第一作者的姓氏和文章题目来查。（一定要输入正确的姓，不能输入全名）
 
-![](https://gfsoso.99lb.net/wordpress/wp-content/uploads/2023/03/3-3.png)
+![](/img/user/Z-attach/3-3.png)
 
 如下图，搜索后可以得到 DOI 的链接形式，后面的 “10.1007/BF02298091” 就是文献的 DOI。
 
-![](https://gfsoso.99lb.net/wordpress/wp-content/uploads/2023/03/4-3.png)
+![](/img/user/Z-attach/4-3.png)
 
 2、在文献数据库查找文献，再获取 DOI
 
@@ -42,21 +42,21 @@ DOI 全称数字对象唯一标识符 (Digital Object Unique Identifier-DOI)，�
 
 如果看到下图这样格式的文献信息，可以直接复制，再通过谷歌学术来检索文献并获取其 DOI 号。这部分信息代表着期刊名称、卷号、页码、年份。
 
-![](https://gfsoso.99lb.net/wordpress/wp-content/uploads/2023/03/9-1.png)
+![](/img/user/Z-attach/9-1.png)
 
 此外，也可以在谷歌学术搜索文献标题，再找到对应的文献。有时候检索结果右侧会直接出现文献 PDF 全文的下载链接，这时候不要犹豫，直接点击即可查看和下载 PDF 全文。
 
-![](https://gfsoso.99lb.net/wordpress/wp-content/uploads/2023/03/6-4.png)
+![](/img/user/Z-attach/6-4.png)
 
 对于没有全文下载链接的文献，直接点击文献链接，进入出版商发布页面。如果你看到下图左下角这样的绿色的打开着的小锁图案，并在旁边写着 Open Access，这说明这篇文献是开源获取的，那么直接点击该页面上的 Get PDF 链接即可直接下载到文献全文。
 
-![](https://gfsoso.99lb.net/wordpress/wp-content/uploads/2023/03/5-4-1024x564.png)
+![](/img/user/Z-attach/5-4-1024x564.png)
 
 如果不是开源的，那么在这个网页上一般可以找到其 DOI 号或者含有 DOI 号的链接，DOI 号全部都是从 10. 开始的，得到 DOI 号之后就可以使用 Sci-Hub 来下载文献。
 
 《Science》等期刊的文献的 DOI 一般会直接给出来，示例如下：
 
-![](https://gfsoso.99lb.net/wordpress/wp-content/uploads/2023/03/7-4-1024x533.png)
+![](/img/user/Z-attach/7-4-1024x533.png)
 
 **三、****如何获取中文文献的 DOI**
 
@@ -64,7 +64,7 @@ DOI 全称数字对象唯一标识符 (Digital Object Unique Identifier-DOI)，�
 
 术等文献数据库查询。在检索网站找到文献之后，进入详情页面一般都能看到 DOI。
 
-![](https://gfsoso.99lb.net/wordpress/wp-content/uploads/2023/03/8-2.png)
+![](/img/user/Z-attach/8-2.png)
 
 **四、****DOI 的格式和链接作用**
 
