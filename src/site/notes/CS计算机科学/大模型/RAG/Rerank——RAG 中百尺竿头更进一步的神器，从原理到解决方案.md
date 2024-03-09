@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/CS计算机科学/大模型/RAG/Rerank——RAG 中百尺竿头更进一步的神器，从原理到解决方案/","created":"2024-02-04T23:02:12.343+08:00","updated":"2024-03-04T02:09:06.784+08:00"}
+{"dg-publish":true,"permalink":"/CS计算机科学/大模型/RAG/Rerank——RAG 中百尺竿头更进一步的神器，从原理到解决方案/","created":"2024-02-04T23:02:12.343+08:00","updated":"2024-03-09T18:08:56.260+08:00"}
 ---
 
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [www.luxiangdong.com](https://www.luxiangdong.com/2023/11/06/rerank/)
