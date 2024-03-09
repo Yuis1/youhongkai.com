@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/R资源/Med/网络药理学 - 生信分析 STITCH数据库/","created":"2022-10-14T14:46:17.347+08:00","updated":"2024-03-04T02:09:06.780+08:00"}
+{"dg-publish":true,"permalink":"/R资源/Med/网络药理学 - 生信分析 STITCH数据库/","created":"2022-10-14T14:46:17.347+08:00","updated":"2024-03-09T18:08:56.922+08:00"}
 ---
 
 
@@ -7,23 +7,23 @@
 
 点击网址 http://stitch.embl.de/ 进入 STITCH 数据库主页，该数据库最早于 2008 年发布，至今更新至 5.0 版本，数据来源有，DurgBank、GLIDA、Matador、TTD 和 CTD 等人工注释数据库，KEGG、PID、Reactome 和 BioCyc 等通路数据库，以及 ChEMBL、PDSPKi 和 PDB 等实验结果数据库。当前版本收录来自 2031 个物种的 43000 个化合物和 9643763 个蛋白之间相互作用信息，并与 STRING 数据库共享蛋白交互数据。STITCH 数据库中的每个化合物与蛋白互作关系都对应一个分值，指示其相互作用概率或结合亲和力，并提供与目标药物相似的化合物及其相似分数。
 
-![](http://i0.hdslb.com/bfs/article/f88e28faa5e8a1413f567806aade7a517311a1c7.jpg@942w_438h_progressive.webp)
+![](/img/user/Z-attach/f88e28faa5e8a1413f567806aade7a517311a1c7.jpg@942w_438h_progressive.webp)
 
 点击 Help，点击侧边栏 Getting started，可见该数据详细使用指南；点击 Database，展示该数据库各种参数 / 名词含义解释。
 
-![](http://i0.hdslb.com/bfs/article/c67edd9baae90f58f89e35ddef25270ec58be06f.jpg@942w_437h_progressive.webp)
+![](/img/user/Z-attach/c67edd9baae90f58f89e35ddef25270ec58be06f.jpg@942w_437h_progressive.webp)
 
-![](http://i0.hdslb.com/bfs/article/22e1b87ce11368b8864ebe435d2ed05f75abd164.jpg@942w_339h_progressive.webp)
+![](/img/user/Z-attach/22e1b87ce11368b8864ebe435d2ed05f75abd164.jpg@942w_339h_progressive.webp)
 
 **1、Item by name**
 
 进入数据库，点击 Item by name 进行单个药物或基因检索，检索框可输入化合物或基因名称，物种可选择自动识别，以检索丁酸盐（butyrate）为例，点击 Search，勾选 butyrate，点击 Continue 得到检索结果。首先映入眼帘的是 butyrate 与基因互作关系网络图，下方是各个功能选项。
 
-![](http://i0.hdslb.com/bfs/article/3e7145b1a6f2eb60786db0e5fb89d5aef911c8ca.jpg@942w_353h_progressive.webp)
+![](/img/user/Z-attach/3e7145b1a6f2eb60786db0e5fb89d5aef911c8ca.jpg@942w_353h_progressive.webp)
 
-![](http://i0.hdslb.com/bfs/article/dd56901c718e88c27f20d117d076ad760c9743da.jpg@942w_285h_progressive.webp)
+![](/img/user/Z-attach/dd56901c718e88c27f20d117d076ad760c9743da.jpg@942w_285h_progressive.webp)
 
-![](http://i0.hdslb.com/bfs/article/b958c15e558dd63c05b3dda2023153e6077c731c.jpg@942w_551h_progressive.webp)
+![](/img/user/Z-attach/b958c15e558dd63c05b3dda2023153e6077c731c.jpg@942w_551h_progressive.webp)
 
 点击 Legend 查看网络图注释：
 
@@ -37,11 +37,11 @@
 
 （5）Your Current Organism 目录下提供当前数据所属的物种。
 
-![](http://i0.hdslb.com/bfs/article/aafed2679bb5d1688672841281663274ee9924de.jpg@942w_819h_progressive.webp)
+![](/img/user/Z-attach/aafed2679bb5d1688672841281663274ee9924de.jpg@942w_819h_progressive.webp)
 
 点击其中某个节点，如 CKD2，查看详细注释信息、结构和功能域信息，Actions 中提供 5 个功能选项，分别是以该因为核心重构网络、添加其为输入基因扩充网络、展示该基因蛋白序列和查找其他物种同源蛋白，以及该基因在 GeneCards 数据库中通路、功能和来源信息。
 
-![](http://i0.hdslb.com/bfs/article/b124db45475aacd672fc1c68ef57f2cc469f5721.jpg@942w_570h_progressive.webp)
+![](/img/user/Z-attach/b124db45475aacd672fc1c68ef57f2cc469f5721.jpg@942w_570h_progressive.webp)
 
 点击 Setting 进行个性化设置：
 
@@ -49,37 +49,37 @@
 
 （2）Advanced Setting 目录下，可选择是否显示组织特异性交互，是否显示蛋白三维结构。
 
-![](http://i0.hdslb.com/bfs/article/486dbd2eb42783361a602f04857590f1b847b296.jpg@942w_623h_progressive.webp)
+![](/img/user/Z-attach/486dbd2eb42783361a602f04857590f1b847b296.jpg@942w_623h_progressive.webp)
 
-![](http://i0.hdslb.com/bfs/article/4965dd554d1c11663b514f48be25ee909a9708be.jpg@942w_534h_progressive.webp)
+![](/img/user/Z-attach/4965dd554d1c11663b514f48be25ee909a9708be.jpg@942w_534h_progressive.webp)
 
 点击 Analysis 展示 GO/KEGG 富集分析结果，按 FDR 值从小到大排列，页面底部提供下载链接。
 
-![](http://i0.hdslb.com/bfs/article/3afe1e36751c564afe41c86fdd62cf47c08d0187.jpg@942w_809h_progressive.webp)
+![](/img/user/Z-attach/3afe1e36751c564afe41c86fdd62cf47c08d0187.jpg@942w_809h_progressive.webp)
 
 点击 Tables/Exports 查看上述交互网络结果表格形式，并提供位图、矢量图和表格数据下载，以及蛋白序列和注释信息下载。
 
-![](http://i0.hdslb.com/bfs/article/d834dfe3a0b04bfd0eac63e41570280661850f95.jpg@942w_639h_progressive.webp)
+![](/img/user/Z-attach/d834dfe3a0b04bfd0eac63e41570280661850f95.jpg@942w_639h_progressive.webp)
 
 点击 More 在当前基础上显示更多节点，点击 Less 在当前基础上显示更少节点。
 
-![](http://i0.hdslb.com/bfs/article/2927430fe2b68408799f7c282e4e797442d916d5.jpg@942w_537h_progressive.webp)
+![](/img/user/Z-attach/2927430fe2b68408799f7c282e4e797442d916d5.jpg@942w_537h_progressive.webp)
 
 上述信息为 Viewers 目录下 Network 结果。点击 Experiments，展示实验支持的 butyrate 与基因交互信息；点击 Databases，展示各种数据库来源的 butyrate 与基因交互信息；点击 Textmining，展示文献挖掘中 butyrate 与基因交互信息；点击 Coexpression，展示蛋白共表达信息。上述结果的下方功能选项基本同前。
 
-![](http://i0.hdslb.com/bfs/article/65fa2b660c7ac40dd7fbfc933dd46ed0445f6fa1.jpg@942w_281h_progressive.webp)
+![](/img/user/Z-attach/65fa2b660c7ac40dd7fbfc933dd46ed0445f6fa1.jpg@942w_281h_progressive.webp)
 
-![](http://i0.hdslb.com/bfs/article/b6f46cdb8bb6a0e93f356ca43e8cf0d3178631fc.jpg@942w_426h_progressive.webp)
+![](/img/user/Z-attach/b6f46cdb8bb6a0e93f356ca43e8cf0d3178631fc.jpg@942w_426h_progressive.webp)
 
-![](http://i0.hdslb.com/bfs/article/dd4ec6e432fa9cbb80030feaaaa3ed7c8d65438a.jpg@942w_452h_progressive.webp)
+![](/img/user/Z-attach/dd4ec6e432fa9cbb80030feaaaa3ed7c8d65438a.jpg@942w_452h_progressive.webp)
 
-![](http://i0.hdslb.com/bfs/article/1c93a3c08d03921c6e445ea0be4a44f6d4091fc8.jpg@942w_551h_progressive.webp)
+![](/img/user/Z-attach/1c93a3c08d03921c6e445ea0be4a44f6d4091fc8.jpg@942w_551h_progressive.webp)
 
-![](http://i0.hdslb.com/bfs/article/54e553fc6566a59fb111bc9ef9d0bbeebb072e16.jpg@942w_485h_progressive.webp)
+![](/img/user/Z-attach/54e553fc6566a59fb111bc9ef9d0bbeebb072e16.jpg@942w_485h_progressive.webp)
 
 接下来以检索 SOX2 基因为例，点击 Search，勾选 Homo sapiens，点击 Continue 得到检索结果，展示 SOX2 基因相关蛋白交互网络，该结果与 STRING 数据库类似，不再赘述。同样地，Protein sequence(s) 检索功能与 STRING 数据库结果类似，不再赘述。
 
-![](http://i0.hdslb.com/bfs/article/4e6e6c905b0344155e8e3b96bd584b7b00f3bbfc.jpg@942w_314h_progressive.webp)
+![](/img/user/Z-attach/4e6e6c905b0344155e8e3b96bd584b7b00f3bbfc.jpg@942w_314h_progressive.webp)
 
 **2、Multiple names**
 
@@ -113,20 +113,20 @@ Tips：SMILES（Simplified Molecular Input Line Entry System）以单行文本�
 
 **Table1 复现如下**：进入 TCMSP 数据库主页，下拉菜单选择 Herb name，检索框输入穿心莲或汉语拼音，点击 Search，结果中点击拉丁文名称 Isatidis Radix 进入详情页面。
 
-![](http://i0.hdslb.com/bfs/article/90e4b638483393b43164c7605c835bff8d1296b0.png@942w_135h_progressive.webp)
+![](/img/user/Z-attach/90e4b638483393b43164c7605c835bff8d1296b0.png@942w_135h_progressive.webp)
 
 Ingredients 部分展示穿心莲化合物成分信息，设置口服生物利用度（OB）≥30% 和药物相似性（DL）≥0.18，结果获得 24 种化合物成分。
 
-![](http://i0.hdslb.com/bfs/article/27a9106b4a636683350d329ac880fa7feaefd267.jpg@942w_303h_progressive.webp)
+![](/img/user/Z-attach/27a9106b4a636683350d329ac880fa7feaefd267.jpg@942w_303h_progressive.webp)
 
-![](http://i0.hdslb.com/bfs/article/6f831b98912613b4ace7ebb3eafb5cdd5e284f37.jpg@942w_305h_progressive.webp)
+![](/img/user/Z-attach/6f831b98912613b4ace7ebb3eafb5cdd5e284f37.jpg@942w_305h_progressive.webp)
 
-![](http://i0.hdslb.com/bfs/article/b11036647924913dd03954769c459bfd9e789fe9.jpg@942w_462h_progressive.webp)
+![](/img/user/Z-attach/b11036647924913dd03954769c459bfd9e789fe9.jpg@942w_462h_progressive.webp)
 
 分别摘录 Molecular name、OB (%)、DL 和 Degree of node in network，点击化合物名称下载 Structure，整理即可得到本文 Table1。
 
-![](http://i0.hdslb.com/bfs/article/bc74417da26e8ed85e5b579f5a6cffc5f2a9cce9.jpg@942w_189h_progressive.webp)
+![](/img/user/Z-attach/bc74417da26e8ed85e5b579f5a6cffc5f2a9cce9.jpg@942w_189h_progressive.webp)
 
-![](http://i0.hdslb.com/bfs/article/8747352c622e1e549c1cc62e12d44341091611af.jpg@942w_230h_progressive.webp)
+![](/img/user/Z-attach/8747352c622e1e549c1cc62e12d44341091611af.jpg@942w_230h_progressive.webp)
 
 更多文献案例可以参考：PMID 34040346、33995004 和 33986915，小伙伴么可以自行安排学习和复哈~！
