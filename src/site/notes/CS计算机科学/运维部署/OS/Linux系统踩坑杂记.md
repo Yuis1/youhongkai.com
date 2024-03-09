@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/CS计算机科学/运维部署/OS/Linux系统踩坑杂记/","created":"2024-01-05T05:25:47.685+08:00","updated":"2024-03-04T02:09:22.473+08:00"}
+{"dg-publish":true,"permalink":"/CS计算机科学/运维部署/OS/Linux系统踩坑杂记/","created":"2024-01-05T05:25:47.685+08:00","updated":"2024-03-09T18:08:56.612+08:00"}
 ---
 
 ## CentOS 的麻烦事
