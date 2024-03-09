@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/CS计算机科学/Drupal/Drupal多站点/","created":"2024-03-04T00:17:44.729+08:00","updated":"2024-03-04T02:09:06.791+08:00"}
+{"dg-publish":true,"permalink":"/CS计算机科学/Drupal/Drupal多站点/","tags":["Drupal"],"created":"2024-03-04T00:17:44.729+08:00","updated":"2024-03-09T18:08:56.115+08:00"}
 ---
 
 
