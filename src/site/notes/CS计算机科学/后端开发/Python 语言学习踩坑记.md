@@ -1,13 +1,16 @@
 ---
-{"dg-publish":true,"permalink":"/CS计算机科学/后端开发/Python 语言学习踩坑记/","created":"2024-01-04T22:30:34.083+08:00","updated":"2024-03-04T23:35:39.302+08:00"}
+{"dg-publish":true,"permalink":"/CS计算机科学/后端开发/Python 语言学习踩坑记/","created":"2024-01-04T22:30:34.083+08:00","updated":"2024-03-09T18:08:56.230+08:00"}
 ---
 
 ## Linux环境
 
 停止使用CentOS，因为马上停止支持了。用Ubuntu吧。  
 并且安装的各种系统包版本也较低，比如 openssl 、Python3
+
 Tortoise-ORM requires Python >= 3.7
+
 而 python3.11需要的openssl的版本为1.1.x及以上
+
 低于 Python 3.7 的，或者 openssl 没有 1.1.x以上的，各种报错无法运行。  
 因为这个浪费了N多时间。  
 
