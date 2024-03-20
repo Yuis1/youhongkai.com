@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/CS计算机科学/Drupal/Drupal 10 模块开发/","created":"2024-01-14T22:26:39.903+08:00","updated":"2024-03-09T18:08:56.111+08:00"}
+{"dg-publish":true,"permalink":"/CS计算机科学/Drupal/Drupal 10 模块开发/","created":"2024-01-14T22:26:39.903+08:00","updated":"2024-03-19T15:48:41.671+08:00"}
 ---
 
 # Drupal 10 模块开发
