@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/CS计算机科学/后端开发/composer/","tags":["PHP"],"created":"2024-03-04T00:23:08.920+08:00","updated":"2024-03-09T18:08:56.234+08:00"}
+{"dg-publish":true,"permalink":"/CS计算机科学/后端开发/composer/","tags":["PHP"],"created":"2024-03-04T00:23:08.920+08:00","updated":"2024-03-18T19:09:43.100+08:00"}
 ---
 
 
@@ -7,14 +7,54 @@
 
 [composer的基本使用和常见报错解决-阿里云开发者社区](https://developer.aliyun.com/article/809078)
 
-全局切换国内镜像  
-阿里云composer config -g repo.packagist composer [https://mirrors.aliyun.com/composer/](https://mirrors.aliyun.com/composer/)# 中国全量镜像composer config -g repo.packagist composer [https://packagist.phpcomposer.com](https://packagist.phpcomposer.com)# 取消全局配置composer config -g --unset repos.packagist  
+```shell
+# 全局切换国内镜像
+# 阿里云
+composer config -g repo.packagist composer https://mirrors.aliyun.com/composer/
+# 中国全量镜像
+composer config -g repo.packagist composer https://packagist.phpcomposer.com
+# 取消全局配置
+composer config -g --unset repos.packagist
+# 当前工程切换配置
+composer config repo.packagist composer https://mirrors.aliyun.com/composer/
+# 取消当前工程配置
+composer config --unset repos.packagist
+# 清除缓存
+composer clear
 
-  
+# 安装依赖包
+composer install
+# 安装依赖
+composer require monolog/monolog
+# 更新所有依赖
+composer update
+# 移除一个包及其依赖
+composer remove monolog/monolog
+# 列出所有已经安装的包
+composer show
+```
 
-当前工程切换配置composer config repo.packagist composer [https://mirrors.aliyun.com/composer/](https://mirrors.aliyun.com/composer/)# 取消当前工程配置composer config --unset repos.packagist  
 
-  
+## 疑难杂症
+### composer 无法安装Drupal
+
+Could not find package drupal/recommended-project with stability stable.  
+
+$ composer show drupal/recommended-project --all
+
+No composer.json found in the current directory, showing available packages from packagist.org In ShowCommand.php line 324: Package "drupal/recommended-project" not found.
+
+解决办法：composer config -g --unset repos.packagist
+
+### 无法检测root包版本
+
+Composer could not detect the root package (drupal/recommended-project) version, defaulting to '1.0.0'. See https://getcomposer.org/root-version
+
+不会影响包的安装等操作，除非将来要基于composer发行。
+
+参考： [Root cause of 'could not detect the root package'? | Drupal.org](https://www.drupal.org/forum/support/composer/2024-03-13/root-cause-of-could-not-detect-the-root-package#comment-15492262)
+
+### 其它
 
 清除缓存:
 
