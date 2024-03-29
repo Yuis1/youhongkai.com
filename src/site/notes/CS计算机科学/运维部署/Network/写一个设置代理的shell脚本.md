@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/CS计算机科学/运维部署/Network/写一个设置代理的shell脚本/","created":"2024-03-04T00:41:54.855+08:00","updated":"2024-03-09T18:08:56.566+08:00"}
+{"dg-publish":true,"permalink":"/CS计算机科学/运维部署/Network/写一个设置代理的shell脚本/","created":"2024-03-04T00:41:54.855+08:00","updated":"2024-03-24T17:27:25.255+08:00"}
 ---
 
 
