@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/CS计算机科学/前端开发/Json 查询语法/","created":"2024-03-20T15:05:14.665+08:00","updated":"2024-03-20T15:07:01.509+08:00"}
+{"dg-publish":true,"permalink":"/CS计算机科学/前端开发/Json 查询语法/","created":"2024-03-20T15:05:14.665+08:00","updated":"2024-03-21T09:31:38.406+08:00"}
 ---
 
 ## JSONPath
@@ -14,6 +14,8 @@
 - `$.store.book[?(@.price < 10)]`：表示查找价格低于 10 的所有书籍。
 
 JSON & JSON Lines parser 是用于解析 JSON 数据和 JSON Lines 格式的工具或库。JSON (JavaScript Object Notation) 是一种常见的数据交换格式，用于在不同系统之间传输和存储数据。JSON 格式简洁清晰，易于阅读和编写，因此在 Web 开发和 API 设计中广泛应用。
+
+在Drupal Feeds模块的Context定义中，需要用到这种语法。例如：[Setting Context for Extendable feeds | Feeds extensible parsers | Drupal Wiki guide on Drupal.org](https://www.drupal.org/node/3227985)
 
 ## JSON Lines
 
