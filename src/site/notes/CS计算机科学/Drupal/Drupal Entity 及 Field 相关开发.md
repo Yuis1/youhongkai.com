@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/CS计算机科学/Drupal/Drupal Entity 及 Field 相关开发/","created":"2024-03-20T18:57:52.951+08:00","updated":"2024-03-21T00:22:21.972+08:00"}
+{"dg-publish":true,"permalink":"/CS计算机科学/Drupal/Drupal Entity 及 Field 相关开发/","created":"2024-03-20T18:57:52.951+08:00","updated":"2024-03-21T09:11:42.091+08:00"}
 ---
 
 ## 字段校验
@@ -33,4 +33,5 @@ Allows for fields to be populated through the use of PHP code, including other
 如果有这个功夫，我自己写个完整的模块不香吗？为什么要去开个模块写一个代码片段？
 
 ### [Field Token Value](https://www.drupal.org/project/field_token_value)
+
 通过在字段中插入Token来自定义内容。
