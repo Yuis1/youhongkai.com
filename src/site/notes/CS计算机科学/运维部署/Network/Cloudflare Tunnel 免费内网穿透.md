@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/CS计算机科学/运维部署/Network/Cloudflare Tunnel 免费内网穿透/","created":"2024-02-03T17:47:59.631+08:00","updated":"2024-03-09T18:08:56.551+08:00"}
+{"dg-publish":true,"permalink":"/CS计算机科学/运维部署/Network/Cloudflare Tunnel 免费内网穿透/","created":"2024-02-03T17:47:59.631+08:00","updated":"2024-03-24T17:27:22.539+08:00"}
 ---
 
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [ednovas.xyz](https://ednovas.xyz/2023/02/24/cloudflaretunnel/#%E5%86%99%E5%9C%A8%E6%9C%80%E5%90%8E)
