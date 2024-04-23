@@ -1,7 +1,11 @@
 ---
-{"dg-publish":true,"permalink":"/CS计算机科学/大模型/RAG/semanticscholar专题/","created":"2024-02-07T16:32:58.433+08:00","updated":"2024-03-09T18:08:56.281+08:00"}
+{"dg-publish":true,"permalink":"/CS计算机科学/大模型/RAG/semanticscholar专题/","created":"2024-02-07T16:32:58.433+08:00","updated":"2024-04-24T00:06:09.980+08:00"}
 ---
 
+
+作者：游鱼思
+
+---
 ## 简介
 
 https://www.semanticscholar.org/
