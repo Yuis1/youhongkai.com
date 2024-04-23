@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/CS计算机科学/Drupal/数据交互/Drupal8 网站的 API 接口调用与权限控制/","created":"2024-03-24T16:57:04.000+08:00","updated":"2024-03-25T09:05:31.392+08:00"}
+{"dg-publish":true,"permalink":"/CS计算机科学/Drupal/数据交互/Drupal8 网站的 API 接口调用与权限控制/","created":"2024-03-24T16:57:04.000+08:00","updated":"2024-04-01T12:06:39.108+08:00"}
 ---
 
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [juejin.cn](https://juejin.cn/post/6844904190657953800)
@@ -37,7 +37,7 @@
 ```
 composer require drush/drush
 ```
-
+配置 drush 命令目录到 $PATH 中。
 安装 devel 模块生成测试文章内容
 -------------------
 
