@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/CS计算机科学/后端开发/Python 3 异步编程/","tags":["Python"],"created":"2024-01-06T21:33:39.454+08:00","updated":"2024-03-16T08:32:26.913+08:00"}
+{"dg-publish":true,"permalink":"/CS计算机科学/后端开发/Python 3 异步编程/","tags":["Python"],"created":"2024-01-06T21:33:39.454+08:00","updated":"2024-04-02T10:01:19.268+08:00"}
 ---
 
 # Python 3 异步编程
@@ -215,6 +215,59 @@ thread.start()
 
 在这个例子中，我们在一个新的线程中运行了asyncio事件循环，并在这个事件循环中运行了一个协程。  
 
+在Python中，使用`asyncio`库进行异步编程时，事件循环（Event Loop）是核心概念之一。事件循环负责管理和分发程序中的各种事件，以及在异步程序中调度协程的执行。当你使用`asyncio.get_event_loop()`和`loop.run_until_complete(main())`时，你实际上是在设置和启动一个事件循环来运行你的异步代码。让我们一步步详细解释这个过程。
+
+### `asyncio.get_event_loop()`
+
+- `asyncio.get_event_loop()`函数用于获取当前上下文中的事件循环。
+- 如果当前上下文没有事件循环，且在一个主线程中调用，它将创建一个新的事件循环并返回。
+- 在子线程中调用时，如果没有已经运行的事件循环，它会抛出一个异常，因为默认情况下子线程不会自动创建事件循环。
+
+### `loop.run_until_complete(main())`
+
+- `loop.run_until_complete(future)`是一个阻塞（blocking）调用，用于运行传入的`future`对象，直到它完成。
+- `future`对象可以是一个`asyncio.Future`对象或者是一个通过`async def`定义的协程对象。
+- 在这个调用中，`main()`是一个协程。`run_until_complete`方法将会运行事件循环，直到`main()`协程执行完成。在此期间，事件循环会自动处理所有排队的异步任务和回调。
+- 一旦`main()`协程完成，`run_until_complete`方法将返回协程的结果，并停止事件循环。
+- 如果在`main()`协程执行期间发生了未被处理的异常，它将被抛出到`run_until_complete`方法外部。
+
+### 示例解释
+
+考虑以下代码：
+
+```python
+import asyncio
+
+async def main():
+    # 异步代码或协程调用
+    pass
+
+loop = asyncio.get_event_loop()
+loop.run_until_complete(main())
+```
+
+在这段代码中：
+
+- 首先，通过`asyncio.get_event_loop()`获取当前线程的事件循环。
+- 然后，使用该事件循环的`run_until_complete`方法来运行`main`协程。
+- 这个调用会一直阻塞，直到`main()`协程执行完毕。在此期间，事件循环会处理其他异步操作，比如I/O事件、其他协程的调度等。
+
+### 注意
+
+从Python 3.7开始，可以直接使用`asyncio.run(coroutine())`作为启动新异步程序的首选方法，因为它更简洁，自动创建和关闭事件循环，减少了样板代码。例如：
+
+```python
+import asyncio
+
+async def main():
+    # 异步代码或协程调用
+    pass
+
+asyncio.run(main())
+```
+
+`asyncio.run(main())`是一个高级API，用于运行最高级别的入口点“main”协程，并自动管理事件循环的生命周期。在大多数情况下，推荐使用`asyncio.run()`，除非你需要更细粒度的控制事件循环，或者在老版本的Python中（3.7以下），你必须手动管理事件循环。
+
 ## 新线程中运行 asyncio.run() 的坑
 
 asyncio.run() 是一个阻塞操作，它会运行传入的协程，直到该协程完成。如果你的 start_ws_own_listener(ws_own_url) 协程永远不会结束（例如，它包含一个无限循环），那么 asyncio.run() 将永远不会返回，后面的代码将不会执行。
@@ -231,7 +284,7 @@ loop.run_until_complete(coro): 这个方法会运行传入的协程，然后等�
 
 loop.create_task(coro): 这个方法会将传入的协程包装成一个Task（也就是一个Future对象），然后将这个Task添加到事件循环中。这个Task会在事件循环运行的过程中被调度和执行。这个方法不会运行事件循环，你需要自己手动运行事件循环（例如通过调用loop.run_forever()）。
 
-loop.run_forever(): 这个方法会启动事件循环，让它一直运行下去，直到loop.stop()被调用。在事件循环运行的过程中，它会自动调度和执行事件循环中的所有Task。
+loop.run_forever(): 这个方法会启动事件循环，让它一直运行下去，直到loop.stop()被调用。在事件循环运行的过程中，它会自动调度和执行事件循环中的所有Task。- 协程任务将执行其逻辑，然后完成，不会自动重复执行。**回调函数**: 你可以通过`loop.call_soon()`、`loop.call_later()`、`loop.call_at()`等方法提交回调函数给事件循环。这些回调函数在被调用后也不会自动重复执行。
 
 loop.stop(): 这个方法会停止事件循环。当事件循环正在运行时（例如在loop.run_forever()中），你可以调用这个方法来停止事件循环。这个方法不会立即停止事件循环，而是会在当前的迭代结束后停止事件循环。这意味着在调用loop.stop()后，事件循环可能还会运行一段时间，直到当前的迭代结束。
 
