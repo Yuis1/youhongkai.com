@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/CS计算机科学/Drupal/数据交互/Drupal 对外提供API/","tags":["Drupal","API"],"created":"2024-03-19T15:09:10.702+08:00","updated":"2024-03-27T18:03:49.092+08:00"}
+{"dg-publish":true,"permalink":"/CS计算机科学/Drupal/数据交互/Drupal 对外提供API/","tags":["Drupal","API"],"created":"2024-03-19T15:09:10.702+08:00","updated":"2024-04-23T23:51:05.956+08:00"}
 ---
 
 
