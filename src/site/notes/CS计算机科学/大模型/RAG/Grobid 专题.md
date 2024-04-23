@@ -1,8 +1,11 @@
 ---
-{"dg-publish":true,"permalink":"/CS计算机科学/大模型/RAG/Grobid 专题/","created":"2024-01-30T20:56:31.809+08:00","updated":"2024-03-09T18:08:56.249+08:00"}
+{"dg-publish":true,"permalink":"/CS计算机科学/大模型/RAG/Grobid 专题/","created":"2024-01-30T20:56:31.809+08:00","updated":"2024-04-24T00:07:26.046+08:00"}
 ---
 
-# grobid 专题
+
+作者：游鱼思
+
+---
 
 Demo: https://kermitt2-grobid.hf.space/
 
