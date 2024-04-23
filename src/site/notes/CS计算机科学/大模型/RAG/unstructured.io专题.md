@@ -1,7 +1,11 @@
 ---
-{"dg-publish":true,"permalink":"/CS计算机科学/大模型/RAG/unstructured.io专题/","created":"2024-02-08T17:52:57.823+08:00","updated":"2024-03-09T18:08:56.294+08:00"}
+{"dg-publish":true,"permalink":"/CS计算机科学/大模型/RAG/unstructured.io专题/","created":"2024-02-08T17:52:57.823+08:00","updated":"2024-04-24T00:05:56.362+08:00"}
 ---
 
+
+作者：游鱼思
+
+---
 # unstructured.io
 
 ## 简介
