@@ -1,6 +1,9 @@
 ---
-{"dg-publish":true,"permalink":"/CS计算机科学/机器学习/Softmax 的相关知识总结/","created":"2022-06-05T14:14:48.574+08:00","updated":"2024-03-09T18:08:56.463+08:00"}
+{"dg-publish":true,"permalink":"/CS计算机科学/机器学习/Softmax 的相关知识总结/","created":"2022-06-05T14:14:48.574+08:00","updated":"2024-04-24T00:24:39.612+08:00"}
 ---
+
+
+原文： https://zhuanlan.zhihu.com/p/406751969
 
 ## **Softmax 函数**
 
