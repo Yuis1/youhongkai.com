@@ -1,7 +1,11 @@
 ---
-{"dg-publish":true,"permalink":"/CS计算机科学/大模型/LlamaIndex 学习笔记/","tags":["LLM","RAG"],"created":"2024-02-04T10:09:30.582+08:00","updated":"2024-03-11T15:38:33.016+08:00"}
+{"dg-publish":true,"permalink":"/CS计算机科学/大模型/LlamaIndex 学习笔记/","tags":["LLM","RAG"],"created":"2024-02-04T10:09:30.582+08:00","updated":"2024-04-24T00:08:04.711+08:00"}
 ---
 
+
+作者：游鱼思
+
+---
 
 Llama Index 专注于RAG环节。  
 
