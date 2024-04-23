@@ -1,8 +1,9 @@
 ---
-{"dg-publish":true,"permalink":"/CS计算机科学/大模型/RAG/全面指南 —用 python 提取 PDF 中各类文本内容的方法/","created":"2024-02-04T23:10:14.242+08:00","updated":"2024-03-09T18:08:56.299+08:00"}
+{"dg-publish":true,"permalink":"/CS计算机科学/大模型/RAG/全面指南 —用 python 提取 PDF 中各类文本内容的方法/","created":"2024-02-04T23:10:14.242+08:00","updated":"2024-04-24T00:03:55.351+08:00"}
 ---
 
-> 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [www.luxiangdong.com](https://www.luxiangdong.com/2023/10/05/extract/)
+
+原文地址 [www.luxiangdong.com](https://www.luxiangdong.com/2023/10/05/extract/)
 
 > 80 后，退役码农，非专业产品经理
 
