@@ -1,8 +1,9 @@
 ---
-{"dg-publish":true,"permalink":"/CS计算机科学/大模型/RAG/RAG 应用之 LlamaIndex——介绍各种索引及优缺点 /","created":"2024-02-04T22:53:40.027+08:00","updated":"2024-03-09T18:08:56.253+08:00"}
+{"dg-publish":true,"permalink":"/CS计算机科学/大模型/RAG/RAG 应用之 LlamaIndex——介绍各种索引及优缺点 /","created":"2024-02-04T22:53:40.027+08:00","updated":"2024-04-24T00:06:26.765+08:00"}
 ---
 
-> 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [www.luxiangdong.com](https://www.luxiangdong.com/2023/10/11/llamaindex-1/)
+
+原文地址 [www.luxiangdong.com](https://www.luxiangdong.com/2023/10/11/llamaindex-1/)
 
 > 80 后，退役码农，非专业产品经理
 
