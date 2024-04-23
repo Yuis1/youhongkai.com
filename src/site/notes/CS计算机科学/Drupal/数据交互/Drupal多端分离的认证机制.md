@@ -1,7 +1,11 @@
 ---
-{"dg-publish":true,"permalink":"/CS计算机科学/Drupal/数据交互/Drupal多端分离的认证机制/","tags":["JWT"],"created":"2024-03-23T08:45:35.236+08:00","updated":"2024-03-24T20:45:55.458+08:00"}
+{"dg-publish":true,"permalink":"/CS计算机科学/Drupal/数据交互/Drupal多端分离的认证机制/","tags":["JWT"],"created":"2024-03-23T08:45:35.236+08:00","updated":"2024-04-23T23:01:36.714+08:00"}
 ---
 
+
+作者: 游鱼思
+
+---
 ## 问题描述
 
 前端：使用react或vue，用户在此登录。
