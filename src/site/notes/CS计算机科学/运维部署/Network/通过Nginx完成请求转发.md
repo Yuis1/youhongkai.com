@@ -1,10 +1,14 @@
 ---
-{"dg-publish":true,"permalink":"/CS计算机科学/运维部署/Network/通过Nginx完成请求转发/","created":"2024-03-24T12:03:52.131+08:00","updated":"2024-03-24T16:57:11.267+08:00"}
+{"dg-publish":true,"permalink":"/CS计算机科学/运维部署/Network/通过Nginx完成请求转发/","created":"2024-03-24T12:03:52.131+08:00","updated":"2024-04-24T00:31:17.835+08:00"}
 ---
 
+
+作者：游鱼思
+
+---
 ## 问题描述
 
-我需要建立一个代理服务器，进行特定接口的转发。例如，客户端请求 https://example.com/priapi/v5/ecotrade/public/trade-data 时，我的服务器会把请求转发到 https://www.okx.com/priapi/v5/ecotrade/public/trade-data
+建立一个代理服务器，进行特定接口的转发。例如，客户端请求 https://example.com/priapi/v5/ecotrade/public/trade-data 时，我的服务器会把请求转发到 https://www.okx.com/priapi/v5/ecotrade/public/trade-data
 
 通过Nginx配置完成请求的转发是一个非常常见且有效的方法。Nginx作为一个高性能的HTTP和反向代理服务器，能够处理这种代理和请求转发的需求。以下是一个基本的Nginx配置示例，演示如何将客户端对`https://example.com/priapi/v5/ecotrade/public/trade-data`的请求转发到`https://www.okx.com/priapi/v5/ecotrade/public/trade-data`。
 
