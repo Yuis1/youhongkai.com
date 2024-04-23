@@ -1,8 +1,7 @@
 ---
-{"dg-publish":true,"permalink":"/CS计算机科学/运维部署/Git学习/","created":"2024-03-03T20:05:24.135+08:00","updated":"2024-03-09T18:08:56.546+08:00"}
+{"dg-publish":true,"permalink":"/CS计算机科学/运维部署/Git学习/","created":"2024-03-03T20:05:24.135+08:00","updated":"2024-04-24T00:39:24.761+08:00"}
 ---
 
-# Git学习
 
 ## Github的坑
 
