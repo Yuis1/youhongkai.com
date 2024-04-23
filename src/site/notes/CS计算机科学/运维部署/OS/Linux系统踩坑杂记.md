@@ -1,7 +1,11 @@
 ---
-{"dg-publish":true,"permalink":"/CS计算机科学/运维部署/OS/Linux系统踩坑杂记/","created":"2024-01-05T05:25:47.685+08:00","updated":"2024-03-09T18:08:56.612+08:00"}
+{"dg-publish":true,"permalink":"/CS计算机科学/运维部署/OS/Linux系统踩坑杂记/","created":"2024-01-05T05:25:47.685+08:00","updated":"2024-04-24T00:38:30.093+08:00"}
 ---
 
+
+作者：游鱼思
+
+---
 ## CentOS 的麻烦事
 
 在CentOS 7下，如果yum install php-devel php-pear ，只会默认给你安装5.4版本的，配合宝塔真是乱上加乱。
