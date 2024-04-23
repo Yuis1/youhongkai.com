@@ -1,7 +1,11 @@
 ---
-{"dg-publish":true,"permalink":"/CS计算机科学/Drupal/数据交互/Drupal数据接入及采集/","tags":["Drupal"],"created":"2024-03-04T00:16:32.726+08:00","updated":"2024-03-24T13:38:04.864+08:00"}
+{"dg-publish":true,"permalink":"/CS计算机科学/Drupal/数据交互/Drupal数据接入及采集/","tags":["Drupal"],"created":"2024-03-04T00:16:32.726+08:00","updated":"2024-04-23T23:01:30.413+08:00"}
 ---
 
+
+作者: 游鱼思
+
+---
 ## 模块对比
 
 在Drupal中，如果你想对接外部API以引入外部数据源作为内容类型或实体（entity），有几个模块可以帮助你实现这一功能。以下是一些主要的模块和工具：
