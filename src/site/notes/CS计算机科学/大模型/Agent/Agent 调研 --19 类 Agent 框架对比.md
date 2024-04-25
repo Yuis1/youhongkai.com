@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/CS计算机科学/大模型/Agent/Agent 调研 --19 类 Agent 框架对比/","created":"2024-04-12T09:57:55.648+08:00","updated":"2024-04-23T23:35:25.370+08:00"}
+{"dg-publish":true,"permalink":"/CS计算机科学/大模型/Agent/Agent 调研 --19 类 Agent 框架对比/","created":"2024-04-17T15:20:05.000+08:00","updated":"2024-04-23T23:35:25.000+08:00"}
 ---
 
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/rogMCoS1zDN0mAAC5EKhFQ)
