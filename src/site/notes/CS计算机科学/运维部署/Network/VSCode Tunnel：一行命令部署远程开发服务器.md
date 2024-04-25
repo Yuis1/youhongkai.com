@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/CS计算机科学/运维部署/Network/VSCode Tunnel：一行命令部署远程开发服务器/","created":"2024-04-20T15:32:28.000+08:00","updated":"2024-04-24T00:35:40.893+08:00"}
+{"dg-publish":true,"permalink":"/CS计算机科学/运维部署/Network/VSCode Tunnel：一行命令部署远程开发服务器/","created":"2024-04-14T23:08:30.250+08:00","updated":"2024-04-24T00:35:40.000+08:00"}
 ---
 
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [blog.vpslog.org](https://blog.vpslog.org/blog/vscodetunnel/)
