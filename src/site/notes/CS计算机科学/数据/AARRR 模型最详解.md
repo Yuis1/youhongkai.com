@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/CS计算机科学/数据/AARRR 模型最详解/","created":"2024-04-17T15:17:57.000+08:00","updated":"2024-03-22T14:44:59.000+08:00"}
+{"dg-publish":true,"permalink":"/CS计算机科学/数据/AARRR 模型最详解/","noteIcon":"","created":"2024-04-17T15:17:57.000+08:00","updated":"2024-04-27T01:22:17.799+08:00"}
 ---
 
 ### **什么是 AARRR 模型？**
@@ -8,7 +8,7 @@ AARRR 模型因其掠夺式的增长方式也被称为**_海盗模型、海盗�
 
 AARRR 是 Acquisition、Activation、Retention、Revenue、Referral，五个单词的缩写，分别对应用户生命周期中的 5 个阶段。
 
-![](https://pic3.zhimg.com/v2-2c107e75c0b7f8784f540c755011c1ce_r.jpg)
+![](/img/user/Z-attach/v2-2c107e75c0b7f8784f540c755011c1ce_r.jpg)
 
 ### 什么是增长黑客 (Growth hacker)？
 
@@ -26,9 +26,9 @@ AARRR 是 Acquisition、Activation、Retention、Revenue、Referral，五个单�
 
 **推荐传播（Referral）：**用户通过你的产品，推荐引导他人来使用你的产品
 
-![](https://pic1.zhimg.com/v2-35865e7558b3abc109f14b713d15ffd4_r.jpg)
+![](/img/user/Z-attach/v2-35865e7558b3abc109f14b713d15ffd4_r.jpg)
 
-![](https://pic3.zhimg.com/v2-d7629ffc44a94799d82c0d7f6fc6b00a_r.jpg)
+![](/img/user/Z-attach/v2-d7629ffc44a94799d82c0d7f6fc6b00a_r.jpg)
 
 ### **一、获取**
 
@@ -126,15 +126,15 @@ K 因子的计算公式不算复杂，过程如下：K=（每个用户向他的�
 
 绝大部分 APP 还不能完全依赖于自传播，还必须和其他营销方式结合。但是，在产品设计阶段就加入有利于自传播的功能，还是有必要的，毕竟这种免费的推广方式可以部分地减少 CAC（用户获取成本）。
 
-![](https://pic4.zhimg.com/v2-8db194b71be5458d8a55559dc82a8eef_r.jpg)
+![](/img/user/Z-attach/v2-8db194b71be5458d8a55559dc82a8eef_r.jpg)
 
-![](https://pic2.zhimg.com/v2-f58f1c49347cc6ed06d64995814e8c05_r.jpg)
+![](/img/user/Z-attach/v2-f58f1c49347cc6ed06d64995814e8c05_r.jpg)
 
 ### RARRA 模型 - 海盗模型的进化
 
 2019 年，托马斯 · 佩蒂特（Thomas Petit）和贾博 · 帕普（Gabor Papp）提出 RARRA 模型，它是对**海盗指标 - AARRR 模型的优化，可以说是一个反向漏斗的模型**。 它强调通过运营核心用户实现用户留存，先获取用户本身的价值，再通过用户去帮我们转化新的用户扩宽市场。 RARRA 模型突出了用户留存的重要性，不再一味关注用户增长；由此企业由野蛮的用户增长时代开始进入用户的精细化运营时代。
 
-![](https://pic2.zhimg.com/v2-a7ba64c38fa2d463bca1bccddeb401ad_r.jpg)
+![](/img/user/Z-attach/v2-a7ba64c38fa2d463bca1bccddeb401ad_r.jpg)
 
 AARRR 最开始关注的是如何获取用户，所以 AARRR 关注的首要指标是获客用户数，而 **RARRA 通过最重要的指标来关注增长：用户留存。**RARRA 的数据模型，本质上是在 AARRR 的基础上进行顺序调整得到，**以满足日益获客成本所带来的压力成本。**RARRA 模型相比与 AARRR 可以使得获客成本更低。RARRAR 首先关注的是产品的留存情况。当产品的留存情况不好，要优化产品的使用体验、功能和运营方式。当这三方面都得到优化提升，接下来就进提供用户的活跃度，以及商业化方面的尝试，等到这些都做好了，就大规模的推广产品关注获客数据指标。
 
