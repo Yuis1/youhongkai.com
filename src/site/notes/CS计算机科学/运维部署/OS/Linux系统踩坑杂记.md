@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/CS计算机科学/运维部署/OS/Linux系统踩坑杂记/","created":"2024-04-17T15:20:03.000+08:00","updated":"2024-04-24T00:38:30.000+08:00"}
+{"dg-publish":true,"permalink":"/CS计算机科学/运维部署/OS/Linux系统踩坑杂记/","noteIcon":"","created":"2024-04-17T15:20:03.000+08:00","updated":"2024-04-24T00:38:30.000+08:00"}
 ---
 
 
