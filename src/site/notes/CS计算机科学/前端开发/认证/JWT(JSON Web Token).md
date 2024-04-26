@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/CS计算机科学/前端开发/认证/JWT(JSON Web Token)/","created":"2024-04-17T15:20:03.000+08:00","updated":"2024-04-23T23:56:31.000+08:00"}
+{"dg-publish":true,"permalink":"/CS计算机科学/前端开发/认证/JWT(JSON Web Token)/","noteIcon":"","created":"2024-04-17T15:20:03.000+08:00","updated":"2024-04-23T23:56:31.000+08:00"}
 ---
 
 
