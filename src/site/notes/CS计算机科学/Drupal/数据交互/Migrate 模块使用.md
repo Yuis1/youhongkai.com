@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/CS计算机科学/Drupal/数据交互/Migrate 模块使用/","created":"2024-04-17T15:19:52.000+08:00","updated":"2024-04-23T23:05:11.000+08:00"}
+{"dg-publish":true,"permalink":"/CS计算机科学/Drupal/数据交互/Migrate 模块使用/","noteIcon":"","created":"2024-04-17T15:19:52.000+08:00","updated":"2024-04-23T23:05:11.000+08:00"}
 ---
 
 
