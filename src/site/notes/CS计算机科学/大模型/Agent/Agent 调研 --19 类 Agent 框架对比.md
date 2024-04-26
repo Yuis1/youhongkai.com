@@ -1,16 +1,14 @@
 ---
-{"dg-publish":true,"permalink":"/CS计算机科学/大模型/Agent/Agent 调研 --19 类 Agent 框架对比/","created":"2024-04-17T15:20:05.000+08:00","updated":"2024-04-23T23:35:25.000+08:00"}
+{"dg-publish":true,"permalink":"/CS计算机科学/大模型/Agent/Agent 调研 --19 类 Agent 框架对比/","noteIcon":"","created":"2024-04-17T15:20:05.000+08:00","updated":"2024-04-27T01:22:45.304+08:00"}
 ---
 
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/rogMCoS1zDN0mAAC5EKhFQ)
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/33P2FdAnju9cLcib00YV66gYq2V6Fhm7YTHlzZdFwfnCtxyBCvgiaicG65n8du0mUYunHZIaBKohjsBxA4sgrPSjQ/640?wx_fmt=gif&wxfrom=5&wx_lazy=1&tp=webp)  
+
 
 代理（Agent）指能自主感知环境并采取行动实现目标的智能体，即 AI 作为一个人或一个组织的代表，进行某种特定行为和交易，降低一个人或组织的工作复杂程度，减少工作量和沟通成本。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/33P2FdAnju8X1wEorjS3bDLnHiar4vtV5RkRoYd65guD5FtbNgFoz71Fzyp1yc7WklYCvES93U4NELnJf4lFzgw/640?wx_fmt=other&wxfrom=5&wx_lazy=1&wx_co=1&tp=webp)
 
-背景
 
 目前，我们在探索 Agent 的应用方向，借此机会调研学习了一下现在主流的 Agent 框架，这篇文章也是我们调研过程的记录。
 
@@ -18,7 +16,7 @@
 
 截止至今日，开源的 Agent 应用可以说是百花齐放，文章也是挑选了热度和讨论度较高的 19 类 Agent，基本能覆盖主流的 Agent 框架，每个类型都做了一个简单的 summary、作为一个参考供大家学习。
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/33P2FdAnjuicCxPP0TdkphlY7Jibm2gALKV9495MGMicl9PxBUKDicoEPdNIqCvQTjro4H33ic4gtibrqzibVZO5sMDkQ/640?wx_fmt=jpeg&from=appmsg)
+![](/img/user/Z-attach/640-9.jpg)
 
 图片来源：https://github.com/e2b-dev/awesome-ai-agents
 
@@ -37,11 +35,11 @@ Agent 的核心决策逻辑是让 LLM 根据动态变化的环境信息选择执
 
 其中，Policy 是 Agent 做出 Action 的核心决策，而行动又通过观察（Observation）成为进一步 Perception 的前提和基础，形成自主地闭环学习过程。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/33P2FdAnjuicCxPP0TdkphlY7Jibm2gALKl9aAtDWvH3kiaic5dN3GA54sFoXiap1fy0s5glWFCcwPeMdUIG8uHB8yQ/640?wx_fmt=png&from=appmsg)
+![](/img/user/Z-attach/640-88.png)
 
 工程实现上可以拆分出四大块核心模块：**推理、记忆、工具、行动**
 
-**![](https://mmbiz.qpic.cn/mmbiz_png/33P2FdAnjuicCxPP0TdkphlY7Jibm2gALKa9iahqJricehno31mNbRjAB3C89g1XYMBIiaQJJiaZeNPhzSsnBAqEe7gw/640?wx_fmt=png&from=appmsg)**
+**![](/img/user/Z-attach/640-81.png)**
 
 #### **▐** **决策模型**
 
@@ -52,7 +50,7 @@ Agent 的核心决策逻辑是让 LLM 根据动态变化的环境信息选择执
 
 ReAct = 少样本 prompt + Thought + Action + Observation 。是调用工具、推理和规划时常用的 prompt 结构，先推理再执行，根据环境来执行具体的 action，并给出思考过程 Thought。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/33P2FdAnjuicCxPP0TdkphlY7Jibm2gALKYcsgbVic1UibQJVFIkNR601lDnWV3wAvdd1MsKBibibiaBkIrsAxn3A1LibQ/640?wx_fmt=png&from=appmsg)
+![](/img/user/Z-attach/640-75.png)
 
 *   ### Plan-and-Execute ReAct
     
@@ -61,17 +59,17 @@ ReAct = 少样本 prompt + Thought + Action + Observation 。是调用工具、�
 
 优点是对于解决复杂任务、需要调用多个工具时，也只需要调用三次大模型，而不是每次工具调用都要调大模型。
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/33P2FdAnjuicCxPP0TdkphlY7Jibm2gALKScWjXqX5tJCkpYFKmaccVEm2icNibnwgDxSL0n7gr8ic5znME378Evu1A/640?wx_fmt=jpeg)
+![](/img/user/Z-attach/640-3.jpg)
 
 LLmCompiler：并行执行任务，规划时生成一个 DAG 图来执行 action，可以理解成将多个工具聚合成一个工具执行图，用图的方式执行某一个 action  
 
 paper：https://arxiv.org/abs/2312.04511?ref=blog.langchain.dev
 
-![](https://mmbiz.qpic.cn/mmbiz_png/33P2FdAnjuicCxPP0TdkphlY7Jibm2gALKEv8FPFMIkTK2dkmkG3go5a8r9QicYmBE0J1vuyQicraRUrqIs8eq8nxg/640?wx_fmt=png&from=appmsg)
+![](/img/user/Z-attach/640-88.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/33P2FdAnjuicCxPP0TdkphlY7Jibm2gALKb9TicOjTGlRLN53U8BznZiaJHkTy76svzDUOZMI85iajL7voduuibRs5tg/640?wx_fmt=png&from=appmsg)
+![](/img/user/Z-attach/640-96.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/33P2FdAnju8X1wEorjS3bDLnHiar4vtV5s4iaFibfqswhDiaUmcuk0ibG6v33ybaPY8N6ZVvedwxAbibQ1ib6BIlnJtRw/640?wx_fmt=other&wxfrom=5&wx_lazy=1&wx_co=1&tp=webp)
+![](/img/user/Z-attach/640-1.webp)
 
 Agent 框架
 
@@ -88,11 +86,11 @@ doc：https://yoheinakajima.com/birth-of-babyagi/
 
 babyAGI 决策流程：1）根据需求分解任务；2）对任务排列优先级；3）执行任务并整合结果；
 
-![](https://mmbiz.qpic.cn/mmbiz_png/33P2FdAnjuicCxPP0TdkphlY7Jibm2gALKGnBSBS0yRJCWDvIgFUC1AELXrk7prvl41ictmwTbG5icHFkZamURRT5Q/640?wx_fmt=png&from=appmsg)
+![](/img/user/Z-attach/640-73.png)
 
 **亮点：**作为早期 agent 的实践，babyagi 框架简单实用，里面的任务优先级排序模块是一个比较独特的 feature，后续的 agent 里大多看不到这个 feature。
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/33P2FdAnjuicCxPP0TdkphlY7Jibm2gALKJWXfAHWjB3dT94Rs5X8RNNqYOeQGnzR1HXV2xB98XmIlMVZVvDia1vA/640?wx_fmt=jpeg)
+![](/img/user/Z-attach/640-8.jpg)
 
 ```
 task_creation_agent
@@ -217,7 +215,7 @@ HuggingGPT 的任务分为四个部分：
 4.  响应汇总和反馈：将执行的结果反馈给用户。
     
 
-![](https://mmbiz.qpic.cn/mmbiz_png/33P2FdAnjuicCxPP0TdkphlY7Jibm2gALK4sZl3ngPjbRpQJzdYv2Wh3Pzwe99zibkGibDzK5hATrQDibVPANkJicTpg/640?wx_fmt=png&from=appmsg)
+![](/img/user/Z-attach/640-99.png)
 
 **HuggingGPT 的亮点**：HuggingGPT 与 AutoGPT 的不同之处在于，它可以调用 HuggingFace 上不同的模型来完成更复杂的任务，从而提高了每个任务的精确度和准确率。然而，总体成本并没有降低太多。
 
@@ -272,7 +270,7 @@ Python toolbelt preferences:
 
 运行效果：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/33P2FdAnjuicCxPP0TdkphlY7Jibm2gALKo0tYl2MpDKoicYfOW7IpzBXcSTh4Na5FTibgTr6SYMricTfhCqpTxoqLA/640?wx_fmt=png&from=appmsg)
+![](/img/user/Z-attach/640-97.png)
 
 *   #### Samantha
     
@@ -283,7 +281,7 @@ tw: https://twitter.com/Schindler___/status/1745986132737769573
 
 灵感来源于电影 her，核心推理逻辑是反思 + 观察，基于 GPT4-V 不断从环境中获取图像和语音信息，会自主发起提问。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/33P2FdAnjuicCxPP0TdkphlY7Jibm2gALKicgGxKqzM9yvCbK7HQA1AibRhtTpuAibpTxd162RCWzkeVqw1yT6QgSyg/640?wx_fmt=png&from=appmsg)
+![](/img/user/Z-attach/640-77.png)
 
 AGI-Samantha 特点：1、动态语音交流：Samantha 能够根据上下文和自身思考自主决定何时进行交流。2、实时视觉能力：它能够理解并反应视觉信息，比如图像或视频中的内容。它能够根据这些视觉信息做出反应。例如，如果看到某个物体或场景，它可以根据这些信息进行交流或采取行动。尽管 Samantha 并不总是直接使用视觉信息，这些信息仍然持续影响它的思考和行为。这意味着即使在不直接谈论或处理视觉信息的情况下，这些信息也会在背后影响它的决策和行动方式。3、外部分类记忆：Samantha 拥有一种特殊的记忆系统，能够根据情境动态写入和读取最相关的信息。4、持续进化：它存储的经验会影响其自身的行为，如个性、语言频率和风格。
 
@@ -291,7 +289,7 @@ AGI-Samantha 由多个特定目的的大语言模型（LLM）组成，每个模�
 
 **亮点：**结合视觉信息来辅助决策，优化了记忆模块，感兴趣可以 fork 代码本地跑着玩一玩。
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/33P2FdAnjuicCxPP0TdkphlY7Jibm2gALKLwtZFlicYzJCvLoVfxSsPjrV5fBiasqvbGzwCZrD1zcXJUTnImT8GtJg/640?wx_fmt=jpeg&from=appmsg)
+![](/img/user/Z-attach/640-4.jpg)
 
 *   #### AppAgent
     
@@ -304,7 +302,7 @@ git：https://github.com/X-PLUG/MobileAgent
 
 **亮点**：基于视觉 / 多模态 appagent，os 级别的 agent，可以完成系统级别的操作，直接操控多个 app。由于需要系统级权限、只支持了安卓。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/33P2FdAnjuicCxPP0TdkphlY7Jibm2gALKs8y9P0xgY4ptF0fOx9EXTbBcYoyDRnjpd0bsU4GsQnmgUytpgQRicSg/640?wx_fmt=png&from=appmsg)
+![](/img/user/Z-attach/640-98.png)
 
 *   #### OS-Copilot
     
@@ -317,9 +315,9 @@ OS 级别的 Agent，FRIDAY 能够从图片、视频或者文本中学习，并�
 
 **亮点:** 自我学习改进，学习如何更有效地使用软件应用、执行特定任务的最佳实践等。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/33P2FdAnjuicCxPP0TdkphlY7Jibm2gALKWRdW0f6fXJwvKGletKAFJfxqN4CP4Uuibbn6oWL4LCqFv73FjBMchwA/640?wx_fmt=png&from=appmsg)
+![](/img/user/Z-attach/640-95.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/33P2FdAnjuicCxPP0TdkphlY7Jibm2gALKEiciapfnCMA4ZoAuTBTWXkZKxxX8UkKkkZv03QwpFEKZwQNmdZWJhNlg/640?wx_fmt=png&from=appmsg)
+![](/img/user/Z-attach/640-84.png)
 
 *   #### Langgraph
     
@@ -383,19 +381,19 @@ paper：https://arxiv.org/abs/2304.03442
 
 虚拟小镇作为早期的 multi-agent 项目，很多设计也影响到了其他 multi-agent 框架，里面的反思和记忆检索 feature 比较有意思，模拟人类的思考方式。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/33P2FdAnjuicCxPP0TdkphlY7Jibm2gALK5vXe0fwKSWMBXLOMibJcNkzoiby0gOwsEcAB2bicia6ibdBxficAf5zO53Fw/640?wx_fmt=png&from=appmsg)
+![](/img/user/Z-attach/640-100.png)
 
 代理（Agents）感知他们的环境，当前代理所有的感知（完整的经历记录）都被保存在一个名为 "记忆流"（memory stream）中。基于代理的感知，系统检索相关的记忆，然后使用这些检索到的行为来决定下一个行为。这些检索到的记忆也被用来形成长期计划，并创造出更高级的反思，这些都被输入到记忆流中以供未来使用。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/33P2FdAnjuicCxPP0TdkphlY7Jibm2gALKMiatKzODgCzCMzPK9iasc0NZDmzjMtPsyQygzrobJ8CP60Bn3HvrICzA/640?wx_fmt=png&from=appmsg)
+![](/img/user/Z-attach/640-78.png)
 
 记忆流记录代理的所有经历，检索从记忆流中根据近期性（Recency）、重要性（Importance）和相关性（Relevance）检索出一部分记忆流，以传递给语言模型。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/33P2FdAnjuicCxPP0TdkphlY7Jibm2gALKOk0ASg0gSfrxetCOo1VrYSS2A0qXcKhaxFNibI8UfHCt5VdOydUQ4Vw/640?wx_fmt=png&from=appmsg)
+![](/img/user/Z-attach/640-90.png)
 
 反思是由代理生成的更高级别、更抽象的思考。因为反思也是一种记忆，所以在检索时，它们会与其他观察结果一起被包含在内。反思是周期性生成的；
 
-![](https://mmbiz.qpic.cn/mmbiz_png/33P2FdAnjuicCxPP0TdkphlY7Jibm2gALKjpiaaP5FktaQQw4svQnJ5mgxBzTBxl1y0R99HH7yviaica8icGdaAXN7GQ/640?wx_fmt=png&from=appmsg)
+![](/img/user/Z-attach/640-93.png)
 
 *   #### MetaGPT
     
@@ -408,19 +406,19 @@ metaGPT 是国内开源的一个 Multi-Agent 框架，目前整体社区活跃�
 
 metaGPT 以软件公司方式组成，目的是完成一个软件需求，输入一句话的老板需求，输出用户故事 / 竞品分析 / 需求 / 数据结构 / APIs / 文件等。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/33P2FdAnjuicCxPP0TdkphlY7Jibm2gALKkkB9NTpBhCUHy1G0mcUUoI2GDAFZ4cfcs3qgOXR278jLNaC4HJuVYg/640?wx_fmt=png&from=appmsg)
+![](/img/user/Z-attach/640-80.png)
 
 MetaGPT 内部包括产品经理 / 架构师 / 项目经理 / 工程师，它提供了一个软件公司的全过程与精心调配的 SOP
 
-![](https://mmbiz.qpic.cn/mmbiz_png/33P2FdAnjuicCxPP0TdkphlY7Jibm2gALK0E7drjFiaHU8upnpTlRRuicibSgAalQpia7UAv02TJOOhqe5oqCwBK55JA/640?wx_fmt=png&from=appmsg)
+![](/img/user/Z-attach/640-87.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/33P2FdAnjuicCxPP0TdkphlY7Jibm2gALKFoQYjToFnI5C5ibqwWuVqP0QgKXWicfg3icRmZo7PXRvnG6qOynUc59SA/640?wx_fmt=png&from=appmsg)
+![](/img/user/Z-attach/640-89.png)
 
 如图的右侧部分所示，Role 将从 Environment 中_observe Message。如果有一个 Role _watch 的特定 Action 引起的 Message，那么这是一个有效的观察，触发 Role 的后续思考和操作。在 _think 中，Role 将选择其能力范围内的一个 Action 并将其设置为要做的事情。在 _act 中，Role 执行要做的事情，即运行 Action 并获取输出。将输出封装在 Message 中，最终 publish_message 到 Environment，完成了一个完整的智能体运行。
 
 对话模式：每个 agent role 维护一个自己的消息队列，并且按照自身的设定消费个性化消费里面的数据，并且再完成一个 act 之后会给全局环境发送消息，供所有 agent 消费。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/33P2FdAnjuicCxPP0TdkphlY7Jibm2gALKL3OnPbDRDxqHIwCkAfS8Lz49iaJMNx00RdGdoiajjwponcEgjPetHmhA/640?wx_fmt=png&from=appmsg)
+![](/img/user/Z-attach/640-82.png)
 
 整体代码精简, 主要包括:  - actions: 智能体行为  - documents: 智能体输出文档  - learn: 智能体学习新技能  - memory: 智能体记忆  - prompts: 提示词  - providers: 第三方服务  - utils: 工具函数等
 
@@ -450,7 +448,7 @@ Do not answer anything else, and do not add any other information in your answer
 
 与 huggingGPT 的对比
 
-![](https://mmbiz.qpic.cn/mmbiz_png/33P2FdAnjuicCxPP0TdkphlY7Jibm2gALKAcxqZeHRbqmpKPSbQZO8tkP77aRNJYoxqpg1FJPU94YYhYdaIECuqg/640?wx_fmt=png&from=appmsg)
+![](/img/user/Z-attach/640-92.png)
 
 *   #### AutoGen
     
@@ -468,7 +466,7 @@ AutoGen 是微软开发的一个通过代理通信实现复杂工作流的框架
 3.  工作流优化：AutoGen 不仅简化了工作流的创建和管理，还提供了工具和方法来优化这些流程。举例：如果你的应用涉及到多步骤的数据处理和分析，AutoGen 可以帮助你找出哪些步骤可以并行执行，从而加速整个流程
     
 
-![](https://mmbiz.qpic.cn/mmbiz_png/33P2FdAnjuicCxPP0TdkphlY7Jibm2gALKt71mQO1QVQP2zddkRfkYVp12icjXVnIydQFia7LMusLibZkZhk3Llo8iaw/640?wx_fmt=png&from=appmsg)
+![](/img/user/Z-attach/640-102.png)
 
 **多 agent 交互框架：**
 
@@ -476,11 +474,11 @@ https://microsoft.github.io/autogen/docs/Use-Cases/agent_chat
 
 三种类型的 agent，分别对应处理单一任务、用户输入以及团队合作功能
 
-![](https://mmbiz.qpic.cn/mmbiz_png/33P2FdAnjuicCxPP0TdkphlY7Jibm2gALKib37Pszibu4IwFS6qdZMdLnZ8hmnAJKR47w3wog1FYAjiaBiaXSRgO15yg/640?wx_fmt=png&from=appmsg)
+![](/img/user/Z-attach/640-103.png)
 
 **基础双智能体交互：**
 
-**![](https://mmbiz.qpic.cn/mmbiz_png/33P2FdAnjuicCxPP0TdkphlY7Jibm2gALKVQj1cZHRplnSoYI692xNTUiabaaEXbUIv8f003GBK88g6pa5iadOUibwA/640?wx_fmt=png&from=appmsg)**
+**![](/img/user/Z-attach/640-83.png)**
 
 1.  助⼿接收到来⾃ user_proxy 的消息，其中包含任务描述。
     
@@ -497,11 +495,11 @@ https://microsoft.github.io/autogen/docs/Use-Cases/agent_chat
 
 有限状态机：自定义 DAG 流程图，定义 agent 间沟通的 SOP
 
-![](https://mmbiz.qpic.cn/mmbiz_png/33P2FdAnjuicCxPP0TdkphlY7Jibm2gALKBicky77QwautmDhrA2icdsicRk0xPOS8LUcAkvuorl7B8TZUa8WJXBdWg/640?wx_fmt=png&from=appmsg)
+![](/img/user/Z-attach/640-74.png)
 
 **多 Agent 例子：**
 
-![](https://mmbiz.qpic.cn/mmbiz_png/33P2FdAnjuicCxPP0TdkphlY7Jibm2gALKwj0WOAicjjO2X2Px2djpeTSnCVESGJ0wNkqk7pvicpRqAq0rK89W5vWQ/640?wx_fmt=png&from=appmsg)
+![](/img/user/Z-attach/640-86.png)
 
 参考：https://microsoft.github.io/autogen/docs/Examples/#automated-multi-agent-chat
 
@@ -509,17 +507,17 @@ https://microsoft.github.io/autogen/docs/Use-Cases/agent_chat
 
 workflow 及 agent 配置：
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/33P2FdAnjuicCxPP0TdkphlY7Jibm2gALKyrHfx47FRZlHD2eDuxvvK4bZgRv3d9G44rR0KxdC451eXzIG3Y1Lwg/640?wx_fmt=jpeg&from=appmsg)
+![](/img/user/Z-attach/640-2.jpg)
 
 agent 会话模式配置：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/33P2FdAnjuicCxPP0TdkphlY7Jibm2gALKfpymDoqbgKicbicOiagSpxn4qCrfeXiaGIhyS0dW84W8Ls6Pjibia5HYS3Gw/640?wx_fmt=png&from=appmsg)
+![](/img/user/Z-attach/640-96.png)
 
 对话及详细的执行信息：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/33P2FdAnjuicCxPP0TdkphlY7Jibm2gALKgEW0iam9MgwDzQPZXcMIuaCYiazj2Clkcru9QdTbWZmhtyFzk7OlJj9g/640?wx_fmt=png&from=appmsg)
+![](/img/user/Z-attach/640-97.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/33P2FdAnjuicCxPP0TdkphlY7Jibm2gALKibnNQ5qPIkibiay8JZZH8sbr0a6KpwSrNVttQPtg1sJ0gibV3KzBPiaJfTQ/640?wx_fmt=png&from=appmsg)
+![](/img/user/Z-attach/640-94.png)
 
 *   #### ChatDEV
     
@@ -530,7 +528,7 @@ doc：https://chatdev.modelbest.cn/introduce
 
 ChatDev 是一家虚拟软件公司，通过各种不同角色的智能体 运营，包括执行官，产品官，技术官，程序员 ，审查员，测试员，设计师等。这些智能体形成了一个多智能体组织结构，其使命是 “通过编程改变数字世界”。ChatDev 内的智能体通过参加专业的功能研讨会来 协作，包括设计、编码、测试和文档编写等任务。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/33P2FdAnjuicCxPP0TdkphlY7Jibm2gALKeULlnUPCKr91reAmHicgjujRVibxERO3s0CzRGcnrO0BwAlt4R0iawlgA/640?wx_fmt=png&from=appmsg)
+![](/img/user/Z-attach/640-86.png)
 
 ChatDev（2023.9）容易被误认为是一个普通的 MultiAgent 框架在软件开发上的具体实现，但实际上它不是。ChatDev 是基于 **Camel** 的，也就是说它内部流程都是 **2 个 Agent 之间多次沟通**，整体上的不同 Agent 角色的沟通关系和顺序都是由开发者配置死的，从这个角度上来说不太像是个全功能的 MultiAgent 框架的实现。
 
@@ -554,7 +552,7 @@ git：https://github.com/assafelovic/gpt-researcher
 
 GPT Researcher 的架构主要通过运行两个代理来进行，一个是 “规划者”，一个是 “执行者”；规划者负责生成研究问题，而执行者则是根据规划者生成的研究问题寻找相关的信息，最后再通过规划者对所有相关信息进行过滤与汇总，然后生成研究报告；
 
-![](https://mmbiz.qpic.cn/mmbiz_png/33P2FdAnjuicCxPP0TdkphlY7Jibm2gALKaNOWp5MrtK2MEN0l5u1VUxG2Qibp1Ux5aV3OiaH9vgNzWzOzU2SLH3Zg/640?wx_fmt=png&from=appmsg)
+![](/img/user/Z-attach/640-91.png)
 
 *   #### TaskWeaver
     
@@ -565,17 +563,17 @@ doc：https://microsoft.github.io/TaskWeaver/docs/overview
 
 TaskWeaver，面向数据分析任务，通过编码片段解释用户请求，并以函数的形式有效协调各种插件来执行数据分析任务。TaskWeaver 不仅仅是一个工具，更是一个复杂的系统，能够解释命令，将它们转换为代码，并精确地执行任务。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/33P2FdAnjuicCxPP0TdkphlY7Jibm2gALKSiaPaSED1OHCQySQaaSMIVGZrrn3lYvcLUbxrHicNd0HsuSGxS67Niafg/640?wx_fmt=png&from=appmsg)
+![](/img/user/Z-attach/640-86.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/33P2FdAnjuicCxPP0TdkphlY7Jibm2gALKMNSicctXNHooWBL136Bav6mWa5fD0Jibwddo29BYJPtvdXHP1rkmK1ibQ/640?wx_fmt=png&from=appmsg)
+![](/img/user/Z-attach/640-101.png)
 
 TaskWeaver 的工作流程涉及几个关键组件和过程, 以下是工作流程的概览。它由三个关键组件组成：规划器（Planner）、代码生成器（CG）和代码执行器（CE）。代码生成器和代码执行器由代码解释器（CI）组成。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/33P2FdAnjuicCxPP0TdkphlY7Jibm2gALKN0ymvdjKCmhJz4AxveKfmyeUe9NKmqbzkAkJ6OWgQITV5G1BpFvBmQ/640?wx_fmt=png&from=appmsg)
+![](/img/user/Z-attach/640-76.png)
 
 论文里提到的后续的多 agent 方向探索，可以与 autoGen 结合
 
-![](https://mmbiz.qpic.cn/mmbiz_png/33P2FdAnjuicCxPP0TdkphlY7Jibm2gALKXCxDqJHA7zePlgK68ICd0TmicSJiaiaoRtmLL7ibBFh1d9ibqoLWa4dZx1A/640?wx_fmt=png&from=appmsg)
+![](/img/user/Z-attach/640-79.png)
 
 *   #### 微软 UFO
     
@@ -584,7 +582,7 @@ git：https://github.com/microsoft/UFO
 
 UFO 是面向 Windows 系统的 Agent，结合自然语言和视觉操作 Windows GUI
 
-![](https://mmbiz.qpic.cn/mmbiz_png/33P2FdAnjuicCxPP0TdkphlY7Jibm2gALKXd5H0iaBVDcexT1UzwdP96H3icBMZQ1UyXbibIAFzJBibYKJNpM0ibsxAgw/640?wx_fmt=png&from=appmsg)
+![](/img/user/Z-attach/640-88.png)
 
 UFO（UI-Focused Agent）的工作原理基于先进的视觉语言模型技术，特别是 GPT-Vision，以及一个独特的双代理框架，使其能够理解和执行 Windows 操作系统中的图形用户界面（GUI）任务。以下是 UFO 工作原理的详细解释：
 
@@ -610,13 +608,13 @@ site: https://www.crewai.com/
 
 基于 langchain 的 Multi-agent 框架
 
-![](https://mmbiz.qpic.cn/mmbiz_png/33P2FdAnjuicCxPP0TdkphlY7Jibm2gALKS3YRRkYiaibxEaabM57STUcAib76g8eEmhUK39F8454a9HJc2GM4wmCbg/640?wx_fmt=png&from=appmsg)
+![](/img/user/Z-attach/640-85.png)
 
 Crew 在 CrewAI 中是代理人、任务和过程相结合的容器层，是任务执行的实际场所。作为一个协同合作的环境，Crew 提供了代理人之间的交流、合作和按照规定过程执行任务的平台。通过 Crew 的设计，代理人能够更好地协作并以高效的方式完成任务。支持顺序结构和层级结构的 agents。
 
 **CrewAI 的优点：**与 LangChain 生态结合，CrewAI 提供了 Autogen 对话代理的灵活性和 ChatDev 的结构化流程方法，但没有僵化。CrewAI 的流程设计为动态且适应性强，可无缝融入开发和生产工作流程。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/33P2FdAnjuicCxPP0TdkphlY7Jibm2gALKE5F4H0JkPLiaH61XiaYtv66DEKM9wQu6saOIdWicibJdeUEu8FCKC6RCibQ/640?wx_fmt=png&from=appmsg)
+![](/img/user/Z-attach/640-93.png)
 
 *   #### AgentScope
     
@@ -625,13 +623,13 @@ git: https://github.com/modelscope/agentscope/blob/main/README_ZH.md
 
 阿里开源的 Multi-agent 框架，亮点是支持分布式框架，并且做了工程链路上的优化及监控。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/33P2FdAnjuicCxPP0TdkphlY7Jibm2gALKLf1AiaBFRPmInIf2icNJaxatN1fb3tN14IQiaVTicZtHoHtSApPlvBuj6Q/640?wx_fmt=png&from=appmsg)
+![](/img/user/Z-attach/640-98.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/33P2FdAnjuicCxPP0TdkphlY7Jibm2gALKfXqCO6kbhWnAAIHyHnc92iaSQezjaf4eXSBtmoPq0FFDCdLd6iaYUnWQ/640?wx_fmt=jpeg&from=appmsg)
+![](/img/user/Z-attach/640-4.jpg)
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/33P2FdAnjuicCxPP0TdkphlY7Jibm2gALKdCKicZ3uqicaahib2y7y2pPVt5L3OGWub8hkBwdtibOATHG0qfianJEfcWg/640?wx_fmt=jpeg&from=appmsg)
+![](/img/user/Z-attach/640-5.jpg)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/33P2FdAnjuicCxPP0TdkphlY7Jibm2gALK3fTvnXvIrEso2wQ0xQsR3GPHyeHL5U5DVfPk06kmibATiaQJoVsGZ4Lw/640?wx_fmt=png&from=appmsg)
+![](/img/user/Z-attach/640-95.png)
 
 *   #### Camel
     
@@ -642,9 +640,9 @@ site: https://www.camel-ai.org
 
 早期 Multi-Agent 项目，实现 agent 间的一对一对话，文档较少，除了 git 和一个站点外没有找到太多有用信息。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/33P2FdAnjuicCxPP0TdkphlY7Jibm2gALK98mY9q8ia76r6xMjs2QIOx6nQPSbaKicicsXy0CQ6cq1HFBfXzyRh1CDQ/640?wx_fmt=png&from=appmsg)
+![](/img/user/Z-attach/640-95.png)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/33P2FdAnju8X1wEorjS3bDLnHiar4vtV5Mcf2mWYYibJt6RwM7zgbBS247KgYR9yVeZewdqR7qYwa7Rp0eCKm7JA/640?wx_fmt=other&wxfrom=5&wx_lazy=1&wx_co=1&tp=webp)
+![](/img/user/Z-attach/640.webp)
 
 Agent 框架总结
 
@@ -683,7 +681,7 @@ Agent 框架总结
 
 Multi-Agent 并不是 Agent 框架的终态，Multi-Agent 框架是当前有限的 LLM 能力背景下的产物，更多还是为了解决当前 LLM 的能力缺陷，通过 LLM 多次迭代、弥补一些显而易见的错误，不同框架间仍然存在着极高的学习和开发成本。随着 LLM 能力的提升，未来的 Agent 框架肯定会朝着更加的简单、易用的方向发展。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/33P2FdAnju8X1wEorjS3bDLnHiar4vtV5ud5n7myibIvZHIq1ia9W8uwXJ6Z8LkILkKw5wgGVF0sfhcMcrnZhzkaw/640?wx_fmt=other&wxfrom=5&wx_lazy=1&wx_co=1&tp=webp)
+![](/img/user/Z-attach/640.webp)
 
 能做什么？
 
@@ -707,7 +705,7 @@ SOP：定义 SOP，编排自定义 Agent
 
 Proxy：自定义 proxy，可编程、执行大小模型
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/33P2FdAnjuicCxPP0TdkphlY7Jibm2gALKVCudJsoNjic0ZUmbRyiaoPtGs2NHfeCM04RHRjWtMibxe4jO5x9oEGyiaQ/640?wx_fmt=jpeg&from=appmsg)
+![](/img/user/Z-attach/640-6.jpg)
 
 #### **▐** **Single Agent 框架**
 
@@ -725,7 +723,7 @@ agent 能观察到的不仅限于用户输入的问题，可以加入包括触�
 
 **自我思考能力：**主动提出问题，自我优化；
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/33P2FdAnjuicCxPP0TdkphlY7Jibm2gALKNjeRL7dt0B0SiaZ1t1Z1Q3eF8437FdcKibyXMvqdPcQxMTqbG6YWRdUA/640?wx_fmt=jpeg&from=appmsg)
+![](/img/user/Z-attach/640-7.jpg)
 
 *   #### 其他
     
@@ -742,7 +740,7 @@ RAG：解决语义孤立问题
 
 业务选择：Copilot 还是 Agent ？Single Agent 还是 Multi-Agent？
 
-![](https://mmbiz.qpic.cn/mmbiz_png/33P2FdAnju8X1wEorjS3bDLnHiar4vtV5eCtYVkmJr6K9ZSYaRZ6ebU19xwib5ZYLtDk1AFAsPNRAkK6J4TJjLaw/640?wx_fmt=other&wxfrom=5&wx_lazy=1&wx_co=1&tp=webp)
+![](/img/user/Z-attach/640.webp)
 
 参考文献
 
@@ -777,7 +775,7 @@ RAG：解决语义孤立问题
 
 16.《MetaGPT 智能体开发入门》学习手册: https://deepwisdom.feishu.cn/wiki/BfS0wmk4piMXXIkHvn5czNT8nuh
 
-![](https://mmbiz.qpic.cn/mmbiz_png/33P2FdAnju8X1wEorjS3bDLnHiar4vtV5CzczGLPQOcdou3FWaqibqVYrYC7MMVyloDaAnM7sQXicrTKANsWYXwog/640?wx_fmt=other&wxfrom=5&wx_lazy=1&wx_co=1&tp=webp)
+![](/img/user/Z-attach/640.webp)
 
 团队介绍
 
