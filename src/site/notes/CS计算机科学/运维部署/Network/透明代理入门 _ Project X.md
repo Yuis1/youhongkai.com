@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/CS计算机科学/运维部署/Network/透明代理入门 _ Project X/","created":"2024-04-17T15:20:03.000+08:00","updated":"2024-04-24T00:31:41.000+08:00"}
+{"dg-publish":true,"permalink":"/CS计算机科学/运维部署/Network/透明代理入门 _ Project X/","noteIcon":"","created":"2024-04-17T15:20:03.000+08:00","updated":"2024-04-27T01:21:51.455+08:00"}
 ---
 
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [xtls.github.io](https://xtls.github.io/document/level-2/transparent_proxy/transparent_proxy.html#%E9%80%8F%E6%98%8E%E4%BB%A3%E7%90%86%E9%9A%BE%E5%9C%A8%E5%93%AA%E9%87%8C)
@@ -53,7 +53,7 @@ iptables 与 nftables 实现透明代理的原理相同，下文统一使用 ipt
 
 Linux 使用`Netfilter`来管理网络，`Netfilter`模型如下：
 
-![](https://xtls.github.io/assets/netfilter-3mRQhe-K.png)
+![](/img/user/Z-attach/netfilter-3mRQhe-K.png)
 
 **假设使用路由器作为网关 (即我们平时的上网方式)，那么：**
 
