@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/CS计算机科学/运维部署/OS/windows 远程连接到 ubuntu20.04 最佳解决方案/","created":"2024-04-17T15:20:03.000+08:00","updated":"2024-04-24T00:36:43.000+08:00"}
+{"dg-publish":true,"permalink":"/CS计算机科学/运维部署/OS/windows 远程连接到 ubuntu20.04 最佳解决方案/","noteIcon":"","created":"2024-04-17T15:20:03.000+08:00","updated":"2024-04-27T01:21:44.286+08:00"}
 ---
 
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [www.cnblogs.com](https://www.cnblogs.com/jaycethanks/p/14988794.html)
@@ -80,11 +80,11 @@ $ sudo ufw allow from any to any port 3389 proto tcp
     ```
     
 
-    ![](https://img2020.cnblogs.com/blog/1735896/202107/1735896-20210709005855839-1480958790.png)
+    ![](/img/user/Z-attach/1735896-20210709005855839-1480958790.png)
 
     
 
-    ![](https://img2020.cnblogs.com/blog/1735896/202107/1735896-20210709005855619-1962313955.png)
+    ![](/img/user/Z-attach/1735896-20210709005855619-1962313955.png)
 
     
 
@@ -92,7 +92,7 @@ $ sudo ufw allow from any to any port 3389 proto tcp
 
     
 
-    ![](https://img2020.cnblogs.com/blog/1735896/202107/1735896-20210709005855419-106166450.png)
+    ![](/img/user/Z-attach/1735896-20210709005855419-106166450.png)
 
     
 
@@ -100,7 +100,7 @@ $ sudo ufw allow from any to any port 3389 proto tcp
 
     
 
-    ![](https://img2020.cnblogs.com/blog/1735896/202107/1735896-20210709005855218-2069211210.png)
+    ![](/img/user/Z-attach/1735896-20210709005855218-2069211210.png)
 
     
 
@@ -108,7 +108,7 @@ $ sudo ufw allow from any to any port 3389 proto tcp
 
     
 
-    ![](https://img2020.cnblogs.com/blog/1735896/202107/1735896-20210709005854903-765060279.png)
+    ![](/img/user/Z-attach/1735896-20210709005854903-765060279.png)
 
     
 
@@ -132,17 +132,17 @@ $ sudo ufw allow from any to any port 3389 proto tcp
 
 **Step2 . 使用说明**
 
-![](https://img2020.cnblogs.com/blog/1735896/202107/1735896-20210709005854586-1013508831.png)
+![](/img/user/Z-attach/1735896-20210709005854586-1013508831.png)
 
-![](https://img2020.cnblogs.com/blog/1735896/202107/1735896-20210709005854359-29747664.png)
+![](/img/user/Z-attach/1735896-20210709005854359-29747664.png)
 
-![](https://img2020.cnblogs.com/blog/1735896/202107/1735896-20210709005854125-1677754279.png)
+![](/img/user/Z-attach/1735896-20210709005854125-1677754279.png)
 
-![](https://img2020.cnblogs.com/blog/1735896/202107/1735896-20210709005853760-18688276.png)
+![](/img/user/Z-attach/1735896-20210709005853760-18688276.png)
 
 Over
 
-![](https://img2020.cnblogs.com/blog/1735896/202107/1735896-20210709005853317-207298469.png)
+![](/img/user/Z-attach/1735896-20210709005853317-207298469.png)
 
 **更多**  
 额外的, 如果你想通过外网 DRP 远程 windows to windows 可以参考这里：  
