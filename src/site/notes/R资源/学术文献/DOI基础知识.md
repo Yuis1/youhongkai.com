@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/R资源/学术文献/DOI基础知识/","created":"2024-04-17T15:18:28.000+08:00","updated":"2024-04-24T00:47:29.000+08:00"}
+{"dg-publish":true,"permalink":"/R资源/学术文献/DOI基础知识/","noteIcon":"","created":"2024-04-17T15:18:28.000+08:00","updated":"2024-04-24T00:47:29.000+08:00"}
 ---
 
 # DOI基础知识
