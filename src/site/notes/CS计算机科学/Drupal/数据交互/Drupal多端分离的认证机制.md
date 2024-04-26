@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/CS计算机科学/Drupal/数据交互/Drupal多端分离的认证机制/","tags":["JWT"],"created":"2024-04-17T15:19:52.000+08:00","updated":"2024-04-23T23:01:36.000+08:00"}
+{"dg-publish":true,"permalink":"/CS计算机科学/Drupal/数据交互/Drupal多端分离的认证机制/","tags":["JWT"],"noteIcon":"","created":"2024-04-17T15:19:52.000+08:00","updated":"2024-04-23T23:01:36.000+08:00"}
 ---
 
 
