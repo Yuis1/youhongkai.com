@@ -32,7 +32,6 @@ permalink: "notes/{{ page.fileSlug | slugify }}/"
           <h1 data-note-icon="{% if noteIcon %}{{noteIcon}}{% else %}{{meta.noteIconsSettings.default}}{% endif %}">{% if title %}{{ title }}{% else %}{{ page.fileSlug }}{% endif %}</h1>
         {% endif %}
         <div class="header-meta">
-
           {% if settings.dgShowTags === true and tags %}
             <div class="header-tags">
               {% for tag in tags %}
@@ -44,16 +43,6 @@ permalink: "notes/{{ page.fileSlug | slugify }}/"
               {% endfor %}
             </div>
           {% endif %}
-
-
-          {% if 作者 %}
-            <div class="header-author">
-                  <a class="author" onclick="toggleTagSearch(this)">
-                    #{{作者}}
-                  </a>
-            </div>
-          {% endif %}
-
           {%- if meta.timestampSettings.showCreated or meta.timestampSettings.showUpdated -%}
           <div class="timestamps">
             {%- if meta.timestampSettings.showCreated and created -%}
@@ -85,10 +74,6 @@ permalink: "notes/{{ page.fileSlug | slugify }}/"
       {% for imp in dynamics.notes.afterContent %}
         {% include imp %}
       {% endfor %}
-
-       {% for imp in dynamics.notes.footer %}
-       {% include imp %}
-        {% endfor %}
     </main>
 
     {% if settings.dgShowBacklinks === true or settings.dgShowLocalGraph === true or settings.dgShowToc === true%}
@@ -103,9 +88,9 @@ permalink: "notes/{{ page.fileSlug | slugify }}/"
     {% for imp in dynamics.common.footer %}
       {% include imp %}
     {% endfor %}
-    {#  {% for imp in dynamics.notes.footer %}
+    {% for imp in dynamics.notes.footer %}
       {% include imp %}
-    {% endfor %}  #}
+    {% endfor %}
     {%include "components/lucideIcons.njk"%}
   </body>
 </html>
