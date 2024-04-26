@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/CS计算机科学/知识图谱/基础知识/谓词 Predicate/","created":"2024-04-22T14:54:36.014+08:00","updated":"2024-04-24T00:27:50.000+08:00"}
+{"dg-publish":true,"permalink":"/CS计算机科学/知识图谱/基础知识/谓词 Predicate/","noteIcon":"","created":"2024-04-22T14:54:36.014+08:00","updated":"2024-04-24T00:27:50.000+08:00"}
 ---
 
 
