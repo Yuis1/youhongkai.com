@@ -1,10 +1,10 @@
 ---
-{"dg-publish":true,"permalink":"/CS计算机科学/运维部署/Network/正确使用 acme.sh， 让你的网站永久免费使用 ssl 证书/","created":"2024-04-17T15:20:03.000+08:00","updated":"2024-04-24T00:32:09.000+08:00"}
+{"dg-publish":true,"permalink":"/CS计算机科学/运维部署/Network/正确使用 acme.sh， 让你的网站永久免费使用 ssl 证书/","noteIcon":"","created":"2024-04-17T15:20:03.000+08:00","updated":"2024-04-27T01:21:54.254+08:00"}
 ---
 
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [zhuanlan.zhihu.com](https://zhuanlan.zhihu.com/p/670418258)
 
-![](https://pic4.zhimg.com/v2-d029b8c8efe89ca7322eb9eeea6f25b7_r.jpg)
+![](/img/user/Z-attach/v2-d029b8c8efe89ca7322eb9eeea6f25b7_r.jpg.png)
 
 [Let's Encrypt(加密) - 免费的 SSL/TLS 证书 (letsencrypt.org)](https://link.zhihu.com/?target=https%3A//letsencrypt.org/zh-cn/)
 
@@ -326,6 +326,6 @@ docker run --rm  -it  \
 
 部署成功后你可以在浏览器中使用 https 去浏览你的网址，如果网页没有任何输出，或者是报错找不到服务的时候，如果你是新买的云服务的话，那么你需要在你的服务器开发对应的 ssl 端口 443 。比如阿里云：
 
-![](https://pic1.zhimg.com/v2-8156bd0091a170024942abc6a76a0e84_r.jpg)
+![](/img/user/Z-attach/v2-8156bd0091a170024942abc6a76a0e84_r.jpg.png)
 
 如此你就可以愉快的上云玩了。
