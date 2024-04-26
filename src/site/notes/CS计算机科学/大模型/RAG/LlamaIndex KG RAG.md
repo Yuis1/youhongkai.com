@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/CS计算机科学/大模型/RAG/LlamaIndex KG RAG/","created":"2024-04-17T15:20:05.000+08:00","updated":"2024-04-24T00:07:02.000+08:00"}
+{"dg-publish":true,"permalink":"/CS计算机科学/大模型/RAG/LlamaIndex KG RAG/","noteIcon":"","created":"2024-04-17T15:20:05.000+08:00","updated":"2024-04-24T00:07:02.000+08:00"}
 ---
 
 
