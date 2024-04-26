@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/CS计算机科学/Drupal/数据交互/Drupal8 中 jsonApi 的使用拓展/","created":"2024-04-17T15:19:52.000+08:00","updated":"2024-03-25T09:19:32.000+08:00"}
+{"dg-publish":true,"permalink":"/CS计算机科学/Drupal/数据交互/Drupal8 中 jsonApi 的使用拓展/","noteIcon":"","created":"2024-04-17T15:19:52.000+08:00","updated":"2024-04-27T01:26:35.893+08:00"}
 ---
 
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [juejin.cn](https://juejin.cn/post/6844904191266291720?from=search-suggest)
@@ -77,7 +77,7 @@ drush cr
 
 *   来到`/admin/config/services/openapi`页面。
 
-![](https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2020/6/15/172b58fd3fa6cb54~tplv-t2oaga2asx-jj-mark:3024:0:0:0:q75.png)
+![](/img/user/Z-attach/172b58fd3fa6cb54~tplv-t2oaga2asx-jj-mark!3024!0!0!0!q75.png)
 
 *   点击`View/Download`按钮，可以查看和下载自动生成的 API 文档。
 
@@ -87,7 +87,7 @@ drush cr
 
     
 
-    ![](https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2020/6/15/172b58fd40dadb0e~tplv-t2oaga2asx-jj-mark:3024:0:0:0:q75.png)
+    ![](/img/user/Z-attach/172b58fd40dadb0e~tplv-t2oaga2asx-jj-mark!3024!0!0!0!q75.png)
 
     
 
@@ -99,21 +99,21 @@ drush cr
 
 1. 在过滤框中输入 article。
 
-![](https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2020/6/15/172b58fd4100da97~tplv-t2oaga2asx-jj-mark:3024:0:0:0:q75.png)
+![](/img/user/Z-attach/172b58fd4100da97~tplv-t2oaga2asx-jj-mark!3024!0!0!0!q75.png)
 
 2. 点击 “覆写” 按钮。
 
-![](https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2020/6/15/172b58fd412bcce2~tplv-t2oaga2asx-jj-mark:3024:0:0:0:q75.png)
+![](/img/user/Z-attach/172b58fd412bcce2~tplv-t2oaga2asx-jj-mark!3024!0!0!0!q75.png)
 
 *   选择禁用资源，则相关 article 的资源 API 不可以访问。
-*   可以自定义资源路径。如，将`node/artcle`改为`article`。 ![](https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2020/6/15/172b58fd447e35c6~tplv-t2oaga2asx-jj-mark:3024:0:0:0:q75.png)
+*   可以自定义资源路径。如，将`node/artcle`改为`article`。 ![](/img/user/Z-attach/172b58fd447e35c6~tplv-t2oaga2asx-jj-mark!3024!0!0!0!q75.png)
 
-![](https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2020/6/15/172b58fd4572c84d~tplv-t2oaga2asx-jj-mark:3024:0:0:0:q75.png)
+![](/img/user/Z-attach/172b58fd4572c84d~tplv-t2oaga2asx-jj-mark!3024!0!0!0!q75.png)
 
 *   可以禁用不需要 API 返回的资源字段，只需在字段左边勾选。
 
-![](https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2020/6/15/172b58fd790ff9ac~tplv-t2oaga2asx-jj-mark:3024:0:0:0:q75.png)
+![](/img/user/Z-attach/172b58fd790ff9ac~tplv-t2oaga2asx-jj-mark!3024!0!0!0!q75.png)
 
 3. 保存。回到 API 文档查看页面`/admin/config/services/openapi`，点击`Explore with ReDoc`按钮，找到`article`资源。
 
-![](https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2020/6/15/172b58fd7aa00930~tplv-t2oaga2asx-jj-mark:3024:0:0:0:q75.png)
+![](/img/user/Z-attach/172b58fd7aa00930~tplv-t2oaga2asx-jj-mark!3024!0!0!0!q75.png)
