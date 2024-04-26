@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/CS计算机科学/大模型/RAG/Rerank——RAG 中百尺竿头更进一步的神器，从原理到解决方案/","created":"2024-04-17T15:20:11.000+08:00","updated":"2024-04-24T00:06:16.000+08:00"}
+{"dg-publish":true,"permalink":"/CS计算机科学/大模型/RAG/Rerank——RAG 中百尺竿头更进一步的神器，从原理到解决方案/","noteIcon":"","created":"2024-04-17T15:20:11.000+08:00","updated":"2024-04-27T01:22:24.995+08:00"}
 ---
 
 
@@ -35,13 +35,13 @@
 
 前面说了，我们自己的 RAG 产品之前是存在一些相关性问题的，其他方面能优化的我们觉得也基本上优化的差不多了，除了我们采用的国产大模型在通用能力上和 ChatGPT-3.5/4 是存在差距的。我们发现的最大的问题就是使用 elasticsearch 的 **retrieval** 召回的内容相关度有问题，多数情况下 score 最高的 chunk 相关度没问题，但是 top2-5 的相关度就很随机了，这是最影响最终结果的。
 
-![](https://www.luxiangdong.com/images/rerank/es-code.png)
+![](/img/user/Z-attach/es-code.png)
 
 图 1：elasticsearch8.4 的 knn 使用方式
 
 我们看了 elasticsearch 的相似度算法，es 用的是 KNN 算法（开始我们以为是暴力搜索），但仔细看了一下，在 es8 的相似度检索中，用的其实是基于 HNSW（分层的最小世界导航算法），HNSW 是有能力在几毫秒内从数百万个数据点中找到最近邻的。
 
-![](https://www.luxiangdong.com/images/rerank/es-hnsw.png)
+![](/img/user/Z-attach/es-hnsw.png)
 
 图 2：elasticsearch 实际使用的是 HNSW 算法
 
@@ -59,13 +59,13 @@ ANN 算法目前主要有三种：
 
 HNSW 借鉴了跳表（Skip List）的思路。跳表是一种数据结构，用于维护一组已排序的元素，并允许进行高效的搜索、插入和删除操作。它是由 William Pugh 在 1989 年发明的。图 (3) 显示了数字 [3、6、7、9、12、17、19、21、25、26] 的排序链表。假设我们想找到目标 19。当值小于目标时，我们向右移动，如果是传统的方式，需要 6 步才能找到它。
 
-![](https://www.luxiangdong.com/images/rerank/3.png)
+![](/img/user/Z-attach/3-4.png)
 
 图 3：链表中查找数据
 
 但是我们在每个节点增加向后的指向指针，比如列表中每三个其他节点都有一个指向后面三个节点的指针，如图 (4) 所示，那么只需要 3 步就可以到达 19
 
-![](https://www.luxiangdong.com/images/rerank/5.png)
+![](/img/user/Z-attach/5-1.png)
 
 图 4：跳表每三个节点就设置一个多指向指针节点，可以让搜索速度明显加快，如果我们再增加这个指针节点数量呢？
 
@@ -73,13 +73,13 @@ HNSW 借鉴了跳表（Skip List）的思路。跳表是一种数据结构，用
 
 现在，这就是奇迹发生的地方。你可以随机选择将其中一些连接改变给圆圈中的其他人，就像图 5 中的红色连接线一样。这就像这些连接的 “抢椅子” 游戏。有人跳到另一把椅子上的几率用概率 p 表示。如果 p 很小，移动的人就不多，网络看起来就很像原来的圆圈。但如果 p 很大，很多人就会跳来跳去，网络就会变得有点混乱。当您选择正确的 p 值 (不太小也不太大) 时，红色连接是最优的。网络变成了一个小世界网络。你可以很快地从一个朋友转到另一个朋友 (这就是“小世界” 的特点)。
 
-![](https://www.luxiangdong.com/images/rerank/6.png)
+![](/img/user/Z-attach/6.png)
 
 图 5：small world 网络结构
 
 现在我们要扩展到高维空间，图中的每个节点都是一个高维向量。在高维空间中，搜索速度会变慢。这是不可避免的 “维度的诅咒”。HNSW 是一种高级数据结构，用于优化高维空间中的相似性搜索。让我们看看 HNSW 如何构建图的层次结构。HNSW 从图(6) 中的第 0 层这样的基础图开始。它通常使用**随机初始化数据点**来构建。
 
-![](https://www.luxiangdong.com/images/rerank/7.png)
+![](/img/user/Z-attach/7.png)
 
 图 6：HNSW 的结构示例
 
@@ -127,7 +127,7 @@ _关于 HNSW 的内容，大家可以查看[像光速一样搜索——HNSW 算�
 
 下表展示了基于**命中率**和 **MRR** 指标的评估结果:
 
-![](https://www.luxiangdong.com/images/rerank/paiming.jpeg)
+![](/img/user/Z-attach/paiming.jpeg.jpg)
 
 图 7：测试结果
 
@@ -139,7 +139,7 @@ _关于 HNSW 的内容，大家可以查看[像光速一样搜索——HNSW 算�
 
 目前最无脑的方式就是使用 bge-reranker-large，我们可以在 [https://huggingface.co/BAAI/bge-reranker-large/tree/main 上找到 models 文件，下载安装。我已经下载了：](https://huggingface.co/BAAI/bge-reranker-large/tree/main%E4%B8%8A%E6%89%BE%E5%88%B0models%E6%96%87%E4%BB%B6%EF%BC%8C%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85%E3%80%82%E6%88%91%E5%B7%B2%E7%BB%8F%E4%B8%8B%E8%BD%BD%E4%BA%86%EF%BC%9A)
 
-![](https://www.luxiangdong.com/images/rerank/models.png)
+![](/img/user/Z-attach/models.png)
 
 图 8：bge-reranker-large 的 models 文件，大约 4.5GB
 
@@ -155,7 +155,7 @@ _关于 HNSW 的内容，大家可以查看[像光速一样搜索——HNSW 算�
 * * *
 
 Update: 2024-01-26  
-![](https://www.luxiangdong.com/images/lanuch-1/shiyong.png)  
+![](/img/user/Z-attach/shiyong.png)  
 我们的 TorchV Bot 产品目前已经开始试用了，详情可以点击：[https://www.luxiangdong.com/2024/01/25/lanuch-1](https://www.luxiangdong.com/2024/01/25/lanuch-1)  
 目前只接受企业用户试用，需要您填写一些信息，必要信息如下：
 
