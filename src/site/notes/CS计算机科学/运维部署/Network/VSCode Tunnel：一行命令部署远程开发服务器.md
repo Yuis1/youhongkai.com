@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/CS计算机科学/运维部署/Network/VSCode Tunnel：一行命令部署远程开发服务器/","created":"2024-04-14T23:08:30.250+08:00","updated":"2024-04-24T00:35:40.000+08:00"}
+{"dg-publish":true,"permalink":"/CS计算机科学/运维部署/Network/VSCode Tunnel：一行命令部署远程开发服务器/","noteIcon":"","created":"2024-04-14T23:08:30.250+08:00","updated":"2024-04-27T01:22:00.021+08:00"}
 ---
 
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [blog.vpslog.org](https://blog.vpslog.org/blog/vscodetunnel/)
@@ -34,15 +34,15 @@ tar -xf vscode_cli.tar.gz
 
 不出意外将有以下输出，注意其中被我马赛克的部分，打开 [Github 认证](https://github.com/login/device)，把你的认证代码复制进去。
 
-![](https://blog.vpslog.org/blog/vscodetunnel/image.png)
+![](/img/user/Z-attach/image.png)
 
-![](https://blog.vpslog.org/blog/vscodetunnel/image-1.png)
+![](/img/user/Z-attach/image-1.png)
 
 然后一路确认即可。之后回到服务器，会要你给设备起个名字，随意。起好之后，打开 [https://vscode.dev/tunnel/](https://vscode.dev/tunnel/)[名字] 就可以直接体验 Web 版的 VSCode 了。
 
-![](https://blog.vpslog.org/blog/vscodetunnel/image-2.png)
+![](/img/user/Z-attach/image-2.png)
 
-![](https://blog.vpslog.org/blog/vscodetunnel/image-3.png)
+![](/img/user/Z-attach/image-3.png)
 
 关闭命令窗口，VSCode Server 服务器也会关闭，如果需要再次打开，请使用
 
