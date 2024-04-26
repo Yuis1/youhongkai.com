@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/CS计算机科学/数据/数据处理/【MindGo】数据预处理（上）之离群值处理、标准化/","created":"2024-04-17T15:17:50.000+08:00","updated":"2024-04-24T00:18:27.000+08:00"}
+{"dg-publish":true,"permalink":"/CS计算机科学/数据/数据处理/【MindGo】数据预处理（上）之离群值处理、标准化/","noteIcon":"","created":"2024-04-17T15:17:50.000+08:00","updated":"2024-04-27T01:22:17.153+08:00"}
 ---
 
 
@@ -7,7 +7,7 @@
 
 处理方法是调整因子值中的离群值至上下限（Winsorzation 处理），其中上下限由离群值判断的标准给出，从而减小离群值的影响力。离群值的判断标准有三种，分别为 MAD、 3σ、百分位法。下图是 2017-10-23 日的全市场 BP 原始数据。
 
-![](https://pic3.zhimg.com/v2-fe47ca38c7a1421cfa98458a5580d9ce_r.jpg)
+![](/img/user/Z-attach/v2-fe47ca38c7a1421cfa98458a5580d9ce_r.jpg.png)
 
 **1. MAD 法：**
 
@@ -15,11 +15,11 @@ MAD 又称为绝对值差中位数法（Median Absolute Deviation）。MAD 是�
 
 处理的逻辑：第一步，找出所有因子的中位数 Xmedian；第二步，得到每个因子与中位数的绝对偏差值 Xi−Xmedian；第三步，得到绝对偏差值的中位数 MAD；最后，确定参数 n，从而确定合理的范围为 [Xmedian−nMAD,Xmedian nMAD]，并针对超出合理范围的因子值做如下的调整：
 
-![](https://pic4.zhimg.com/v2-73556e9f157495ca6c5da90dc48bfc03_r.jpg)
+![](/img/user/Z-attach/v2-73556e9f157495ca6c5da90dc48bfc03_r.jpg.png)
 
 对全市场 BP 原始数据进行 MAD 处理后的结果：
 
-![](https://pic4.zhimg.com/v2-0341898dcdfef75f1d1e15375f618073_r.jpg)
+![](/img/user/Z-attach/v2-0341898dcdfef75f1d1e15375f618073_r.jpg.png)
 
 **2. 3σ法**
 
@@ -27,11 +27,11 @@ MAD 又称为绝对值差中位数法（Median Absolute Deviation）。MAD 是�
 
 标准差法处理的逻辑与 MAD 法类似，首先计算出因子的平均值与标准差，其次确认参数 n（这里选定 n = 3），从而确认因子值的合理范围为 [Xmean−nσ,Xmean nσ]，并对因子值作如下的调整：
 
-![](https://pic4.zhimg.com/v2-e8f5eb35b525071252ba117af4f6acd3_r.jpg)
+![](/img/user/Z-attach/v2-e8f5eb35b525071252ba117af4f6acd3_r.jpg.png)
 
 对全市场 BP 原始数据进行 3σ法处理后的结果：
 
-![](https://pic2.zhimg.com/v2-e0bba000b071ae1bea336210b56f3065_r.jpg)
+![](/img/user/Z-attach/v2-e0bba000b071ae1bea336210b56f3065_r.jpg.png)
 
 **3. 百分位法：**
 
@@ -39,7 +39,7 @@ MAD 又称为绝对值差中位数法（Median Absolute Deviation）。MAD 是�
 
 对全市场 BP 原始数据进行百分位法处理后的结果：
 
-![](https://pic2.zhimg.com/v2-a18e7f476fb3caef03f34d84abf3214d_r.jpg)
+![](/img/user/Z-attach/v2-a18e7f476fb3caef03f34d84abf3214d_r.jpg.png)
 
 **二、标准化**
 
@@ -51,7 +51,7 @@ MAD 又称为绝对值差中位数法（Median Absolute Deviation）。MAD 是�
 
 **1、对原始因子值进行标准化；**　　方法一可以保留更多的因子分布信息，但是需要去掉极端值，否则会影响到回归结果。回归的方法一般使用 z-score，将因子值的均值调整为 0，标准差调整为 1。 标准化处理基于原始数据的均值和标准差，处理的逻辑是因子值减去均值后，再除以标准差。　　对已经过 3σ法去极值后的结果进行标准化：
 
-![](https://pic2.zhimg.com/v2-19e71bc461532608e3959179c558dca5_r.jpg)
+![](/img/user/Z-attach/v2-19e71bc461532608e3959179c558dca5_r.jpg.png)
 
 **2、用因子的排序值进行标准化。**
 
