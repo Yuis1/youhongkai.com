@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/CS计算机科学/数据/B 端用户画像中的 ID Mapping/","created":"2024-04-17T15:17:50.000+08:00","updated":"2024-04-24T00:17:28.000+08:00"}
+{"dg-publish":true,"permalink":"/CS计算机科学/数据/B 端用户画像中的 ID Mapping/","noteIcon":"","created":"2024-04-17T15:17:50.000+08:00","updated":"2024-04-27T01:22:16.633+08:00"}
 ---
 
 
@@ -30,7 +30,7 @@
 
 方案 2：可参照目前 C 端的用户画像中、的解决方案，利用一定的规则把割裂的行为串联起来。仍然以上述用户张三为例，在不同行为中，张三留下了不同的标识，利用不同行为中共同的标识，可以很容易的找到行为间的关联关系，下图红色所示：
 
-![图片](https://mmbiz.qpic.cn/mmbiz_jpg/jWg3EibnYW9ib1wd6DdYsn1Ct1NequoZqZJkqsyNxVb0HpxurzPI6ibExd7QsRwFKb2UBjJqJJJUbvlFEsdj56LgA/640?wx_fmt=jpeg)
+![图片](/img/user/Z-attach/图片-2.jpg)
 
 第一天，获取了一个用户，我们把 Cookie ID 和设备 ID1 作为用户标识保存起来，创建用户 001；
 
@@ -73,13 +73,13 @@ Segment 有一个 three Identity Resolution rules- 即三大用户标识识别�
 
 引用原文例子说明一下，假如系统设立的 limit 和 priority 分别如下：
 
-![图片](https://mmbiz.qpic.cn/mmbiz_jpg/jWg3EibnYW9ib1wd6DdYsn1Ct1NequoZqZBa53rju0WNuJlibprSBgqlqiakzq6afaRgVVsd1ZOsquO3frPCKNBxIw/640?wx_fmt=jpeg)
+![图片](/img/user/Z-attach/图片-1.jpg)
 
 假设系统中已有一个用户， userid 为 abc，拥有邮箱 tom@tom.com。此时又来了一个新用户，userid 是 def， 同样拥有邮箱 tom@tom.com。因为 user_id 的 limit 为 1，而 user_id 的优先级高于 email，那么我们对 email 进行降级，只利用 userid def 来查找是否有已有用户存在，如果没有，就新建一个用户，user_id 为 def。
 
 我们用这三个规则套路一下张三的例子：
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/jWg3EibnYW9ib1wd6DdYsn1Ct1NequoZqZibJvhibGq37VEK7icTbW9UYGxlcmAibNWtUvNXico2iaxmRyxicdK2V9mpUfg/640?wx_fmt=png)
+![图片](/img/user/Z-attach/图片-6.png)
 
 第一天，我们把 Cookie ID 和设备 ID1 作为用户标识保存起来，创建用户 001；
 
