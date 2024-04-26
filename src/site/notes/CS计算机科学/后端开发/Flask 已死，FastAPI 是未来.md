@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/CS计算机科学/后端开发/Flask 已死，FastAPI 是未来/","created":"2024-04-17T15:18:13.000+08:00","updated":"2024-04-24T00:01:57.000+08:00"}
+{"dg-publish":true,"permalink":"/CS计算机科学/后端开发/Flask 已死，FastAPI 是未来/","noteIcon":"","created":"2024-04-17T15:18:13.000+08:00","updated":"2024-04-27T01:22:45.575+08:00"}
 ---
 
 
@@ -18,7 +18,7 @@ Flask 是一个在 Python 开发者心目中十分重要的项目，如果你是
 
 接着看一下 Python 官方的开发者调查中 Web 框架占比的变化:
 
-![](https://pic1.zhimg.com/v2-2f4795862e9ab1e3a336acb2c749b36c_r.jpg)
+![](/img/user/Z-attach/v2-2f4795862e9ab1e3a336acb2c749b36c_r.jpg)
 
 可以看到 19 年 FastAPI 甚至不是一个选项，而 22 年已经占到 25% 的比率。这个开发者调查需要年中才会统计出上一年的，所以 2023 年的得明天第三季度才能知道，我预计 FastAPI 可以达到 35% 左右。
 
