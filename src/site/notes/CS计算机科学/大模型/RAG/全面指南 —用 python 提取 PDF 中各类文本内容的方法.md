@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/CS计算机科学/大模型/RAG/全面指南 —用 python 提取 PDF 中各类文本内容的方法/","created":"2024-04-17T15:20:21.000+08:00","updated":"2024-04-24T00:03:55.000+08:00"}
+{"dg-publish":true,"permalink":"/CS计算机科学/大模型/RAG/全面指南 —用 python 提取 PDF 中各类文本内容的方法/","noteIcon":"","created":"2024-04-17T15:20:21.000+08:00","updated":"2024-04-27T01:22:23.820+08:00"}
 ---
 
 
@@ -45,7 +45,7 @@
 4.  以结构化格式从表格中提取的文本
 5.  页面的完整文本内容
 
-![](https://www.luxiangdong.com/images/extract/1.png)
+![](/img/user/Z-attach/1-2.png)
 
 图 1：文本提取示意
 
@@ -53,7 +53,7 @@
 
 您可以在下面的图片中看到这种方法的流程图。
 
-![](https://www.luxiangdong.com/images/extract/2.png)
+![](/img/user/Z-attach/2.png)
 
 PDF 提取方法的具体流程，中间会有各种适配选择
 
@@ -131,7 +131,7 @@ import os
 
 现在我们都准备好了，让我们来试一下这些库怎么样。
 
-![](https://www.luxiangdong.com/images/extract/3.png)
+![](/img/user/Z-attach/3-2.png)
 
 布局分析，理解什么是 LOGO，什么是标题，什么是表格等
 
@@ -210,7 +210,7 @@ def text_extraction(element):
 
 通常，特定文本块中的字符往往具有一致的格式，除非某些字符以粗体突出显示。为了便于进一步分析，我们捕获文本中所有字符的文本格式的唯一值，并将它们存储在适当的列表中。
 
-![](https://www.luxiangdong.com/images/extract/4.png)
+![](/img/user/Z-attach/4-1.png)
 
 获取字体、尺寸等元数据的过程
 
@@ -264,7 +264,7 @@ def image_to_text(image_path):
 
 当我们尝试使用 **tabula-py** 从一个表中提取数据时，你可以看到下面的例子:
 
-![](https://www.luxiangdong.com/images/extract/5.png)
+![](/img/user/Z-attach/5.png)
 
 提取表格信息，虽然转化为文本了，但是我们依然可以保留表格的信息
 
@@ -502,7 +502,7 @@ print(result)
 * * *
 
 Update: 2024-01-26  
-![](https://www.luxiangdong.com/images/lanuch-1/shiyong.png)  
+![](/img/user/Z-attach/shiyong.png)  
 我们的 TorchV Bot 产品目前已经开始试用了，详情可以点击：[https://www.luxiangdong.com/2024/01/25/lanuch-1](https://www.luxiangdong.com/2024/01/25/lanuch-1)  
 目前只接受企业用户试用，需要您填写一些信息，必要信息如下：
 
