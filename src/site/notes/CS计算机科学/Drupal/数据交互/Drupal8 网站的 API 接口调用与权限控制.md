@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/CS计算机科学/Drupal/数据交互/Drupal8 网站的 API 接口调用与权限控制/","created":"2024-04-17T15:19:52.000+08:00","updated":"2024-04-01T12:06:39.000+08:00"}
+{"dg-publish":true,"permalink":"/CS计算机科学/Drupal/数据交互/Drupal8 网站的 API 接口调用与权限控制/","noteIcon":"","created":"2024-04-17T15:19:52.000+08:00","updated":"2024-04-27T01:26:38.751+08:00"}
 ---
 
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [juejin.cn](https://juejin.cn/post/6844904190657953800)
@@ -9,13 +9,13 @@
 
 用 Drupal8 作为后端数据管理平台，前端通过 API 调用数据接口。实现 Drupal8 的数据解耦，与小程序和移动 APP 进行无缝衔接。
 
-![](https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2020/6/14/172b0991d0bbd3f9~tplv-t2oaga2asx-jj-mark:3024:0:0:0:q75.png)
+![](/img/user/Z-attach/172b0991d0bbd3f9~tplv-t2oaga2asx-jj-mark!3024!0!0!0!q75.png)
 
 ### API 规范：REST 与 JSON：API 与 GraphQL
 
 有一个比较强大的最常见的技术规范的 REST，对于 JSON：API 来说，结果是非常肯定的。
 
-![](https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2020/6/14/172b0991d22192bd~tplv-t2oaga2asx-jj-mark:3024:0:0:0:q75.png)
+![](/img/user/Z-attach/172b0991d22192bd~tplv-t2oaga2asx-jj-mark!3024!0!0!0!q75.png)
 
 以上信息可帮助我们选择 JSON：API 作为具有有用文档的基本规范。
 
@@ -49,7 +49,7 @@ composer require drupal/devel
 
     
 
-    ![](https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2020/6/14/172b0991d6517f91~tplv-t2oaga2asx-jj-mark:3024:0:0:0:q75.png)
+    ![](/img/user/Z-attach/172b0991d6517f91~tplv-t2oaga2asx-jj-mark!3024!0!0!0!q75.png)
 
     
 
@@ -88,7 +88,7 @@ drush en -y simple_oauth
 
     
 
-    ![](https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2020/6/14/172b0991d3d2492b~tplv-t2oaga2asx-jj-mark:3024:0:0:0:q75.png)
+    ![](/img/user/Z-attach/172b0991d3d2492b~tplv-t2oaga2asx-jj-mark!3024!0!0!0!q75.png)
 
     
 
@@ -96,7 +96,7 @@ drush en -y simple_oauth
 
     
 
-    ![](https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2020/6/14/172b0991d13d3bb7~tplv-t2oaga2asx-jj-mark:3024:0:0:0:q75.png)
+    ![](/img/user/Z-attach/172b0991d13d3bb7~tplv-t2oaga2asx-jj-mark!3024!0!0!0!q75.png)
 
     
 
@@ -110,7 +110,7 @@ drush en -y simple_oauth
 
     
 
-    ![](https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2020/6/14/172b0991ee563d7d~tplv-t2oaga2asx-jj-mark:3024:0:0:0:q75.png)
+    ![](/img/user/Z-attach/172b0991ee563d7d~tplv-t2oaga2asx-jj-mark!3024!0!0!0!q75.png)
 
     
 
@@ -118,7 +118,7 @@ drush en -y simple_oauth
 
     
 
-    ![](https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2020/6/14/172b0992007e5363~tplv-t2oaga2asx-jj-mark:3024:0:0:0:q75.png)
+    ![](/img/user/Z-attach/172b0992007e5363~tplv-t2oaga2asx-jj-mark!3024!0!0!0!q75.png)
 
     
 
@@ -126,7 +126,7 @@ drush en -y simple_oauth
 
     
 
-    ![](https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2020/6/14/172b099202c4cf44~tplv-t2oaga2asx-jj-mark:3024:0:0:0:q75.png)
+    ![](/img/user/Z-attach/172b099202c4cf44~tplv-t2oaga2asx-jj-mark!3024!0!0!0!q75.png)
 
     
 
@@ -137,7 +137,7 @@ drush en -y simple_oauth
 
     
 
-    ![](https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2020/6/14/172b099203d7aa96~tplv-t2oaga2asx-jj-mark:3024:0:0:0:q75.png)
+    ![](/img/user/Z-attach/172b099203d7aa96~tplv-t2oaga2asx-jj-mark!3024!0!0!0!q75.png)
 
     
 
@@ -149,7 +149,7 @@ drush en -y simple_oauth
 
     
 
-    ![](https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2020/6/14/172b099203f89397~tplv-t2oaga2asx-jj-mark:3024:0:0:0:q75.png)
+    ![](/img/user/Z-attach/172b099203f89397~tplv-t2oaga2asx-jj-mark!3024!0!0!0!q75.png)
 
     
 
@@ -164,7 +164,7 @@ drush en -y simple_oauth
 
 grant_type：大多数情况下，password。 client_id：上一部分中使用者的 UUID。 client_secret：添加使用者时提供的客户机密。 username：与使用者相关联的帐户的用户名。 password：与使用者相关联的帐户的密码。 scope: 指定的访问者角色。
 
-![](https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2020/6/14/172b099204102065~tplv-t2oaga2asx-jj-mark:3024:0:0:0:q75.png)
+![](/img/user/Z-attach/172b099204102065~tplv-t2oaga2asx-jj-mark!3024!0!0!0!q75.png)
 
 *   获取 token。
 
@@ -218,7 +218,7 @@ drush en -y jsonapi jsonapi_extras
 
 JSON：API 是一个零配置模块，该模块提供对所有 Drupal 实体的访问权限，以进行即用型读取。但是，您不仅应考虑读取数据，还应考虑创建或更新数据的可能性。 启用后，您需要转到模块设置页面（_/admin/config/services/jsonapi_），并将 “允许的操作” 字段更改为 “ 接受所有 JSON：API 创建，读取，更新和删除操作 ” 值。
 
-![](https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2020/6/14/172b09921cf0db1c~tplv-t2oaga2asx-jj-mark:3024:0:0:0:q75.png)
+![](/img/user/Z-attach/172b09921cf0db1c~tplv-t2oaga2asx-jj-mark!3024!0!0!0!q75.png)
 
 保存配置。
 
@@ -230,7 +230,7 @@ JSON：API 是一个零配置模块，该模块提供对所有 Drupal 实体的�
 
 稍后，您还可以在设置页面的 “资源替代” 标签上禁用无法通过 API 使用的额外资源。
 
-![](https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2020/6/14/172b099226ce5dff~tplv-t2oaga2asx-jj-mark:3024:0:0:0:q75.png)
+![](/img/user/Z-attach/172b099226ce5dff~tplv-t2oaga2asx-jj-mark!3024!0!0!0!q75.png)
 
 请记住清除 Drupal 缓存（_/admin(管理员)/config/development/performance_）以应用路由更改。
 
@@ -261,7 +261,7 @@ curl --location --request POST 'http://d890.com/api/json/node/article' \
 
 刷新网站首页看到我们新增的文章。
 
-![](https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2020/6/14/172b099227960d90~tplv-t2oaga2asx-jj-mark:3024:0:0:0:q75.png)
+![](/img/user/Z-attach/172b099227960d90~tplv-t2oaga2asx-jj-mark!3024!0!0!0!q75.png)
 
 *   获取文章列表
 
@@ -270,7 +270,7 @@ curl --location --request GET 'http://d890.com/api/json/node/article' \
 --header 'Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjE5MzdmMWM1YTU2OWJkZDIxZmJhMDJlYjhiOWQyYTFlMWY5ZGEzNzEwOGFmNTQ4YzNjYTg1ZDY5YjVkNGJlMmI0NGIzYzZjMTdlNGM0Mzk5In0.eyJhdWQiOiI5M2Q4OTY1Yi1kOGRmLTRlZjAtYjg4Ny05N2E2NzVmOTY4ZjEiLCJqdGkiOiIxOTM3ZjFjNWE1NjliZGQyMWZiYTAyZWI4YjlkMmExZTFmOWRhMzcxMDhhZjU0OGMzY2E4NWQ2OWI1ZDRiZTJiNDRiM2M2YzE3ZTRjNDM5OSIsImlhdCI6MTU5MjA5NDUzMiwibmJmIjoxNTkyMDk0NTMyLCJleHAiOjE1OTI5NjQ1MzEsInN1YiI6IjUiLCJzY29wZXMiOlsib2F1dGhhcGkiLCJhdXRoZW50aWNhdGVkIl19.J29rBtkl4pwde6b3Xf3bYiyv_w2pwMEQdtDI1YztqNZFm-rTvLFu_MkV3CDsfOi9YHp13d1RhMlz7JbYXylTlaPET9U6IjAI1SeEFV_ZqKxHC1z9LTXR-bxgzGToi7QqoVKa6ZiFPJgGdfhFsPxi6KD-zK1RUPmW5ueGpHM6U9JMPuh-ZL-mO69If36HJOhBR5eld0VDX_SMBq_4a-WJSOQmrzFxICo6Tqh34xLmNeSk3eiCE5hUij_MjcFHJ3jWnCNRh-8U5CaT5O_f5JB_PPu_sHww5nU8gaEXvHpwTLFT34T8ZobmaZD1WnFV836-eE238PNWUPELWCD4560Dz56sNlxRZg2BWAYLtrlKwoGBsgBGT_TSgYW9s2nfMW1_bAjuCgG80uBg5ZBYO-1snK7YxhS9oVERUXksZElSV09upyggQOWrKAxG__jEccejgc1j3muV4m5NNv_Z59qFgzuTBUKJg7aE7ZK5vrydvbgzEaL-X49H1lWyfPy5-HmsOVfRFafQIehvxBvMRQlXkJGIeRn2EVeQhjJx8sqe_PJw-GUe6ADPiC68KO6qPjVAfJZs5BMWjuSa8N_CN9Uokt7dZlgPHL5lG7ZCkeolQ5LKiWsphFHxsLjGooDREMOvWxlfPY8Q3Q4W9rQ-5QcGT7JQJBIxbZy_PGctJkCdwbU'
 ```
 
-![](https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2020/6/14/172b09922a0d9c7d~tplv-t2oaga2asx-jj-mark:3024:0:0:0:q75.png)
+![](/img/user/Z-attach/172b09922a0d9c7d~tplv-t2oaga2asx-jj-mark!3024!0!0!0!q75.png)
 
 *   获取指定文章
 
@@ -279,7 +279,7 @@ curl --location --request GET 'http://d890.com/api/json/node/article/0de2ce4b-1f
 --header 'Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjE5MzdmMWM1YTU2OWJkZDIxZmJhMDJlYjhiOWQyYTFlMWY5ZGEzNzEwOGFmNTQ4YzNjYTg1ZDY5YjVkNGJlMmI0NGIzYzZjMTdlNGM0Mzk5In0.eyJhdWQiOiI5M2Q4OTY1Yi1kOGRmLTRlZjAtYjg4Ny05N2E2NzVmOTY4ZjEiLCJqdGkiOiIxOTM3ZjFjNWE1NjliZGQyMWZiYTAyZWI4YjlkMmExZTFmOWRhMzcxMDhhZjU0OGMzY2E4NWQ2OWI1ZDRiZTJiNDRiM2M2YzE3ZTRjNDM5OSIsImlhdCI6MTU5MjA5NDUzMiwibmJmIjoxNTkyMDk0NTMyLCJleHAiOjE1OTI5NjQ1MzEsInN1YiI6IjUiLCJzY29wZXMiOlsib2F1dGhhcGkiLCJhdXRoZW50aWNhdGVkIl19.J29rBtkl4pwde6b3Xf3bYiyv_w2pwMEQdtDI1YztqNZFm-rTvLFu_MkV3CDsfOi9YHp13d1RhMlz7JbYXylTlaPET9U6IjAI1SeEFV_ZqKxHC1z9LTXR-bxgzGToi7QqoVKa6ZiFPJgGdfhFsPxi6KD-zK1RUPmW5ueGpHM6U9JMPuh-ZL-mO69If36HJOhBR5eld0VDX_SMBq_4a-WJSOQmrzFxICo6Tqh34xLmNeSk3eiCE5hUij_MjcFHJ3jWnCNRh-8U5CaT5O_f5JB_PPu_sHww5nU8gaEXvHpwTLFT34T8ZobmaZD1WnFV836-eE238PNWUPELWCD4560Dz56sNlxRZg2BWAYLtrlKwoGBsgBGT_TSgYW9s2nfMW1_bAjuCgG80uBg5ZBYO-1snK7YxhS9oVERUXksZElSV09upyggQOWrKAxG__jEccejgc1j3muV4m5NNv_Z59qFgzuTBUKJg7aE7ZK5vrydvbgzEaL-X49H1lWyfPy5-HmsOVfRFafQIehvxBvMRQlXkJGIeRn2EVeQhjJx8sqe_PJw-GUe6ADPiC68KO6qPjVAfJZs5BMWjuSa8N_CN9Uokt7dZlgPHL5lG7ZCkeolQ5LKiWsphFHxsLjGooDREMOvWxlfPY8Q3Q4W9rQ-5QcGT7JQJBIxbZy_PGctJkCdwbU'
 ```
 
-![](https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2020/6/14/172b09922a17b79e~tplv-t2oaga2asx-jj-mark:3024:0:0:0:q75.png)
+![](/img/user/Z-attach/172b09922a17b79e~tplv-t2oaga2asx-jj-mark!3024!0!0!0!q75.png)
 
 *   修改文章内容
 
@@ -301,7 +301,7 @@ curl --location --request PATCH 'http://d890.com/api/json/node/article/1bbfa4af-
 
 刷新网站首页看到我们修改成功的文章。
 
-![](https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2020/6/14/172b09922a37b19a~tplv-t2oaga2asx-jj-mark:3024:0:0:0:q75.png)
+![](/img/user/Z-attach/172b09922a37b19a~tplv-t2oaga2asx-jj-mark!3024!0!0!0!q75.png)
 
 *   删除一篇文章
 
