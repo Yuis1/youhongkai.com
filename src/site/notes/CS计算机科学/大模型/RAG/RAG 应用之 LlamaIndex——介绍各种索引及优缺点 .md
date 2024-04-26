@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/CS计算机科学/大模型/RAG/RAG 应用之 LlamaIndex——介绍各种索引及优缺点 /","created":"2024-04-17T15:20:21.000+08:00","updated":"2024-04-24T00:06:26.000+08:00"}
+{"dg-publish":true,"permalink":"/CS计算机科学/大模型/RAG/RAG 应用之 LlamaIndex——介绍各种索引及优缺点 /","noteIcon":"","created":"2024-04-17T15:20:21.000+08:00","updated":"2024-04-27T01:22:25.615+08:00"}
 ---
 
 
@@ -11,7 +11,7 @@
 
 这是我自己列的一个结构图，当然是按我自己的理解画的，您只做参考吧，哈哈。
 
-![](https://www.luxiangdong.com/images/llamaindex/1-all.png)
+![](/img/user/Z-attach/1-all.png)
 
 LlamaIndex 是一个大型语言模型 (大语言模型) 的数据框架，提供以下工具:
 
@@ -54,7 +54,7 @@ Llamaindex 提供不同类型的索引，以便更好地组织和检索相关信
 
 List Index 是一个简单的数据结构，它将文档存储为节点序列。在索引构建期间，文档文本被分块、转换为节点并存储在一个列表中。这使得它成为检索包含特定关键字或短语的文档的非常有效的索引。
 
-![](https://www.luxiangdong.com/images/llamaindex/2-list.png)
+![](/img/user/Z-attach/2-list.png)
 
 **使用列表索引的优点**
 
@@ -66,11 +66,11 @@ List Index 是一个简单的数据结构，它将文档存储为节点序列。
 
 在查询期间，如果没有指定其他查询参数，LlamaIndex 只是将列表中的所有节点加载到响应合成模块中。
 
-![](https://www.luxiangdong.com/images/llamaindex/3-list.png)
+![](/img/user/Z-attach/3-list.png)
 
 当用户输入关键字或短语时，查询列表索引。然后，索引扫描节点列表以查找包含关键字或短语的文档。然后将匹配查询的文档返回给响应合成模块:
 
-![](https://www.luxiangdong.com/images/llamaindex/4-list.png)
+![](/img/user/Z-attach/4-list.png)
 
 **使用 List Index 的缺点或问题:**
 
@@ -78,7 +78,7 @@ List Index 是一个简单的数据结构，它将文档存储为节点序列。
 
 向量索引是一种将文档文本转化为向量的索引，向量通常是由编码器 transformer 模型 (如 Bert 等) 生成的，它们也被称为 Embeddings 模型（参考前面关于 embedding 的文章《[Embedding——从入门到生产使用](https://www.luxiangdong.com/2023/09/19/emb/)》）。向量表示文本的含义，可以根据用户的查询来查找相关文档。
 
-![](https://www.luxiangdong.com/images/llamaindex/5-vec.png)
+![](/img/user/Z-attach/5-vec.png)
 
 使用 LlamaIndex 来创建向量 Index 是非常简单，可以从文档中直接提取文本建立索引，可以看下面这段代码：
 
@@ -121,7 +121,7 @@ index = VectorStoreIndex(nodes)
 *   然后将向量与索引中所有文档的向量进行匹配，具有最相似（可以设置 top_k）向量的文档将作为查询的结果返回。
 *   我们还可以定义返回 top-k 最相似的节点，并将它们传递到我们的响应合成模块。
 
-![](https://www.luxiangdong.com/images/llamaindex/6-vec.png)
+![](/img/user/Z-attach/6-vec.png)
 
 总的来说，向量索引与传统查询的索引相比，更具备语义属性，可以让我们根据语义来检索，而不仅仅是按关键词匹配等字面意思来搜索。而且向量索引使用高效、可扩展能力强，且易于创建。当然了，它也有不好的一方面，就是如果您使用的不是本地 embedding 模型，而是使用 OpenAI 的`text-embedding-ada-003`、通义千问的 embedding 模型等，那么是需要成本的，而且量大的话可能很昂贵，即使使用免费的 BGE、m3e 等本地模型，也是需要一些硬件资源的。对了，说一点开心的，本地的 embedding 模型的话，我们自己是可以微调训练的，可以参考我之前的文章《[手工微调 embedding 模型](https://www.luxiangdong.com/2023/09/27/ftembedding/)》。
 
@@ -136,7 +136,7 @@ Tree Index 也是一种索引类型，它将文档的文本存储在树状结构
 > *   **树**：树结构算是一个折中吧，特别是二叉树，它的查询和操作（插入、删除等）的复杂度都是 O(logn)。二分法的威力就是 n 越大，它的上升曲线会越来越平缓。比如一组有序数字的猜大小的游戏中，8 个数字（n=8），只要猜 3 次；32 个数字猜 5 次，但是 1024 个数字也只需要 10 次。且很关键的一点，二叉树的效率非常稳定，这一点在开发中对于性能的可预估性非常重要。
 >
 
-![](https://www.luxiangdong.com/images/llamaindex/7-tree.png)
+![](/img/user/Z-attach/7-tree.png)
 
 **使用树索引的优点:**
 
@@ -151,7 +151,7 @@ Tree Index 也是一种索引类型，它将文档的文本存储在树状结构
 *   这个过程一直持续到索引到达一个叶子节点，或者直到它耗尽树中的所有节点。到达的叶节点是最有可能与查询相关的文档。
 *   根据原始文档：查询树索引需要从根节点向下遍历到叶节点。默认情况下，(`child_branch_factor=1`)，查询在给定父节点的情况下选择一个子节点。如果`child_branch_factor=2`，查询将在每个级别选择两个子节点。
 
-![](https://www.luxiangdong.com/images/llamaindex/8-tree.png)
+![](/img/user/Z-attach/8-tree.png)
 
 **使用树索引的缺点:**
 
@@ -163,7 +163,7 @@ Tree Index 也是一种索引类型，它将文档的文本存储在树状结构
 
 关键字表索引是一种将文档的关键字存储在表中的索引，我觉得这更加类似 Map<k,v> 或者字典的结构。表中的每一行代表一个关键字，每一列代表一个文档。通过在表中查找关键字，可以使用表索引来查找包含给定关键字的文档。
 
-![](https://www.luxiangdong.com/images/llamaindex/9-key.png)
+![](/img/user/Z-attach/9-key.png)
 
 **使用关键字表索引的优点:**
 
@@ -175,7 +175,7 @@ Tree Index 也是一种索引类型，它将文档的文本存储在树状结构
 
 *   查询关键字表索引时，需要提供关键字。然后索引在表中查找关键字并返回包含该关键字的所有文档。
 
-![](https://www.luxiangdong.com/images/llamaindex/10-key.png)
+![](/img/user/Z-attach/10-key.png)
 
 **使用关键字 Index 的缺点或问题:**
 
