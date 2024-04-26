@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/CS计算机科学/数据/Tracking/utm_source, utm_medium 等参数的含义是什么？/","created":"2024-04-17T15:20:32.000+08:00","updated":"2024-04-24T00:10:01.000+08:00"}
+{"dg-publish":true,"permalink":"/CS计算机科学/数据/Tracking/utm_source, utm_medium 等参数的含义是什么？/","noteIcon":"","created":"2024-04-17T15:20:32.000+08:00","updated":"2024-04-27T01:22:17.535+08:00"}
 ---
 
 
@@ -40,7 +40,7 @@ UTM 除了最基础的追踪流量来源外，还可以根据不同渠道、不�
 
 先来看一个结果：添加 UTM 参数的链接的链接投放后，我们就可以看到这样的统计了：
 
-![](https://picx.zhimg.com/4a97c5556403190d36124b826b4c454b_r.jpg?source=1940ef5c)
+![](/img/user/Z-attach/4a97c5556403190d36124b826b4c454b_r.jpg)
 
 每一个渠道带来的流量都十分清晰，用户在产品内的行为也一目了然，是否注册了，是否最终购买了，都可以看到。我们可以看到讲述 heatmap 热图的这篇内容在渠道「微博 1」投放的链接，带来了 9992 个页面浏览量，2066 个注册用户量，以及 1614 个购买用户量。
 
@@ -70,7 +70,7 @@ _2. 添加自定义的参数_
 
 说白了，这里就是你用各种各样的内容来描述这条[链接](https://www.zhihu.com/search?q=%E9%93%BE%E6%8E%A5&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22%3A%22answer%22%2C%22sourceId%22%3A122730629%7D)是放在哪个活动、哪个来源上的，我们来看一个例子进行理解。
 
-![](https://pica.zhimg.com/1f3cfbaad4660f74969cd45807dceed1_r.jpg?source=1940ef5c)
+![](/img/user/Z-attach/1f3cfbaad4660f74969cd45807dceed1_r.jpg)
 
   
 
@@ -107,7 +107,7 @@ _2. 添加自定义的参数_
 
 我们提供的 UTM 参数和自定义参数的方式采用的是目前市面上最常用的定义方式：
 
-![](https://pica.zhimg.com/53be54fc398bdf52c97b7c77fdef6b54_r.jpg?source=1940ef5c)
+![](/img/user/Z-attach/53be54fc398bdf52c97b7c77fdef6b54_r.jpg)
 
 我们可以根据需要，进行各种各样自定义的填充，因为 UTM 最初是用在广告监控上的，所以它的很多名称还是关于广告的，但是我们现在已经可以把它放在各个内容、活动、推广中，监控渠道的流量情况。
 
@@ -115,17 +115,17 @@ _2. 添加自定义的参数_
 
 _1. 当这条链接用于付费推广时，可以这样定义：_
 
-![](https://picx.zhimg.com/457a27ca5b2aceb7b8003a8f91f95e06_r.jpg?source=1940ef5c)
+![](/img/user/Z-attach/457a27ca5b2aceb7b8003a8f91f95e06_r.jpg)
 
 2. 当这条链接用于内容文章时，可以这样定义：_
 
-![](https://pic1.zhimg.com/5f2af1e60a8a94bd9df0ff23a0026db3_r.jpg?source=1940ef5c)
+![](/img/user/Z-attach/5f2af1e60a8a94bd9df0ff23a0026db3_r.jpg.png)
 
   
 
 _3. 当这条链接用于活动时，可以这样定义：_
 
-![](https://pica.zhimg.com/aaee8514c40384b1fb4761b96c117a27_r.jpg?source=1940ef5c)
+![](/img/user/Z-attach/aaee8514c40384b1fb4761b96c117a27_r.jpg.png)
 
   
 
@@ -139,19 +139,19 @@ UTM 做好了之后，可以做哪些分析呢？我们就可以进行日常的�
 
 现在，我们知道哪些投放的渠道来的量高、哪些量低了，可以有的放矢地进行市场推广和渠道运营，我们可以用 UTM 里面的维度来制图，看一下这一周文章投放的效果：
 
-![](https://picx.zhimg.com/235999524bc591a9cef6f9bdfd60703c_r.jpg?source=1940ef5c)
+![](/img/user/Z-attach/235999524bc591a9cef6f9bdfd60703c_r.jpg)
 
   
 
 接下来，你可能想了解更多细节，这些人都访问了哪些页面呢？比如说他们是否最终[注册](https://www.zhihu.com/search?q=%E6%B3%A8%E5%86%8C&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22%3A%22answer%22%2C%22sourceId%22%3A122730629%7D)完成了呢？我们可以加上注册页面的[指标](https://www.zhihu.com/search?q=%E6%8C%87%E6%A0%87&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22%3A%22answer%22%2C%22sourceId%22%3A122730629%7D)来做图：
 
-![](https://picx.zhimg.com/8c4cdaf08d3bde47f3101e395e0deca5_r.jpg?source=1940ef5c)
+![](/img/user/Z-attach/8c4cdaf08d3bde47f3101e395e0deca5_r.jpg)
 
   
 
 这些都只是一个开始，接下来我们还可以做更有价值的数据分析，在漏斗里，用 UTM 参数作为不同的维度，可以对比不同来源不同内容的[转化率](https://www.zhihu.com/search?q=%E8%BD%AC%E5%8C%96%E7%8E%87&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22%3A%22answer%22%2C%22sourceId%22%3A122730629%7D)：
 
-![](https://pic1.zhimg.com/832f3ffac07d108828142e07d1967e67_r.jpg?source=1940ef5c)
+![](/img/user/Z-attach/832f3ffac07d108828142e07d1967e67_r.jpg)
 
   
 
@@ -163,7 +163,7 @@ UTM 做好了之后，可以做哪些分析呢？我们就可以进行日常的�
 
 [GrowingIO - 硅谷新一代数据分析产品](https://link.zhihu.com/?target=https%3A//www.growingio.com/%3Futm_source%3Dzhihu%26utm_medium%3Dqa%26utm_campaign%3Dq48724061%26utm_content%3D160919-utm%26utm_term%3Dtool)
 
-![](https://pic1.zhimg.com/8c9895e1a2db9eba3c09b558affd2b00_l.jpg?source=1940ef5c)
+![](/img/user/Z-attach/8c9895e1a2db9eba3c09b558affd2b00_l.jpg.png)
 
 zhibo shan
 
