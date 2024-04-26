@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/CS计算机科学/知识图谱/LLM+KG/Multi-perspective Improvement of Knowledge Graph Completion with Large Language Models 翻译和解读/","created":"2024-04-18T16:39:44.321+08:00","updated":"2024-04-18T17:22:19.428+08:00"}
+{"dg-publish":true,"permalink":"/CS计算机科学/知识图谱/LLM+KG/Multi-perspective Improvement of Knowledge Graph Completion with Large Language Models 翻译和解读/","noteIcon":"","created":"2024-04-18T16:39:44.321+08:00","updated":"2024-04-18T17:22:19.428+08:00"}
 ---
 
 
