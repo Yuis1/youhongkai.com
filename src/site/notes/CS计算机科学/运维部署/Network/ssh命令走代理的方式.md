@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/CS计算机科学/运维部署/Network/ssh命令走代理的方式/","created":"2024-04-15T01:15:49.470+08:00","updated":"2024-04-24T00:35:57.000+08:00"}
+{"dg-publish":true,"permalink":"/CS计算机科学/运维部署/Network/ssh命令走代理的方式/","noteIcon":"","created":"2024-04-15T01:15:49.470+08:00","updated":"2024-04-24T00:35:57.000+08:00"}
 ---
 
 
