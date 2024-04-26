@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/CS计算机科学/运维部署/OS/CentOS 7 升级 git 版本到 2.x/","created":"2024-04-17T15:20:03.000+08:00","updated":"2024-04-24T00:37:21.000+08:00"}
+{"dg-publish":true,"permalink":"/CS计算机科学/运维部署/OS/CentOS 7 升级 git 版本到 2.x/","noteIcon":"","created":"2024-04-17T15:20:03.000+08:00","updated":"2024-04-27T01:21:44.406+08:00"}
 ---
 
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [juejin.cn](https://juejin.cn/post/7071910670056292389)
@@ -106,7 +106,7 @@ wget https://github.com/git/git/archive/v${VERSION}.tar.gz
 
 具体版本可以看 `git` 代码库中的 `tags`:
 
-![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/0ca4e24ebe25483ab3c00eb2ff9d3fec~tplv-k3u1fbpfcp-zoom-in-crop-mark:1512:0:0:0.awebp?)
+![](/img/user/Z-attach/0ca4e24ebe25483ab3c00eb2ff9d3fec~tplv-k3u1fbpfcp-zoom-in-crop-mark!1512!0!0!0.awebp.webp)
 
 ### 解压安装
 
