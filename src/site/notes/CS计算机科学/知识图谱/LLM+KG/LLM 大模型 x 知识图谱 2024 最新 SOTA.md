@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/CS计算机科学/知识图谱/LLM+KG/LLM 大模型 x 知识图谱 2024 最新 SOTA/","created":"2024-04-17T15:17:23.000+08:00","updated":"2024-04-24T00:27:15.000+08:00"}
+{"dg-publish":true,"permalink":"/CS计算机科学/知识图谱/LLM+KG/LLM 大模型 x 知识图谱 2024 最新 SOTA/","noteIcon":"","created":"2024-04-17T15:17:23.000+08:00","updated":"2024-04-27T01:22:03.126+08:00"}
 ---
 
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s?src=11×tamp=1711530523&ver=5164&signature=ZLMO2q4Oa1geryD7PjFEfiArqo3HLl4RyZGRDFC3XpRB4MuWer8LzVU775*iKSsPuZFktLqG4mBjDkazEDRkVMX1PHVnZJtnStVlOc1JtBEpLIU5pjD-MgEGVc4rQImd&new=1)
@@ -15,7 +15,7 @@
 *  本文评估了未经过专门训练的大型语言模型在对话语义解析任务上的性能，通过一系列实验比较了不同大小的模型和不同提示技术的性能，并识别了生成输出中的常见问题类型。
 *  与之前的模型不同，本文采用了上下文学习和后处理的方法，实现了端到端的结构化查询生成。本文旨在研究大型语言模型在理解对话、解决词汇问题和生成具有正确语法的 SPARQL 查询方面的性能。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/CE7zqEW7RV2PrDWNgeT6w4AkgrctfqWc5B14wanSib2oYXZpbyibbQgCW4QGF7l9D5mFWG0zziciaUqbIHukeYicyOA/640?wx_fmt=png&from=appmsg)
+![](/img/user/Z-attach/640-20.png)
 
 #### keqing: knowledge-based question answering is a nature chain-of-thought mentor of LLM
 
@@ -27,7 +27,7 @@
 *  提出了候选推理模块，根据分解的子问题的依赖关系，选择正确的实体来回答当前问题，并迭代地得出最终答案。通过问题分解和知识检索，得到了答案候选，然后利用候选推理模块选择正确的实体，并根据子问题的依赖关系逐步得出最终答案。
 *  提出了基于知识图谱的检索模块，用于收集相关的三元组，为 LLMs 提供高质量的上下文信息，以完成知识库问答任务。与基于嵌入的语料库检索方法不同，该方法可以精确地提供高质量的上下文信息，避免了重复或无关的内容对 LLMs 生成的响应质量的影响。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/CE7zqEW7RV2PrDWNgeT6w4AkgrctfqWcDsgdqdgmuBgRHodglCbicavB4GlZk7PFxUad5YDpZAzoJlBeJHYIt4Q/640?wx_fmt=png&from=appmsg)
+![](/img/user/Z-attach/640-20.png)
 
 #### Quartet Logic: A Four-Step Reasoning (QLFR) framework for advancing Short Text Classification
 
@@ -38,7 +38,7 @@
 * 引入了 Quartet Logic: A Four-Step Reasoning (QLFR) 框架，这是一种基于 CoT 提示的多步推理方法，用于改进 LLM 在 STC 任务中的性能。该框架通过四个步骤的推理来引发内在的知识和能力，然后确定预测的标签。
 * 提出了 Syntactic and Semantic Enrichment CoT (SSE-CoT) 的 CoT 方法，提供了一个四步推理的方法，用于提高输入文本的清晰度和上下文，并丰富其解释深度。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/CE7zqEW7RV2PrDWNgeT6w4AkgrctfqWcVBib2qgB2icNJIh1TtxUWhxluqwfUMBibwsJibpgF9tYql4Pb7z9oumQ0w/640?wx_fmt=png&from=appmsg)
+![](/img/user/Z-attach/640-25.png)
 
 #### TechGPT-2.0: A large language model project to solve the task of knowledge graph construction.
 
@@ -50,7 +50,7 @@
 * 作者开发了两个 7B-scale 模型，用于知识图谱构建任务，并针对长文本问题设计了 QLoRA 权重。
 * 作者发现当前小规模大模型在知识图谱构建任务中表现不佳，旨在填补中国开源社区在该领域的空白。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/CE7zqEW7RV2PrDWNgeT6w4AkgrctfqWcnRwht1431WJ68iatiaYqQZibMO3ujy8iaZHbmDKWTo1eibE2gropPZq9qLA/640?wx_fmt=png&from=appmsg)
+![](/img/user/Z-attach/640-19.png)
 
 #### The Earth is Flat? Unveiling Factual Errors in Large Language Models
 
@@ -65,7 +65,7 @@
 
     
 
-![](https://mmbiz.qpic.cn/mmbiz_png/CE7zqEW7RV2PrDWNgeT6w4AkgrctfqWcx1JkaWxj7D4uPcZC48ouZS6tic3orv9sUt2Wc3dR4ibW9cMpeo0uy4hg/640?wx_fmt=png&from=appmsg)
+![](/img/user/Z-attach/640-22.png)
 
 #### Chain of History: Learning and Forecasting with LLMs for Temporal Knowledge Graph Completion
 
@@ -77,7 +77,7 @@
 *   作者将 TKGC 任务建模为在历史事实链上的事件生成过程，并利用 LLM 的微调来增强其生成时间事件的能力。
 *   作者通过结构化的历史数据增强和引入逆向四元组来解决逆转问题，提高了 LLM 感知图结构的能力。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/CE7zqEW7RV2PrDWNgeT6w4AkgrctfqWcGu5IY4qiatFf41RLmZE51quBxn0EmKYic1GYRr03fbFfUwWYJ1dk2iavA/640?wx_fmt=png&from=appmsg)
+![](/img/user/Z-attach/640-26.png)
 
 #### Conversational Question Answering with Reformulations over Knowledge Graph
 
@@ -89,7 +89,7 @@
 *   提出了一种师生架构，进一步提高了 ConvQA 的性能。CoRnNet 直接使用训练数据中的人类编写改写来训练师傅模型，并使用 LLMs 生成的改写来间接训练学生模型，以模仿师傅模型的输出，从而接近人类水平的性能。
 *   提出了一种基于 RL 的模型，通过从策略网络中采样动作来引导遍历知识图谱（KG）并定位答案。这一方法在定位答案方面表现出了有效性，并且优于现有的对话式问答基线模型。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/CE7zqEW7RV2PrDWNgeT6w4AkgrctfqWcv87dSNg5medPDplSAYKXnRgIiblPNYXgpGt34Va7E4icxGwM2AOrnkRg/640?wx_fmt=png&from=appmsg)
+![](/img/user/Z-attach/640-21.png)
 
 #### Think and Retrieval: A Hypothesis Knowledge Graph Enhanced Medical Large Language Models
 
@@ -101,7 +101,7 @@
 * 提出了一个片段重新排序模块，通过分而治之的思想，对检索到的知识进行重新排列和整合，进一步增强用户查询和外部知识推理路径之间的对齐。
 * 与以往的方法相比，我们让 LLMs 首先处理用户查询，通过 LLMs 的理解，获得与用户查询相关的更多医学知识。我们从 "H O" 和 "Q" 中提取医学实体。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/CE7zqEW7RV2PrDWNgeT6w4AkgrctfqWcIzNSe69FmwRatKDO5wx2YZrperUdbibGiaajJ0icIV2dibicFKaCGficc11A/640?wx_fmt=png&from=appmsg)
+![](/img/user/Z-attach/640-20.png)
 
 #### KnowledgeNavigator: Leveraging Large Language Models for Enhanced Reasoning over Knowledge Graph
 
@@ -113,7 +113,7 @@
 *  问题分析：问题分析阶段通过预先分析给定的问题来增强和限制推理过程，从而解决了 KGQA 任务中的多跳推理问题。这种方法有助于提高检索效率和准确性。
 *  案例研究：作者通过一个案例研究展示了知识导航器在 KGQA 任务中的应用。知识导航器首先基于 PLM 预测从核心实体 “Babaloo Mandel” 开始的推理跳数，并为目标问题生成 2 个类似的问题，以供 LLM 使用。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/CE7zqEW7RV2PrDWNgeT6w4AkgrctfqWcUdjx0bKS49XJ0Rk3p6FLL7kj35LbpDFarQq68hCCKUhXRibb0UUhzdw/640?wx_fmt=png&from=appmsg)
+![](/img/user/Z-attach/640-24.png)
 
 #### Urban Generative Intelligence (UGI): A Foundational Platform for Agents in Embodied City Environment
 
@@ -125,4 +125,4 @@
 * 引入大型语言模型（LLMs）来增强城市智能代理的能力。通过将多源城市数据训练到基于城市的大型语言模型 CityGPT 中，UGI 能够创建具有人类级智能的具体代理，这些代理能够解决各种城市挑战，并在社会、经济和环境等方面提供洞察和解决方案。
 * UGI 平台提供了一个开放的数字基础设施，集成了城市模拟器、城市知识图谱和各种数据流。这个基础设施不仅能够收集大量的空间 - 时间数据，模拟城市系统的复杂交互，还能够提供标准的语言接口，方便大型语言模型和生成代理的插件。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/CE7zqEW7RV2PrDWNgeT6w4AkgrctfqWcnO0CrqCmaGj9curLt4UliaxVc8wchcUVy5D0P3iaeXpeiaHYJNnIWDvPg/640?wx_fmt=png&from=appmsg)
+![](/img/user/Z-attach/640-23.png)
