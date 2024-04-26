@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/P生产力/PKM/给数字花园添加 Giscus 评论系统/","created":"2024-04-17T15:18:44.000+08:00","updated":"2024-04-24T00:43:21.000+08:00"}
+{"dg-publish":true,"permalink":"/P生产力/PKM/给数字花园添加 Giscus 评论系统/","noteIcon":"","created":"2024-04-17T15:18:44.000+08:00","updated":"2024-04-27T01:21:35.750+08:00"}
 ---
 
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [zhuanlan.zhihu.com](https://zhuanlan.zhihu.com/p/681343213)
@@ -23,24 +23,24 @@ giscus 是基于 Github Discussions 实现的评论系统，受 utterances(话�
 
 1.  点击以下链接在 github 创建新仓库。
 
-![](https://pic4.zhimg.com/v2-8177b83e8b8c4becda9e4e003ef9c6df_r.jpg)
+![](/img/user/Z-attach/v2-8177b83e8b8c4becda9e4e003ef9c6df_r.jpg)
 
 2. 在新建的仓库的 settings->general->Discussions ，中打开 Discussions 功能。
 
-![](https://pic4.zhimg.com/v2-e79fd557cc20d5d935a8f1f9a7f965b3_r.jpg)
+![](/img/user/Z-attach/v2-e79fd557cc20d5d935a8f1f9a7f965b3_r.jpg)
 
 3. 点击该链接：[https(超文本传输协议安全（Hyper Text Transfer Protocol）)://github.com/apps/giscus](https://link.zhihu.com/?target=https%3A//github.com/apps/giscus)，在 github 安装 giscus 插件。
 4. 点击该链接：[https://giscus.app/zh-CN](https://link.zhihu.com/?target=https%3A//giscus.app/zh-CN)，对 giscus 进行配置，把 giscus 关联到步骤 1 创建的新仓库
 
-![](https://pic1.zhimg.com/v2-bdfa6bcdbdb5b5ede0c7f180be83814c_r.jpg)
+![](/img/user/Z-attach/v2-bdfa6bcdbdb5b5ede0c7f180be83814c_r.jpg)
 
 5. 复制以下代码，等待后续步骤的使用。
 
-![](https://pic4.zhimg.com/v2-8de69b5ebb57e0f49fa2e416f25f883b_r.jpg)
+![](/img/user/Z-attach/v2-8de69b5ebb57e0f49fa2e416f25f883b_r.jpg)
 
 6. 配置数字花园仓库，这里我推荐用 [GitHub Desktop](https://link.zhihu.com/?target=https%3A//desktop.github.com/) 拉取数字花园仓库，再用 [vscode](https://link.zhihu.com/?target=https%3A//code.visualstudio.com/) 编辑，然后再用 GitHub Desktop 提交并推送到远程仓库的方式。
 
-![](https://pic2.zhimg.com/v2-379844d00fb3adb2a0f464e2dc08eebd_r.jpg)
+![](/img/user/Z-attach/v2-379844d00fb3adb2a0f464e2dc08eebd_r.jpg)
 
   
 
@@ -66,7 +66,7 @@ giscus 是基于 Github Discussions 实现的评论系统，受 utterances(话�
 
 7. 修改页面布局。编辑`src/_includes/layouts/note.njk` 文件。 默认的布局是如图所示，分为左、中、右：
 
-![](https://pic3.zhimg.com/v2-9364b719097115ba2b1ca944a32cbd3e_r.jpg)
+![](/img/user/Z-attach/v2-9364b719097115ba2b1ca944a32cbd3e_r.jpg)
 
   
 
@@ -98,11 +98,11 @@ giscus 是基于 Github Discussions 实现的评论系统，受 utterances(话�
 
 现在的布局如图所示：
 
-![](https://pic4.zhimg.com/v2-3c22b7b51100050e1b5ad57394f0645b_r.jpg)
+![](/img/user/Z-attach/v2-3c22b7b51100050e1b5ad57394f0645b_r.jpg)
 
 8. 最终的效果如图所示：
 
-![](https://pic3.zhimg.com/v2-17d7e8aba9e3306d4c50e82e43431042_r.jpg)
+![](/img/user/Z-attach/v2-17d7e8aba9e3306d4c50e82e43431042_r.jpg)
 
   
 
