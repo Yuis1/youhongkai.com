@@ -1,10 +1,10 @@
 ---
-{"dg-publish":true,"permalink":"/CS计算机科学/知识图谱/LLM+KG/4 种通过 LLM 进行文本知识图谱的构建方法对比介绍/","created":"2024-04-17T15:17:17.000+08:00","updated":"2024-04-24T00:27:19.000+08:00"}
+{"dg-publish":true,"permalink":"/CS计算机科学/知识图谱/LLM+KG/4 种通过 LLM 进行文本知识图谱的构建方法对比介绍/","noteIcon":"","created":"2024-04-17T15:17:17.000+08:00","updated":"2024-04-27T01:22:11.504+08:00"}
 ---
 
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s?src=11×tamp=1711530523&ver=5164&signature=ScupIaFex6KHsmFdGtKIXM8620-YBMKenNGR9BeFQ2GwBwWZJ7cReFceMe0z1nxKS5bgtQLeANM3p0V1mDFQQn1APjFtXTka7yeO2qFOqDE5mveiDxxS7g-4qm2Tg7mI&new=1)
 
-![](https://mmbiz.qpic.cn/mmbiz_png/heS6wRSHVMmbq1qLbfTGuk3jmOPpGT7D5XWia0mA8twb2poibaBnypJvy5dMj7FGbQAjz6ic69NSHthvJ7jQqgz2g/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)
+![](/img/user/Z-attach/640-48.png)
 
 ```
 Translate the following user text to an RDF graph using the RDF, RDFS, and OWL ontologies formatted as TTL.
@@ -15,18 +15,18 @@ Translate the following user text to an RDF graph using the RDF, RDFS, and OWL o
 
 ====================================================================================================================================
 
-![](https://mmbiz.qpic.cn/mmbiz_png/6wQyVOrkRNI7tPib3ufAQ4eE25SEPDIeob3BdQIa9a4yVHIYeavN0PGDwXIDscTDecY9AhOLbvibllib7FIyQytEw/640?wx_fmt=png&from=appmsg&wxfrom=13&tp=wxpic)
+![](/img/user/Z-attach/640-49.png)
 
 所以本文将介绍和比较使用 LLM 转换非结构化文本的四种方法，这些方法在不同的场景中都可能会用到。
 
-![](https://mmbiz.qpic.cn/mmbiz_gif/6wQyVOrkRNI7tPib3ufAQ4eE25SEPDIeoibczGvQ8nJxqdhOLUJMvT9U1CcHLlWiblOp1eE4b4A7iaq5cEFVCPTbrg/640?wx_fmt=gif&from=appmsg&wxfrom=13&tp=wxpic)
+![](/img/user/Z-attach/640-1.gif)
 
 **使用 LLM 预训练本体（ontologies(本体)）**
 --------------------------------
 
 LLM 似乎已经接受了各种标准本体 (如 SCHEMA) 的预先培训。ORG, FOAF, SKOS, RDF, RDFS, OWL 等。所以通过适当的系统提示来指导使用这个预训练的本体，再加上包含非结构化文本的用户提示，我们可以获得想要的转换后的图谱结构。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/6wQyVOrkRNI7tPib3ufAQ4eE25SEPDIeoxpQj8lNW08ZFPEXdvuAuVVv8bNE83ChEAYtjCJW64rJgDYs0LZwxfg/640?wx_fmt=png&from=appmsg&tp=wxpic&wxfrom=5&wx_lazy=1&wx_co=1)
+![](/img/user/Z-attach/640-50.png)
 
 提示如下：
 
@@ -96,7 +96,7 @@ Translate the following user text to an RDF graph using the following schema1: <
 **在 LLM 提示中添加本体**
 -----------------
 
-![](https://mmbiz.qpic.cn/mmbiz_png/6wQyVOrkRNI7tPib3ufAQ4eE25SEPDIeo0mjxurSItO7ETZuVhNcgDJ8RDf1m5dOILY2E1XFbQUMUGQJokUrp7w/640?wx_fmt=png&from=appmsg&tp=wxpic&wxfrom=5&wx_lazy=1&wx_co=1)
+![](/img/user/Z-attach/640-51.png)
 
 在大多多情况下，我们希望使用非标准或自定义本体。LLM 不太可能在这样的本体上进行预训练，因此我们需要在提示中包含完整的本体。
 
@@ -144,7 +144,7 @@ ex:PeterJones rdf:type schema1:CC ;
 **使用本体进行微调**
 ------------
 
-![](https://mmbiz.qpic.cn/mmbiz_png/6wQyVOrkRNI7tPib3ufAQ4eE25SEPDIeoLNw5C159gJ0cf5DibaWrL74S61DVnGRN3NPDY9p2yeWIib0M0uY8Ep8g/640?wx_fmt=png&from=appmsg&tp=wxpic&wxfrom=5&wx_lazy=1&wx_co=1)
+![](/img/user/Z-attach/640-52.png)
 
 前两种方法的主要问题是局限于预训练的本体，或者在提示中包含自定义本体时开销很大。所以我们可以对 LLM 进行微调使用 KG 对 LLM 进行微调是非常简单的，因为图的本质是三元组：
 
@@ -311,7 +311,7 @@ LLM 可以使用自定义本体进行微调，调优 LLM 的提示可以非常�
 
 对于上面几种方法的对比，我们总结了一个图表：
 
-![](https://mmbiz.qpic.cn/mmbiz_png/6wQyVOrkRNI7tPib3ufAQ4eE25SEPDIeoXeuTniayayhiakDMFv8NEVLndVK5JfPOwyicjV6oO4PQOQrjR9vRicI9bw/640?wx_fmt=png&from=appmsg&tp=wxpic&wxfrom=5&wx_lazy=1&wx_co=1)
+![](/img/user/Z-attach/640-53.png)
 
 llm 可以有效地将非结构化文本转换为 RDF 图。自定义本体微调模型的 token 效率要高得多，因为它不需要在每个转换请求提示符中提供完整本体的开销，当需要转换多个文本时，这可以降低生产环境中的转换成本。
 
