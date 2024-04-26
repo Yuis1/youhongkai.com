@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/CS计算机科学/运维部署/Network/Cloudflare Tunnel 免费内网穿透/","created":"2024-04-17T15:19:55.000+08:00","updated":"2024-03-24T17:27:22.000+08:00"}
+{"dg-publish":true,"permalink":"/CS计算机科学/运维部署/Network/Cloudflare Tunnel 免费内网穿透/","noteIcon":"","created":"2024-04-17T15:19:55.000+08:00","updated":"2024-04-27T01:21:50.930+08:00"}
 ---
 
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [ednovas.xyz](https://ednovas.xyz/2023/02/24/cloudflaretunnel/#%E5%86%99%E5%9C%A8%E6%9C%80%E5%90%8E)
@@ -103,7 +103,7 @@ cloudflared tunnel route dns ednovas 80.ednovas.xyz
 cloudflared tunnel route dns ednovas ssh.ednovas.xyz
 ```
 
-[![](https://cdn.jsdelivr.net/gh/ednovas/CDN/New%20folder/Snipaste_2023-02-24_03-24-23.png)](https://cdn.jsdelivr.net/gh/ednovas/CDN/New%20folder/Snipaste_2023-02-24_03-24-23.png)
+[![](/img/user/Z-attach/Snipaste_2023-02-24_03-24-23.png)](https://cdn.jsdelivr.net/gh/ednovas/CDN/New%20folder/Snipaste_2023-02-24_03-24-23.png)
 
 [](#配置Config文件 "配置Config文件")配置 Config 文件
 ----------------------------------------
@@ -221,31 +221,31 @@ systemctl restart cloudflared
 
 在 zero trust 的控制面板创建一个新的 application
 
-[![](https://cdn.jsdelivr.net/gh/ednovas/CDN/New%20folder/Snipaste_2023-02-24_03-44-17.png)](https://cdn.jsdelivr.net/gh/ednovas/CDN/New%20folder/Snipaste_2023-02-24_03-44-17.png)
+[![](/img/user/Z-attach/Snipaste_2023-02-24_03-44-17.png)](https://cdn.jsdelivr.net/gh/ednovas/CDN/New%20folder/Snipaste_2023-02-24_03-44-17.png)
 
 类型选 `self-hosted`
 
-[![](https://cdn.jsdelivr.net/gh/ednovas/CDN/New%20folder/Snipaste_2023-02-24_03-45-03.png)](https://cdn.jsdelivr.net/gh/ednovas/CDN/New%20folder/Snipaste_2023-02-24_03-45-03.png)
+[![](/img/user/Z-attach/Snipaste_2023-02-24_03-45-03.png)](https://cdn.jsdelivr.net/gh/ednovas/CDN/New%20folder/Snipaste_2023-02-24_03-45-03.png)
 
 以下是两个必须要填的内容。application name 就随意，session duration 的话，安全起见，30 分钟 - 1 天比较好。
 
-[![](https://cdn.jsdelivr.net/gh/ednovas/CDN/New%20folder/Snipaste_2023-02-24_03-45-49.png)](https://cdn.jsdelivr.net/gh/ednovas/CDN/New%20folder/Snipaste_2023-02-24_03-45-49.png)
+[![](/img/user/Z-attach/Snipaste_2023-02-24_03-45-49.png)](https://cdn.jsdelivr.net/gh/ednovas/CDN/New%20folder/Snipaste_2023-02-24_03-45-49.png)
 
 然后输入之前自己解析到 ssh 端口的内网穿透域名。
 
-[![](https://cdn.jsdelivr.net/gh/ednovas/CDN/New%20folder/Snipaste_2023-02-24_03-47-34.png)](https://cdn.jsdelivr.net/gh/ednovas/CDN/New%20folder/Snipaste_2023-02-24_03-47-34.png)
+[![](/img/user/Z-attach/Snipaste_2023-02-24_03-47-34.png)](https://cdn.jsdelivr.net/gh/ednovas/CDN/New%20folder/Snipaste_2023-02-24_03-47-34.png)
 
 Policy 页面，名字还是随意，action 选择默认的 allow，session duration 选择和应用的 session timeout 一样就行（默认）。下面的规则，建议是选择 email，并且输入你的 cloudflare 的 email 邮箱地址来保证安全。
 
-[![](https://cdn.jsdelivr.net/gh/ednovas/CDN/New%20folder/Snipaste_2023-02-24_03-48-47.png)](https://cdn.jsdelivr.net/gh/ednovas/CDN/New%20folder/Snipaste_2023-02-24_03-48-47.png)
+[![](/img/user/Z-attach/Snipaste_2023-02-24_03-48-47.png)](https://cdn.jsdelivr.net/gh/ednovas/CDN/New%20folder/Snipaste_2023-02-24_03-48-47.png)
 
 在最后一页的最下面把 browser rendering 设置成 SSH。并且开启 Enable automatic cloudflared authentication。
 
-[![](https://cdn.jsdelivr.net/gh/ednovas/CDN/New%20folder/Snipaste_2023-02-24_03-51-22.png)](https://cdn.jsdelivr.net/gh/ednovas/CDN/New%20folder/Snipaste_2023-02-24_03-51-22.png)
+[![](/img/user/Z-attach/Snipaste_2023-02-24_03-51-22.png)](https://cdn.jsdelivr.net/gh/ednovas/CDN/New%20folder/Snipaste_2023-02-24_03-51-22.png)
 
 然后此时再登录你的 SSH 域名，就可以直接访问页面端的 SSH 了，输入你的 SSH 用户名和密码即可访问（支持密钥登录）。
 
-[![](https://cdn.jsdelivr.net/gh/ednovas/CDN/New%20folder/Snipaste_2023-02-24_03-54-07.png)](https://cdn.jsdelivr.net/gh/ednovas/CDN/New%20folder/Snipaste_2023-02-24_03-54-07.png)
+[![](/img/user/Z-attach/Snipaste_2023-02-24_03-54-07.png)](https://cdn.jsdelivr.net/gh/ednovas/CDN/New%20folder/Snipaste_2023-02-24_03-54-07.png)
 
 [](#RDP "RDP")RDP
 -----------------
