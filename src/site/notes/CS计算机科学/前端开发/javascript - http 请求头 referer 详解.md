@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/CS计算机科学/前端开发/javascript - http 请求头 referer 详解/","created":"2024-04-17T15:17:38.000+08:00","updated":"2024-04-24T00:02:54.000+08:00"}
+{"dg-publish":true,"permalink":"/CS计算机科学/前端开发/javascript - http 请求头 referer 详解/","noteIcon":"","created":"2024-04-17T15:17:38.000+08:00","updated":"2024-04-27T01:26:34.621+08:00"}
 ---
 
 
@@ -70,7 +70,7 @@ Referrer-Policy: origin
 
 ## Referrer policy 控制 Referer 内容
 
-![](https://segmentfault.com/img/bVbO76u)
+![](/img/user/Z-attach/bVbO76u.png)
 
 ### referrer policy 各值的含义
 
@@ -118,7 +118,7 @@ Referrer-Policy: origin
 
 #### 百度中转页做了哪些事
 
-![](https://segmentfault.com/img/bVbO8sh)
+![](/img/user/Z-attach/bVbO8sh.png)
 
 1.  **从 referer 剥离参数 wd**，保护用户隐私
 2.  **新窗口打开中间页面**
