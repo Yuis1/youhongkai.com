@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/M市场/品类、品种、品项、sku、spu、商品、单品、编码、单位 区别/","created":"2024-04-17T15:16:54.000+08:00","updated":"2024-04-24T00:42:32.000+08:00"}
+{"dg-publish":true,"permalink":"/M市场/品类、品种、品项、sku、spu、商品、单品、编码、单位 区别/","noteIcon":"","created":"2024-04-17T15:16:54.000+08:00","updated":"2024-04-27T01:21:39.108+08:00"}
 ---
 
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [www.jianshu.com](https://www.jianshu.com/p/ad135278a0f3)
@@ -28,11 +28,11 @@
 
 类似于快消品里说的一个条码, 代表的指定一种规格.。
 
-![](http://upload-images.jianshu.io/upload_images/20583692-ddc55c932426c726.png)
+![](/img/user/Z-attach/20583692-ddc55c932426c726.png.webp)
 
 pet 就是包装，如下：
 
-![](http://upload-images.jianshu.io/upload_images/20583692-03b81b64334f0a2a.png)
+![](/img/user/Z-attach/20583692-03b81b64334f0a2a.png.webp)
 
 SKU：
 ----
