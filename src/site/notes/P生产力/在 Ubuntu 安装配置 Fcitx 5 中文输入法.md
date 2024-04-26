@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/P生产力/在 Ubuntu 安装配置 Fcitx 5 中文输入法/","created":"2024-04-17T15:20:03.000+08:00","updated":"2024-04-24T00:36:42.000+08:00"}
+{"dg-publish":true,"permalink":"/P生产力/在 Ubuntu 安装配置 Fcitx 5 中文输入法/","noteIcon":"","created":"2024-04-17T15:20:03.000+08:00","updated":"2024-04-27T01:21:05.485+08:00"}
 ---
 
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [muzing.top](https://muzing.top/posts/3fc249cf/)
@@ -11,7 +11,7 @@
 
 书接上回，一时兴起将主力机的 Ubuntu 20.04 LTS 升级至了刚刚发布的 22.04 LTS。从 `X` 切换到 [`Wayland`](https://wayland.freedesktop.org/)、[GNOME](https://www.gnome.org/) 从 3.36 升级至 42、Python 默认为 3.10 等等…… 使用太新的软件包反而暂时带来了麻烦，部分原有的软件和插件都不可用了。这其中就包括已经很久没有更新的[百度输入法](https://srf.baidu.com/site/guanwang_linux/index.html)。故需要寻找新的中文拼音输入法。经简单浏览对比，选择了 [Fcitx 5](https://fcitx-im.org/wiki/Fcitx_5/zh-cn)。
 
-[![](https://oss.muzing.top/image/fcitx_logo.png)](https://oss.muzing.top/image/fcitx_logo.png "小企鹅输入法")
+[![](/img/user/Z-attach/fcitx_logo.png)](https://oss.muzing.top/image/fcitx_logo.png "小企鹅输入法")
 
 小企鹅输入法
 
@@ -22,7 +22,7 @@
 
 在 Ubuntu 设置中打开「区域与语言」—— 「管理已安装的语言」，然后会自动检查已安装语言是否完整。若不完整，根据提示安装即可。
 
-[![](https://oss.muzing.top/image/20220503150712.png)](https://oss.muzing.top/image/20220503150712.png "检查可用的语言支持")
+[![](/img/user/Z-attach/20220503150712.png)](https://oss.muzing.top/image/20220503150712.png "检查可用的语言支持")
 
 检查可用的语言支持
 
@@ -95,7 +95,7 @@ SHELL
 
 另一个可以写入此配置的文件为系统级的 `/etc/profile`。
 
-[![](https://oss.muzing.top/image/20220503154637.png)](https://oss.muzing.top/image/20220503154637.png "将配置写入到 /etc/profile 文件末尾")
+[![](/img/user/Z-attach/20220503154637.png)](https://oss.muzing.top/image/20220503154637.png "将配置写入到 /etc/profile 文件末尾")
 
 将配置写入到 /etc/profile 文件末尾
 
@@ -105,7 +105,7 @@ SHELL
 
 解决方案非常简单，在 Tweaks（`sudo apt install gnome-tweaks`）中将 Fcitx 5 添加到「开机启动程序」列表中即可。
 
-[![](https://oss.muzing.top/image/20220502211650.png)](https://oss.muzing.top/image/20220502211650.png "将 Fcitx 5 添加到开机启动程序列表中")
+[![](/img/user/Z-attach/20220502211650.png)](https://oss.muzing.top/image/20220502211650.png "将 Fcitx 5 添加到开机启动程序列表中")
 
 将 Fcitx 5 添加到开机启动程序列表中
 
@@ -119,7 +119,7 @@ Fcitx 5 提供了一个基于 Qt 的强大易用的 GUI 配置工具，可以对
 
 根据个人偏好进行设置即可。需要注意的是「输入法」标签页下，应将「键盘 - 英语」放在首位，拼音（或其他中文输入法）放在后面的位置。
 
-[![](https://oss.muzing.top/image/20220503150346.png)](https://oss.muzing.top/image/20220503150346.png "Fcitx5 configtool")
+[![](/img/user/Z-attach/20220503150346.png)](https://oss.muzing.top/image/20220503150346.png "Fcitx5 configtool")
 
 Fcitx5 configtool
 
@@ -131,7 +131,7 @@ Fcitx 5 默认的外观比较朴素，用户可以根据喜好使用自定义主
 
 第二种方式为使用 [Kim 面板](https://fcitx-im.org/wiki/Theme_Customization/zh-cn#kim%E9%9D%A2%E6%9D%BF)，一种基于 DBus 接口的用户界面。此处安装了 [Input Method Panel](https://extensions.gnome.org/extension/261/kimpanel/) 这个 GNOME 扩展，黑色的风格与正在使用的 GNOME 主题 [Orchis-dark](https://www.gnome-look.org/p/1357889) 非常搭配。
 
-[![](https://oss.muzing.top/image/20220503125515.png)](https://oss.muzing.top/image/20220503125515.png "Input Method Panel 效果")
+[![](/img/user/Z-attach/20220503125515.png)](https://oss.muzing.top/image/20220503125515.png "Input Method Panel 效果")
 
 Input Method Panel 效果
 
