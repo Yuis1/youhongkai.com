@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/CS计算机科学/大模型/RAG/Rerank——RAG 中百尺竿头更进一步的神器，从原理到解决方案/","noteIcon":"","created":"2024-04-17T15:20:11.000+08:00","updated":"2024-04-27T01:22:24.995+08:00"}
+{"dg-publish":true,"permalink":"/CS计算机科学/大模型/RAG/Rerank——RAG 中百尺竿头更进一步的神器，从原理到解决方案/","noteIcon":"","created":"2024-02-04T23:02:12.343+08:00","updated":"2024-04-27T01:22:24.000+08:00"}
 ---
 
 
