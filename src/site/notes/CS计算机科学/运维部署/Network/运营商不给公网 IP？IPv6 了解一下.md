@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/CS计算机科学/运维部署/Network/运营商不给公网 IP？IPv6 了解一下/","noteIcon":"","created":"2024-04-17T15:20:03.000+08:00","updated":"2024-04-27T01:21:54.081+08:00"}
+{"dg-publish":true,"permalink":"/CS计算机科学/运维部署/Network/运营商不给公网 IP？IPv6 了解一下/","noteIcon":"","created":"2024-01-27T02:26:39.848+08:00","updated":"2024-04-28T14:18:10.000+08:00"}
 ---
 
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [zhuanlan.zhihu.com](https://zhuanlan.zhihu.com/p/644711457)
@@ -148,8 +148,6 @@ _**Step 2：设置域名解析和动态域名解析**_
 ![](/img/user/Z-attach/v2-715e797c31459d354bef60b7e90b594a_r.jpg.png)
 
 现在，DDNS-GO 每次开机时就会自动启动并检测 IPv6 地址的变化，至此这一部分就完成了。
-
-![](/img/user/Z-attach/v2-e06f056071aa7d5f15de30a520838e0e_r.jpg.png)
 
 _**Step 3: 外网访问 RD(远程桌面) 及更多**_
 
