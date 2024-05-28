@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/CS计算机科学/Drupal/数据交互/Drupal 对外提供API/","tags":["Drupal","API"],"noteIcon":"","created":"2024-04-17T15:19:52.000+08:00","updated":"2024-04-23T23:51:05.000+08:00"}
+{"dg-publish":true,"permalink":"/CS计算机科学/Drupal/数据交互/Drupal 对外提供API/","tags":["Drupal","API"],"noteIcon":"","created":"2024-03-19T15:09:10.702+08:00","updated":"2024-05-07T15:10:07.110+08:00"}
 ---
 
 
@@ -9,6 +9,8 @@
 
 ---
 ## 重要参考
+
+[JSON:API — A specification for building APIs in JSON (jsonapi.org)](https://jsonapi.org/)
 
 视频教程：[JSON API Drupal - YouTube](https://www.youtube.com/playlist?list=PLZOQ_ZMpYrZsyO-3IstImK1okrpfAjuMZ)
 
@@ -22,9 +24,19 @@
 
 [JSON API模块 与核心的 REST 模块](https://www.drupal.org/docs/core-modules-and-themes/core-modules/jsonapi-module/jsonapi-vs-cores-rest-module)
 
-Json API ：不支持注册、登录等流程，只支持增删改查。但是却支持按 Node Type、Entity Type 来查询对应的列表。不使用Drupal的nid，却使用另一套唯一id来查询Node、Entity。
+**Json API ：** 不支持注册、登录等流程，只支持增删改查。但是却支持按 Node Type、Entity Type 来查询对应的列表。不使用Drupal的nid，却使用另一套唯一id来查询Node、Entity。
 
-Restful API：和 Json API 以上几点特性正好相反。
+Json API权限：
+
+Json API权限 是跟着Drupal系统走的。Drupal系统的权限有个坑：View unpublished ECK entities ，会查出其它人创建且未发布的Entity。
+
+错误的做法：在权限里勾选 View unpublished ECK entities ，会查出其它人创建且未发布的Entity，引发权限漏洞。
+
+正确的做法：不勾选 View unpublished ECK entities 。此时又无法直接查看自己未发布的 Entity，但是可以通过views检索出条目，以及可以编辑详情。
+
+[RESTful Web Services API | Drupal APIs | Drupal Wiki guide on Drupal.org](https://www.drupal.org/docs/drupal-apis/restful-web-services-api)
+
+**Restful API：** 和 Json API 以上几点特性正好相反。
 
 结论：两个都得开启用 😤
 
@@ -51,10 +63,12 @@ Rest导出 视图 就是 Rest API
 通过 include 参数，可以加载关联实体的字段信息，避免了二次查询，或者再去建Views进行关联查询。示例：
 
 ```
-http(s)://sourcesite.com/jsonapi/node/article?include=field_image,uid/author
+http(s)://sourcesite.com/jsonapi/node/article?include=field_image,uid.author
 ```
 
 In JSON API you can follow the related information down through as many levels as necessary.
+
+多个平行的关联关系用 , 分隔，多个嵌套的关联关系用 . 分隔。
 
 ## 问题排查
 ### 通过Restful API注册的用户，默认是阻止状态
