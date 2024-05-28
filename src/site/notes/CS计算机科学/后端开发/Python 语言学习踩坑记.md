@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/CS计算机科学/后端开发/Python 语言学习踩坑记/","noteIcon":"","created":"2024-04-17T15:18:09.000+08:00","updated":"2024-04-24T00:01:10.000+08:00"}
+{"dg-publish":true,"permalink":"/CS计算机科学/后端开发/Python 语言学习踩坑记/","noteIcon":"","created":"2024-01-04T22:30:34.083+08:00","updated":"2024-05-26T21:29:12.683+08:00"}
 ---
 
 
@@ -199,6 +199,40 @@ pip3 install PySocks
 还是报错："Could not install packages due to an OSError: Missing dependencies for SOCKS support"
 
 解决：需要先关闭代理，或者在新的shell中安装，否则这个错误会阻塞安装。
+
+## 数据类型
+Python 中的 `Decimal` 和 `float` 都是用来表示浮点数的,但是它们在精度、存储方式和运算规则上存在一些区别。
+
+1. **精度**
+
+`float` 是用二进制来近似表示浮点数,因此在某些情况下会有精度丢失的问题。例如:
+
+```python
+>>> 0.1 + 0.2
+0.30000000000000004
+```
+
+而 `Decimal` 则是用字符串的形式精确地表示一个浮点数,可以避免这种精度丢失的问题。
+
+```python
+>>> from decimal import Decimal
+>>> Decimal('0.1') + Decimal('0.2')
+Decimal('0.3')
+```
+
+2. **存储方式**
+
+`float` 在内存中是用二进制的方式存储,而 `Decimal` 则是用字符串的形式存储。`Decimal` 更加精确,但是存储和运算的效率相对会低一些。
+
+3. **运算规则**
+
+`float` 遵循 IEEE 754 标准,在运算过程中可能会出现一些我们预期之外的结果。而 `Decimal` 可以通过设置不同的上下文(Context)来控制运算的规则,比如精度、舍入模式等。
+
+4. **使用场景**
+
+如果是科学计算或大部分的普通运算,使用 `float` 已经足够。但如果涉及到金融计算等对精度要求极高的场景,使用 `Decimal` 会更加合适。
+
+总的来说,`Decimal` 用于需要精确计算的场合,如财务、货币等领域,而 `float` 则用于科学计算或普通的简单运算。在精度要求不是很高的情况下,使用 `float` 可以获得更好的性能。
 
 ## Python 语法
 
