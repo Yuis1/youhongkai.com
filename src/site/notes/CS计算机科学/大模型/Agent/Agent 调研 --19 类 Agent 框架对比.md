@@ -1,14 +1,10 @@
 ---
-{"dg-publish":true,"permalink":"/CS计算机科学/大模型/Agent/Agent 调研 --19 类 Agent 框架对比/","noteIcon":"","created":"2024-04-17T15:20:05.000+08:00","updated":"2024-04-27T01:22:45.304+08:00"}
+{"dg-publish":true,"permalink":"/CS计算机科学/大模型/Agent/Agent 调研 --19 类 Agent 框架对比/","noteIcon":"","created":"2024-04-12T09:57:55.648+08:00","updated":"2024-05-22T12:43:35.176+08:00"}
 ---
 
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/rogMCoS1zDN0mAAC5EKhFQ)
 
-
-
 代理（Agent）指能自主感知环境并采取行动实现目标的智能体，即 AI 作为一个人或一个组织的代表，进行某种特定行为和交易，降低一个人或组织的工作复杂程度，减少工作量和沟通成本。
-
-
 
 目前，我们在探索 Agent 的应用方向，借此机会调研学习了一下现在主流的 Agent 框架，这篇文章也是我们调研过程的记录。
 
@@ -18,20 +14,17 @@
 
 ![](/img/user/Z-attach/640-9.jpg)
 
-图片来源：https://github.com/e2b-dev/awesome-ai-agents
+图片来源： https://github.com/e2b-dev/awesome-ai-agents
 
 #### **▐** **Agent 基础**
 
 Agent 的核心决策逻辑是让 LLM 根据动态变化的环境信息选择执行具体的行动或者对结果作出判断，并影响环境，通过多轮迭代重复执行上述步骤，直到完成目标。
 
-**精简的决策流程：**P（感知）→ P（规划）→ A（行动）
+**精简的决策流程：** P（感知）→ P（规划）→ A（行动）
 
 1.  感知（Perception）是指 Agent 从环境中收集信息并从中提取相关知识的能力。
-    
 2.  规划（Planning）是指 Agent 为了某一目标而作出的决策过程。
-    
 3.  行动（Action）是指基于环境和规划做出的动作。
-    
 
 其中，Policy 是 Agent 做出 Action 的核心决策，而行动又通过观察（Observation）成为进一步 Perception 的前提和基础，形成自主地闭环学习过程。
 
@@ -45,15 +38,13 @@ Agent 的核心决策逻辑是让 LLM 根据动态变化的环境信息选择执
 
 目前 Agent 主流的决策模型是 ReAct 框架，也有一些 ReAct 的变种框架，以下是两种框架的对比。
 
-*   ### 传统 ReAct 框架：Reason and Act
-    
+* 传统 ReAct 框架：Reason and Act
 
 ReAct = 少样本 prompt + Thought + Action + Observation 。是调用工具、推理和规划时常用的 prompt 结构，先推理再执行，根据环境来执行具体的 action，并给出思考过程 Thought。
 
 ![](/img/user/Z-attach/640-75.png)
 
-*   ### Plan-and-Execute ReAct
-    
+* Plan-and-Execute ReAct
 
 类 BabyAgi 的执行流程：一部分 Agent 通过优化规划和任务执行的流程来完成复杂任务的拆解，将复杂的任务拆解成多个子任务，再依次 / 批量执行。
 
@@ -69,16 +60,13 @@ paper：https://arxiv.org/abs/2312.04511?ref=blog.langchain.dev
 
 ![](/img/user/Z-attach/640-96.png)
 
-![](/img/user/Z-attach/640-1.webp)
-
-Agent 框架
+## Agent 框架
 
 根据框架和实现方式的差异，这里简单将 Agent 框架分为两大类：Single-Agent 和 Multi-Agent，分别对应单智能体和多智能体架构，Multi-Agent 使用多个智能体来解决更复杂的问题。
 
 #### **▐** **Single-Agent**
 
-*   #### BabyAGI
-    
+* BabyAGI
 
 git：https://github.com/yoheinakajima/babyagi/blob/main/babyagi.py
 
@@ -88,7 +76,7 @@ babyAGI 决策流程：1）根据需求分解任务；2）对任务排列优先�
 
 ![](/img/user/Z-attach/640-73.png)
 
-**亮点：**作为早期 agent 的实践，babyagi 框架简单实用，里面的任务优先级排序模块是一个比较独特的 feature，后续的 agent 里大多看不到这个 feature。
+**亮点：** 作为早期 agent 的实践，babyagi 框架简单实用，里面的任务优先级排序模块是一个比较独特的 feature，后续的 agent 里大多看不到这个 feature。
 
 ![](/img/user/Z-attach/640-8.jpg)
 
@@ -115,8 +103,7 @@ execution_agent
 响应：
 ```
 
-*   #### AutoGPT
-    
+* AutoGPT
 
 git：https://github.com/Significant-Gravitas/AutoGPT
 
@@ -197,8 +184,7 @@ Response Format:
 Ensure the response can be parsed by Python json.loads
 ```
 
-*   #### HuggingGPT
-    
+* HuggingGPT
 
 git: https://github.com/microsoft/JARVIS
 
@@ -219,8 +205,7 @@ HuggingGPT 的任务分为四个部分：
 
 **HuggingGPT 的亮点**：HuggingGPT 与 AutoGPT 的不同之处在于，它可以调用 HuggingFace 上不同的模型来完成更复杂的任务，从而提高了每个任务的精确度和准确率。然而，总体成本并没有降低太多。
 
-*   #### GPT-Engineer
-    
+* GPT-Engineer
 
 git: https://github.com/AntonOsika/gpt-engineer
 
@@ -272,8 +257,7 @@ Python toolbelt preferences:
 
 ![](/img/user/Z-attach/640-97.png)
 
-*   #### Samantha
-    
+* Samantha
 
 git: https://github.com/BRlkl/AGI-Samantha
 
@@ -283,7 +267,11 @@ tw: https://twitter.com/Schindler___/status/1745986132737769573
 
 ![](/img/user/Z-attach/640-77.png)
 
-AGI-Samantha 特点：1、动态语音交流：Samantha 能够根据上下文和自身思考自主决定何时进行交流。2、实时视觉能力：它能够理解并反应视觉信息，比如图像或视频中的内容。它能够根据这些视觉信息做出反应。例如，如果看到某个物体或场景，它可以根据这些信息进行交流或采取行动。尽管 Samantha 并不总是直接使用视觉信息，这些信息仍然持续影响它的思考和行为。这意味着即使在不直接谈论或处理视觉信息的情况下，这些信息也会在背后影响它的决策和行动方式。3、外部分类记忆：Samantha 拥有一种特殊的记忆系统，能够根据情境动态写入和读取最相关的信息。4、持续进化：它存储的经验会影响其自身的行为，如个性、语言频率和风格。
+AGI-Samantha 特点：  
+1、动态语音交流：Samantha 能够根据上下文和自身思考自主决定何时进行交流。  
+2、实时视觉能力：它能够理解并反应视觉信息，比如图像或视频中的内容。它能够根据这些视觉信息做出反应。例如，如果看到某个物体或场景，它可以根据这些信息进行交流或采取行动。尽管 Samantha 并不总是直接使用视觉信息，这些信息仍然持续影响它的思考和行为。这意味着即使在不直接谈论或处理视觉信息的情况下，这些信息也会在背后影响它的决策和行动方式。  
+3、外部分类记忆：Samantha 拥有一种特殊的记忆系统，能够根据情境动态写入和读取最相关的信息。  
+4、持续进化：它存储的经验会影响其自身的行为，如个性、语言频率和风格。
 
 AGI-Samantha 由多个特定目的的大语言模型（LLM）组成，每个模型称为一个 “模块”。主要模块包括：思考、意识、潜意识、回答、记忆读取、记忆写入、记忆选择和视觉。这些模块通过内部循环和协调模仿人类大脑的工作流程。让 Samantha 能够接收并处理视觉和听觉信息，然后做出相应的反应。简而言之，AGI-Samantha 是一种努力模仿人类思维和行为的高级人工智能系统。
 
@@ -291,8 +279,7 @@ AGI-Samantha 由多个特定目的的大语言模型（LLM）组成，每个模�
 
 ![](/img/user/Z-attach/640-4.jpg)
 
-*   #### AppAgent
-    
+*  AppAgent
 
 doc：https://appagent-official.github.io/
 
@@ -304,8 +291,7 @@ git：https://github.com/X-PLUG/MobileAgent
 
 ![](/img/user/Z-attach/640-98.png)
 
-*   #### OS-Copilot
-    
+* OS-Copilot
 
 git：https://github.com/OS-Copilot/FRIDAY
 
@@ -319,8 +305,7 @@ OS 级别的 Agent，FRIDAY 能够从图片、视频或者文本中学习，并�
 
 ![](/img/user/Z-attach/640-84.png)
 
-*   #### Langgraph
-    
+* Langgraph
 
 doc：https://python.langchain.com/docs/langgraph
 
@@ -372,8 +357,7 @@ app = workflow.compile()
 
 #### **▐** **Multi-Agent**
 
-*   #### 斯坦福虚拟小镇
-    
+* 斯坦福虚拟小镇
 
 git：https://github.com/joonspk-research/generative_agents
 
@@ -395,8 +379,9 @@ paper：https://arxiv.org/abs/2304.03442
 
 ![](/img/user/Z-attach/640-93.png)
 
-*   #### MetaGPT
-    
+* MetaGPT
+
+*
 
 git：https://github.com/geekan/MetaGPT
 
@@ -450,8 +435,7 @@ Do not answer anything else, and do not add any other information in your answer
 
 ![](/img/user/Z-attach/640-92.png)
 
-*   #### AutoGen
-    
+* AutoGen
 
 doc：https://microsoft.github.io/autogen/docs/Getting-Started
 
@@ -478,7 +462,7 @@ https://microsoft.github.io/autogen/docs/Use-Cases/agent_chat
 
 **基础双智能体交互：**
 
-**![](/img/user/Z-attach/640-83.png)**
+![](/img/user/Z-attach/640-83.png)
 
 1.  助⼿接收到来⾃ user_proxy 的消息，其中包含任务描述。
     
@@ -536,15 +520,13 @@ ChatDev（2023.9）容易被误认为是一个普通的 MultiAgent 框架在软�
 
 ChatDev 项目本身的代码没有太多和复用性，依赖的旧版本 Camel 也是该抛弃的东西。这个项目本身更多是为了支撑论文的学术性原型，并不是为了让别人在上面开发而设计的。
 
-*   #### GPTeam
-    
+* GPTeam
 
 git：https://github.com/101dotxyz/GPTeam
 
 类似于 meta-GPT 的多 agent 合作方式，较早期的 Multi-Agent 探索，交互比较固定。
 
-*   #### GPT Researcher
-    
+* GPT Researcher
 
 git：https://github.com/assafelovic/gpt-researcher
 
@@ -555,7 +537,6 @@ GPT Researcher 的架构主要通过运行两个代理来进行，一个是 “�
 ![](/img/user/Z-attach/640-91.png)
 
 *   #### TaskWeaver
-    
 
 git：https://github.com/microsoft/TaskWeaver?tab=readme-ov-file
 
@@ -575,8 +556,7 @@ TaskWeaver 的工作流程涉及几个关键组件和过程, 以下是工作流�
 
 ![](/img/user/Z-attach/640-79.png)
 
-*   #### 微软 UFO
-    
+* 微软 UFO
 
 git：https://github.com/microsoft/UFO
 
@@ -599,8 +579,7 @@ UFO（UI-Focused Agent）的工作原理基于先进的视觉语言模型技术�
 6.  自然语言命令到 GUI 操作的映射 UFO 的核心功能之一是将用户的自然语言命令映射到具体的 GUI 操作上。这一过程涉及到理解命令的意图，识别相关的 GUI 元素，以及生成和执行操作这些元素的动作。通过这种方式，UFO 可以自动完成从文档编辑和信息提取到电子邮件撰写和发送等一系列复杂的任务，大大提高用户在 Windows 操作系统中工作的效率和便捷性。
     
 
-*   #### CrewAI
-    
+* CrewAI
 
 git: https://github.com/joaomdmoura/crewAI
 
@@ -612,12 +591,11 @@ site: https://www.crewai.com/
 
 Crew 在 CrewAI 中是代理人、任务和过程相结合的容器层，是任务执行的实际场所。作为一个协同合作的环境，Crew 提供了代理人之间的交流、合作和按照规定过程执行任务的平台。通过 Crew 的设计，代理人能够更好地协作并以高效的方式完成任务。支持顺序结构和层级结构的 agents。
 
-**CrewAI 的优点：**与 LangChain 生态结合，CrewAI 提供了 Autogen 对话代理的灵活性和 ChatDev 的结构化流程方法，但没有僵化。CrewAI 的流程设计为动态且适应性强，可无缝融入开发和生产工作流程。
+**CrewAI 的优点：** 与 LangChain 生态结合，CrewAI 提供了 Autogen 对话代理的灵活性和 ChatDev 的结构化流程方法，但没有僵化。CrewAI 的流程设计为动态且适应性强，可无缝融入开发和生产工作流程。
 
 ![](/img/user/Z-attach/640-93.png)
 
-*   #### AgentScope
-    
+* AgentScope
 
 git: https://github.com/modelscope/agentscope/blob/main/README_ZH.md
 
@@ -631,8 +609,7 @@ git: https://github.com/modelscope/agentscope/blob/main/README_ZH.md
 
 ![](/img/user/Z-attach/640-95.png)
 
-*   #### Camel
-    
+* Camel
 
 git: https://github.com/camel-ai/camel
 
@@ -642,9 +619,7 @@ site: https://www.camel-ai.org
 
 ![](/img/user/Z-attach/640-95.png)
 
-![](/img/user/Z-attach/640.webp)
-
-Agent 框架总结
+## Agent 框架总结
 
 **单智能体** = 大语言模型（LLM） + 观察（obs） + 思考（thought） + 行动（act） + 记忆（mem）
 
@@ -652,44 +627,33 @@ Agent 框架总结
 
 **多智能体优点：**
 
-1.  多视角分析问题：虽然 LLM 可以扮演很多视角，但会随着 system prompt 或者前几轮的对话快速坍缩到某个具体的视角上；
-    
-2.  复杂问题拆解：每个子 agent 负责解决特定领域的问题，降低对记忆和 prompt 长度的要求；
-    
-3.  可操控性强：可以自主的选择需要的视角和人设；
-    
-4.  开闭原则：通过增加子 agent 来扩展功能，新增功能无需修改之前的 agent；
-    
-5.  （可能）更快的解决问题：解决单 agent 并发的问题；
-    
+1. 多视角分析问题：虽然 LLM 可以扮演很多视角，但会随着 system prompt 或者前几轮的对话快速坍缩到某个具体的视角上；
+2. 复杂问题拆解：每个子 agent 负责解决特定领域的问题，降低对记忆和 prompt 长度的要求；
+3. 可操控性强：可以自主的选择需要的视角和人设；
+4. 开闭原则：通过增加子 agent 来扩展功能，新增功能无需修改之前的 agent；
+5. （可能）更快的解决问题：解决单 agent 并发的问题；
 
 **缺点：**
 
 1.  成本和耗时的增加；
-    
 2.  交互更复杂、定制开发成本高；
-    
 3.  简单的问题 single Agent 也能解决；
-    
 
 **多智能体能解决的问题：**
 
 1.  解决复杂问题；
-    
 2.  生成多角色交互的剧情；
     
 
 Multi-Agent 并不是 Agent 框架的终态，Multi-Agent 框架是当前有限的 LLM 能力背景下的产物，更多还是为了解决当前 LLM 的能力缺陷，通过 LLM 多次迭代、弥补一些显而易见的错误，不同框架间仍然存在着极高的学习和开发成本。随着 LLM 能力的提升，未来的 Agent 框架肯定会朝着更加的简单、易用的方向发展。
 
-![](/img/user/Z-attach/640.webp)
+## 能做什么？
 
-能做什么？
-
-#### **▐** **可能的方向**
+###  可能的方向
 
 游戏场景（npc 对话、游戏素材生产）、内容生产、私域助理、OS 级别智能体、部分工作的提效
 
-#### **▐** **Multi-Agent 框架**
+### Multi-Agent 框架
 
 多 agent 应该像人类的大脑一样，分工明确、又能一起协作，比如，大脑有负责视觉、味觉、触觉、行走、平衡，甚至控制四肢行走的区域都不一样。
 
@@ -707,26 +671,21 @@ Proxy：自定义 proxy，可编程、执行大小模型
 
 ![](/img/user/Z-attach/640-6.jpg)
 
-#### **▐** **Single Agent 框架**
+### Single Agent 框架
 
-**执行架构优化：**论文数据支撑
+**执行架构优化：** 论文数据支撑
 
 CoT to XoT，从一个 thought 一步 act 到一个 thought 多个 act，从链式的思考方式到多维度思考；
 
-**长期记忆的优化：**
+**长期记忆的优化：** 具备个性化能力的 agent，模拟人的回想过程，将长期记忆加入 agent 中；
 
-具备个性化能力的 agent，模拟人的回想过程，将长期记忆加入 agent 中；
+**多模态能力建设：** agent 能观察到的不仅限于用户输入的问题，可以加入包括触觉、视觉、对周围环境的感知等；
 
-**多模态能力建设：**
-
-agent 能观察到的不仅限于用户输入的问题，可以加入包括触觉、视觉、对周围环境的感知等；
-
-**自我思考能力：**主动提出问题，自我优化；
+**自我思考能力：** 主动提出问题，自我优化；
 
 ![](/img/user/Z-attach/640-7.jpg)
 
-*   #### 其他
-    
+### 其他
 
 部署：Agent 以及 workflow 的配置化及服务化，更长远的还需要考虑分布式部署
 
@@ -740,51 +699,25 @@ RAG：解决语义孤立问题
 
 业务选择：Copilot 还是 Agent ？Single Agent 还是 Multi-Agent？
 
-![](/img/user/Z-attach/640.webp)
-
-参考文献
-
+## 参考文献
 1. 什么是 ai agent：https://www.breezedeus.com/article/ai-agent-part1#33ddb6413e094280aaa4ac82634d01d9
 2. 什么是 ai agent part2：https://www.breezedeus.com/article/ai-agent-part2
+3. ReAct: Synergizing Reasoning and Acting in Language Models：https://react-lm.github.io/
+4. Plan-and-Execute Agents：https://blog.langchain.dev/planning-agents/
+5. LLmCompiler：https://arxiv.org/abs/2312.04511?ref=blog.langchain.dev
+6. agent：https://hub.baai.ac.cn/view/27683
+7. TaskWeaver 创建超级 AI Agent：https://hub.baai.ac.cn/view/34799
+8. For a Multi-Agent Framework, CrewAI has its Advantages Compared to AutoGen: https://levelup.gitconnected.com/for-a-multi-agent-framework-crewai-has-its-advantages-compared-to-autogen-a1df3ff66ed3
+9. AgentScope: A Flexible yet Robust Multi-Agent Platform: https://arxiv.org/abs/2402.14034
+10. Assisting in Writing Wikipedia-like Articles From Scratch with Large Language Models: https://arxiv.org/abs/2402.14207
+11. Autogen 的基本框架:https://limoncc.com/post/3271c9aecd8f7df1/
+12. MetaGPT 作者深度解析:https://www.bilibili.com/video/BV1Ru411V7XL/?spm_id_from=333.999.0.0&vd_source=b27d8b2549ee8e4b490115503ac81017
+13. Agent 产品设计: https://mp.weixin.qq.com/s/pbCg1KOXK63U9QY28yXpsw?poc_token=HHAx12Wjjn0BqZd4N-byo0-rjRmpjhjjl6yN6Bdz
+14. Building the Future of Responsible AI: A Reference Architecture for Designing Large Language Model based Agents:https://arxiv.org/abs/2311.13148
+15. Multi Agent 策略架构 基础:https://mp.weixin.qq.com/s?__biz=Mzk0MDU2OTk1Ng==&mid=2247483811&idx=1&sn=f92d1ecdb6f2ddcbc36e70e8ffe5efa2&chksm=c2dee5a8f5a96cbeaa66b8575540a416c80d66f7427f5095999f520a09717fa2906cfccddb59&scene=21#wechat_redirect
+16. 《MetaGPT 智能体开发入门》学习手册: https://deepwisdom.feishu.cn/wiki/BfS0wmk4piMXXIkHvn5czNT8nuh
 
-3.ReAct: Synergizing Reasoning and Acting in Language Models：https://react-lm.github.io/
 
-4.Plan-and-Execute Agents：https://blog.langchain.dev/planning-agents/
-
-5.LLmCompiler：https://arxiv.org/abs/2312.04511?ref=blog.langchain.dev
-
-6.agent：https://hub.baai.ac.cn/view/27683
-
-7.TaskWeaver 创建超级 AI Agent：https://hub.baai.ac.cn/view/34799
-
-8.For a Multi-Agent Framework, CrewAI has its Advantages Compared to AutoGen: https://levelup.gitconnected.com/for-a-multi-agent-framework-crewai-has-its-advantages-compared-to-autogen-a1df3ff66ed3
-
-9.AgentScope: A Flexible yet Robust Multi-Agent Platform: https://arxiv.org/abs/2402.14034
-
-10.Assisting in Writing Wikipedia-like Articles From Scratch with Large Language Models: https://arxiv.org/abs/2402.14207
-
-11.Autogen 的基本框架:https://limoncc.com/post/3271c9aecd8f7df1/
-
-12.MetaGPT 作者深度解析:https://www.bilibili.com/video/BV1Ru411V7XL/?spm_id_from=333.999.0.0&vd_source=b27d8b2549ee8e4b490115503ac81017
-
-13.Agent 产品设计: https://mp.weixin.qq.com/s/pbCg1KOXK63U9QY28yXpsw?poc_token=HHAx12Wjjn0BqZd4N-byo0-rjRmpjhjjl6yN6Bdz
-
-14.Building the Future of Responsible AI: A Reference Architecture for Designing Large Language Model based Agents:https://arxiv.org/abs/2311.13148
-
-15.Multi Agent 策略架构 基础:https://mp.weixin.qq.com/s?__biz=Mzk0MDU2OTk1Ng==&mid=2247483811&idx=1&sn=f92d1ecdb6f2ddcbc36e70e8ffe5efa2&chksm=c2dee5a8f5a96cbeaa66b8575540a416c80d66f7427f5095999f520a09717fa2906cfccddb59&scene=21#wechat_redirect
-
-16.《MetaGPT 智能体开发入门》学习手册: https://deepwisdom.feishu.cn/wiki/BfS0wmk4piMXXIkHvn5czNT8nuh
-
-![](/img/user/Z-attach/640.webp)
-
-团队介绍
+## 团队介绍
 
 我们是天猫技术 - 手猫智能策略 - 推荐工程团队，主要任务是为手机天猫 APP 用户提升推荐和 AI 的服务体验。我们专注于推荐和 AI 创新业务的研发，包括但不限于手机天猫的推荐引擎、推荐服务端、流量调控、智能 UI 的研发优化以及 AI 创新业务探索。结合最新的搜推技术、大语言模型和视觉模型，我们致力于为用户提供更好的推荐服务及 AI 体验，力求在不断探索和实践中为用户创造更多价值。
-
-**¤** **拓展阅读** **¤**
-
-  
-
-[3DXR 技术](https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzAxNDEwNjk5OQ==&action=getalbum&album_id=2565944923443904512#wechat_redirect) | [终端技术](https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzAxNDEwNjk5OQ==&action=getalbum&album_id=1533906991218294785#wechat_redirect) | [音视频技术](https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzAxNDEwNjk5OQ==&action=getalbum&album_id=1592015847500414978#wechat_redirect)
-
-[服务端技术](https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzAxNDEwNjk5OQ==&action=getalbum&album_id=1539610690070642689#wechat_redirect) | [技术质量](https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzAxNDEwNjk5OQ==&action=getalbum&album_id=2565883875634397185#wechat_redirect) | [数据算法](https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzAxNDEwNjk5OQ==&action=getalbum&album_id=1522425612282494977#wechat_redirect)
