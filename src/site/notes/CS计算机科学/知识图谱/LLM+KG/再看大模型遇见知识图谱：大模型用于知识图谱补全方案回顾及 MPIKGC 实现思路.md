@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/CS计算机科学/知识图谱/LLM+KG/再看大模型遇见知识图谱：大模型用于知识图谱补全方案回顾及 MPIKGC 实现思路/","noteIcon":"","created":"2024-04-18T15:09:26.868+08:00","updated":"2024-04-27T01:22:06.325+08:00"}
+{"dg-publish":true,"permalink":"/CS计算机科学/知识图谱/LLM+KG/再看大模型遇见知识图谱：大模型用于知识图谱补全方案回顾及 MPIKGC 实现思路/","noteIcon":"","created":"2024-04-20T15:32:28.000+08:00","updated":"2024-05-18T16:45:30.632+08:00"}
 ---
 
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [mp.weixin.qq.com](https://mp.weixin.qq.com/s/Ohvdt97dPTC-BTE4nOmeXw)
