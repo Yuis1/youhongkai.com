@@ -1,17 +1,22 @@
 ---
-{"dg-publish":true,"permalink":"/CS计算机科学/Drupal/Drupal 10 模块开发/","noteIcon":"","created":"2024-04-17T15:17:23.000+08:00","updated":"2024-04-23T23:06:41.000+08:00"}
+{"dg-publish":true,"permalink":"/CS计算机科学/Drupal/Drupal 10 模块开发/","noteIcon":"","created":"2024-01-14T22:26:39.903+08:00","updated":"2024-05-06T12:12:53.994+08:00"}
 ---
 
 
 作者: 游鱼思
 
 ---
-# Drupal 10 模块开发
+## 开发环境准备
+
+官方推荐使用DDEV，基于Docker
+
 ## Symfony
 
 是 Drupal 的底层框架。
 
 ## Service
+
+
 
 ## Hook
 
