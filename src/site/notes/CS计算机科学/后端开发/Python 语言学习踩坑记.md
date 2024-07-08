@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/CS计算机科学/后端开发/Python 语言学习踩坑记/","noteIcon":"","created":"2024-01-04T22:30:34.083+08:00","updated":"2024-05-26T21:29:12.683+08:00"}
+{"dg-publish":true,"permalink":"/CS计算机科学/后端开发/Python 语言学习踩坑记/","noteIcon":"","created":"2024-06-22T22:30:28.842+08:00","updated":"2024-05-28T11:45:52.000+08:00"}
 ---
 
 
@@ -201,6 +201,7 @@ pip3 install PySocks
 解决：需要先关闭代理，或者在新的shell中安装，否则这个错误会阻塞安装。
 
 ## 数据类型
+
 Python 中的 `Decimal` 和 `float` 都是用来表示浮点数的,但是它们在精度、存储方式和运算规则上存在一些区别。
 
 1. **精度**
