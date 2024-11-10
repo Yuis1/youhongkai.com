@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/CS计算机科学/WordPress/WordPress论坛插件/","noteIcon":"","created":"2024-07-09T01:33:56.603+08:00","updated":"2024-07-09T02:20:47.051+08:00"}
+{"dg-publish":true,"permalink":"/CS计算机科学/WordPress/WordPress论坛插件/","noteIcon":"","created":"2024-07-09T01:34:51.000+08:00","updated":"2024-07-10T01:23:17.000+08:00"}
 ---
 
 
@@ -10,6 +10,10 @@
 
 2. **BuddyPress**：
    - 虽然 BuddyPress 主要是一个社交网络插件，它可以与 bbPress 配合使用，为用户提供一个社区论坛加社交网络的功能复合体。BuddyPress 添加了用户个人资料、社交群组、好友系统等功能。
+
+Youzify – BuddyPress Community, User Profile, Social Network & Membership Plugin for WordPress
+
+在BuddyPress基础上，为用户的个人主页定制，提供了非常强大的功能。
 
 3. **wpForo Forum**：
    - wpForo Forum 是一个功能全面的论坛插件，拥有现代的用户界面和丰富的功能。它提供多种布局和风格，支持SEO优化，并具备强大的管理工具。wpForo 设计用于提供一个完整的论坛解决方案，适合那些需要高级论坛功能的网站。
