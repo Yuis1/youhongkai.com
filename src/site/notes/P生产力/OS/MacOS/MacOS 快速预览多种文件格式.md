@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/P生产力/OS/MacOS/MacOS 快速预览多种文件格式/","noteIcon":"","created":"2024-06-22T21:50:30.725+08:00","updated":"2024-06-29T00:48:54.000+08:00"}
+{"dg-publish":true,"permalink":"/P生产力/OS/MacOS/MacOS 快速预览多种文件格式/","noteIcon":"","created":"2024-08-28T17:26:35.000+08:00","updated":"2024-09-18T14:27:57.465+08:00"}
 ---
 
 
